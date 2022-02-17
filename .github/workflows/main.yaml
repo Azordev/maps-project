@@ -1,0 +1,59 @@
+---
+name: Lint Code Base
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main, dev]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Lint Code Base
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.13]
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Cache dependencies
+        id: cache
+        uses: actions/cache@v2
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-
+
+      - uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 6.21.0
+          run_install: true
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - uses: actionsx/prettier@v2
+        with:
+          # prettier CLI arguments.
+          args: --check --config ./.prettierrc.js src
+      - uses: bradennapier/eslint-plus-action@v3.4.2
+        with: 
+          issueSummaryType: full
+          issueSummaryOnlyOnEvent: true
+          configFile: .eslintrc.js
+      - uses: streetsidesoftware/cspell-action@v1.5.1
+        config: '.'
+
+      - name: test
+        run: pnpm test
+      - name: build
+        run: pnpm run build --if-present
