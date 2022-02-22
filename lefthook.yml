@@ -1,4 +1,23 @@
 # cSpell:word commitlint typecheck stylelint
+pre-commit:
+  parallel: true
+  commands:
+    prettier:
+      glob: '*.{js,jsx}'
+      run: npm run prettier:ci {staged_files}
+    eslint:
+      glob: '*.{js,jsx}'
+      run: npm run eslint:ci {staged_files}
+    stylelint:
+      glob: './**/*.styled.jsx' # For CSS-in-JS
+      run: npm run stylelint:ci {staged_files}
+    spelling:
+      glob: '*.{js,jsx,md}'
+      run: npm run spelling:ci {staged_files}
+    markdown-link-check:
+      glob: '*.md'
+      run: npx markdown-link-check {staged_files}
+
 commit-msg:
   parallel: true
   commands:
