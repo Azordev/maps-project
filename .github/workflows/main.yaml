@@ -2,9 +2,10 @@
 name: Lint Code Base
 on:
   push:
-    branches: [main]
+    branches: [main, release-*]
   pull_request:
-    branches: [main, dev]
+    types: [opened, synchronize, reopened]
+    branches: [main, dev, release-*]
 
   workflow_dispatch:
 
@@ -14,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [16.13]
+        node-version: [14.x, 16.3]
 
     steps:
       - name: Checkout Code
@@ -26,25 +27,22 @@ jobs:
         id: cache
         uses: actions/cache@v2
         with:
-          path: ~/.pnpm-store
-          key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            ${{ runner.os }}-
-
-      - uses: pnpm/action-setup@v2.0.1
-        with:
-          version: 6.21.0
-          run_install: true
+            ${{ runner.os }}-node-
 
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
 
+      - name: Install package
+        run: npm install
       - uses: actionsx/prettier@v2
         with:
           # prettier CLI arguments.
-          args: --check --config ./.prettierrc.js src
+          args: --list-different src
       - uses: bradennapier/eslint-plus-action@v3.4.2
         with: 
           issueSummaryType: full
@@ -52,8 +50,7 @@ jobs:
           configFile: .eslintrc.js
       - name: spelling
         run: npm run spelling ci .
-
       - name: test
-        run: pnpm test
+        run: npm test
       - name: build
-        run: pnpm run build --if-present
+        run: npm run build --if-present
