@@ -13,15 +13,6 @@ commit-msg:
         - merge
         - rebase
 
-pre-push:
-  parallel: true
-  commands:
-    markdown-link-check:
-      glob: '*.md'
-      run: npx markdown-link-check {staged_files}
-    test:
-      run: npm run test --passWithNoTests
-
 lint:
   parallel: true
   commands:

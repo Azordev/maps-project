@@ -90,7 +90,7 @@
     "Osuna",
     "jhernandez"
   ],
-  "flagWords": ["hte"],
+  "flagWords": [],
   "ignorePaths": [
     "./.github/**",
     "./.vscode/**",
@@ -101,6 +101,7 @@
     "src/reportWebVitals.js",
     "package.json",
     "package-lock.json",
-    "yarn.lock"
+    "yarn.lock",
+    "README.md"
   ]
 }
