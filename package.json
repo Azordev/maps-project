@@ -19,7 +19,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "@emotion/react": "^11.7.1",
-    "@emotion/styled": "^11.6.0",
+    "@emotion/styled": "^11.8.1",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
@@ -44,7 +44,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest --passWithNoTests --watchAll=false",
     "eject": "react-scripts eject",
     "spelling": "cspell lint 'src/**/*.{js,jsx,md}'",
     "spelling:ci": "cspell run",
@@ -53,8 +53,8 @@
     "stylelint": "stylelint --config .stylelintrc.json './**/*.styled.jsx'",
     "eslint": "eslint src --color --cache -f table",
     "lint:js:fix": "eslint src --fix",
-    "prettier": "prettier src  --write --config ./.prettierrc.js",
-    "prettier:ci": "prettier  --write --config ./.prettierrc.js"
+    "prettier": "prettier --write src --config ./.prettierrc.js",
+    "prettier:ci": "prettier --check --config ./.prettierrc.js"
   },
   "eslintConfig": {
     "extends": [

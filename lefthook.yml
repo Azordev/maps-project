@@ -36,7 +36,7 @@ lint:
   parallel: true
   commands:
     test:
-      run: npm test --passWithNoTests
+      run: npm test
     prettier:
       run: npm run prettier
     eslint:
