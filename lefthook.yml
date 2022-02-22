@@ -1,0 +1,40 @@
+# cSpell:word commitlint typecheck stylelint
+commit-msg:
+  parallel: true
+  commands:
+    lint-commit-msg:
+      run: npx commitlint --edit --color --config commitlint.config.js
+      skip:
+        - merge
+        - rebase
+    spell-check:
+      run: npm run spelling --no-summary {1}
+      skip:
+        - merge
+        - rebase
+
+pre-push:
+  parallel: true
+  commands:
+    markdown-link-check:
+      glob: '*.md'
+      run: npx markdown-link-check {staged_files}
+    test:
+      run: npm run test --passWithNoTests
+
+lint:
+  parallel: true
+  commands:
+    test:
+      run: npm test --passWithNoTests
+    prettier:
+      run: npm run prettier
+    eslint:
+      run: npm run eslint
+    stylelint:
+      run: npm run stylelint
+    spelling:
+      run: npm run spelling
+    markdown-link-check:
+      glob: '*.md'
+      run: npx markdown-link-check {staged_files}
