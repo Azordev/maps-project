@@ -1,0 +1,284 @@
+{
+  "Auto close tag": {
+		"prefix": "tag",
+		"body": [
+			"<$1>",
+			"</$1>"
+		]
+	},
+  "ES6 React Import": {
+    "prefix": "r-import",
+    "body": "import React from 'react'\n"
+  },
+  "ES6 React & Component Import": {
+    "prefix": "r-importcomponent",
+    "body": "import React, { Component } from 'react'\n"
+  },
+  "Initial function component for React": {
+    "prefix": "rf-export",
+    "body": [
+      "import React from 'react'",
+      "",
+      "function ${1:${TM_FILENAME_BASE}} () {",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t<h1>${0}</h1>",
+      "\t\t</div>",
+      "\t)",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}}"
+    ],
+    "description": "Initial function component file for React"
+  },
+  "Initial arrow function component for React": {
+    "prefix": "raf-export",
+    "body": [
+      "import React from 'react'",
+      "",
+      "const ${1:${TM_FILENAME_BASE}} = () => (",
+      "\t<div>",
+      "\t\t<h1>${0}</h1>",
+      "\t</div>",
+      ")",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}}"
+    ],
+    "description": "Initial arrow function component file for React JUST PRESENTATIONAL"
+  },
+  "Initial function component with useState for React": {
+    "prefix": "rf-usestate",
+    "body": [
+      "import React, { useState } from 'react'",
+      "",
+      "function ${1:${TM_FILENAME_BASE}} () {",
+      "\tconst [${2:state}, set${2:state}] = useState('${2:state}')",
+      "",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t<h1>${0}</h1>",
+      "\t\t\t<span>{${2:state}}</span>",
+      "\t\t</div>",
+      "\t)",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}}"
+    ],
+    "description": "Initial function component file with useState for React"
+  },
+  "Initial arrow function component with useState for React": {
+    "prefix": "raf-usestate",
+    "body": [
+      "import React, { useState } from 'react'",
+      "",
+      "const ${1:${TM_FILENAME_BASE}} = () => {",
+      "\tconst [${2:state}, set${2:state}] = useState('${2:state}')",
+      "",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t<h1>${0}</h1>",
+      "\t\t\t<span>{${2:state}}</span>",
+      "\t\t</div>",
+      "\t)",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}}"
+    ],
+    "description": "Initial arrow function component file with useState for React"
+  },
+  "Auxiliar arrow function component for React": {
+    "prefix": "raf-auxiliar",
+    "body": [
+      "const ${1:Component} = () => {",
+      "",
+      "\treturn (",
+      "\t\t<div>",
+      "\t\t\t<h1>${1:Component}</h1>",
+      "\t\t</div>",
+      "\t)",
+      "}"
+    ],
+    "description": "Auxiliar arrow function component for React"
+  },
+  "Auxiliar function component for React": {
+    "prefix": "rf-auxiliar",
+    "body": [
+      "const ${1:Component} = () => (",
+      "\t<h1>${1:Component}</h1>",
+      ")",
+    ],
+    "description": "Auxiliar function component for React"
+  },
+  "Initial styled-components for React": {
+    "prefix": "st-export",
+    "body": [
+      "import styled from 'styled-components'",
+      "\t",
+      "export const ${1:Container} = styled.${2:div}`",
+      "\t$0",
+      "`"
+    ],
+    "description": "Initial styled-components file for React"
+  },
+  "styled-components for React": {
+    "prefix": "st-component",
+    "body": [
+      "import styled from 'styled-components'",
+      "\t",
+      "const ${1:Container} = styled.${2:div}`",
+      "\t$0",
+      "`"
+    ],
+    "description": "Normal styled-components in React' file"
+  },
+  "ES6 react-router Link Import": {
+    "prefix": "rr-importlink",
+    "body": "import { Link } from 'react-router-dom'\n"
+  },
+  "ES6 react-router NavLink Import": {
+    "prefix": "rr-importnavlink",
+    "body": "import { NavLink } from 'react-router-dom'\n"
+  },
+  "react-router NavLink": {
+    "prefix": "rr-navlink",
+    "body": "<NavLink to={${1:path}}>{$anchorText}</NavLink>\n"
+  },
+  "react-router Link": {
+    "prefix": "rr-link",
+    "body": "<Link to={${1:path}}>{$anchorText}</Link>\n"
+  },
+  "useState": {
+    "prefix": "ru-useState",
+    "body": [
+      "const [${1:state}, set${1/(.*)/${1:/capitalize}/}] = useState(${2:initialState})"
+    ]
+  },
+  "useEffect": {
+    "prefix": "ru-useEffect",
+    "body": [
+      "useEffect(() => {",
+      "  ${1:effect}",
+      "  return () => {",
+      "    ${3:cleanup}",
+      "  }",
+      "},[${2:input}])"
+    ]
+  },
+  "useContext": {
+    "prefix": "ru-useContext",
+    "body": [
+      "const ${1:context} = useContext(${2:contextValue})"
+    ]
+  },
+  "useReducer": {
+    "prefix": "ru-useReducer",
+    "body": [
+      "const [state, dispatch] = useReducer(${1:reducer}, ${2:initialState}, ${3:init})"
+    ]
+  },
+  "useCallback": {
+    "prefix": "ru-useCallback",
+    "body": [
+      "useCallback(",
+      "  () => {",
+      "    ${1:callback}",
+      "  },",
+      "  [${2:input}],",
+      ")"
+    ]
+  },
+  "useMemo": {
+    "prefix": "ru-useMemo",
+    "body": [
+      "useMemo(() => ${1:function}, ${2:input})"
+    ]
+  },
+  "useRef": {
+    "prefix": "ru-useRef",
+    "body": [
+      "const ${1:ref} = useRef(${2:initialValue})"
+    ]
+  },
+  "useLayoutEffect": {
+    "prefix": "ru-useLayoutEffect",
+    "body": [
+      "useLayoutEffect(() => {",
+      "  ${1:effect}",
+      "  return () => {",
+      "    ${3:cleanup}",
+      "  }",
+      "},[${2:input}])"
+    ]
+  },
+  "ES6 Component Import": {
+    "prefix": "js-import",
+    "body": "import ${1:componentName} from './components/${1:componentName}'\n"
+  },
+  "throwNewError": {
+    "prefix": "js-throwerror",
+    "body": "throw new ${1:Error}('${2:message}')${3}",
+    "description": "throw new error"
+  },
+  "constRequirePackage": {
+    "prefix": "js-require",
+    "body": "const ${2:name} = require('${1:pkg}')${0}",
+    "description": "const require package"
+  },
+  "exportsMember": {
+    "prefix": "js-exportmember",
+    "body": "exports.${1:member} = ${2:value}",
+    "description": "exports.member"
+  },
+  "moduleExports": {
+    "prefix": "js-moduleexports",
+    "body": "module.exports = ${1}",
+    "description": "module.exports"
+  },
+  "destructObject": {
+    "prefix": "js-destruct",
+    "body": [
+      "const { $1 } = $2 "
+    ],
+    "description": "Creates and assigns a local variable using object destructing"
+  },
+  "ternary": {
+    "prefix": "js-ternary",
+    "body": "${1:condition} ? ${2:ifTrue} : ${3:ifFalse}",
+    "description": "ternary operator"
+  },
+  "consoleLog": {
+    "prefix": "con-log",
+    "body": "console.log(${1})",
+    "description": "Displays a message in the console"
+  },
+  "consoleError": {
+    "prefix": "con-error",
+    "body": "console.error(${1})",
+    "description": "Displays a message in the console and also includes a stack trace from where the method was called"
+  },
+  "consoleInfo": {
+    "prefix": "con-info",
+    "body": "console.info(${1})",
+    "description": "Displays a message in the console but also displays a blue information icon along with the logged message"
+  },
+  "consoleTrace": {
+    "prefix": "con-trace",
+    "body": "console.trace(${1})",
+    "description": "Prints a stack trace from the point where the method was called"
+  },
+  "consoleTime": {
+    "prefix": "con-time",
+    "body": "console.time('${1}')",
+    "description": "Console time wrapper"
+  },
+  "consoleTimeEnd": {
+    "prefix": "con-timeend",
+    "body": "console.timeEnd('${1}')",
+    "description": "Console time end wrapper"
+  },
+  "consoleWarn": {
+    "prefix": "con-warn",
+    "body": "console.warn(${1})",
+    "description": "Displays a message in the console but also displays a yellow warning icon along with the logged message"
+  }
+}

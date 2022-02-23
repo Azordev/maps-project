@@ -1,0 +1,12 @@
+{
+  "processors": ["stylelint-processor-styled-components"],
+  "extends": "stylelint-config-standard",
+  "syntax": "scss",
+  "overrides": [
+    {
+      "files": ["'./**/*.styled.jsx'"],
+      "customSyntax": "postcss-scss"
+    }
+  ],
+  "rules": { "value-keyword-case": ["lower", { "ignoreKeywords": ["dummyValue"] }] }
+}

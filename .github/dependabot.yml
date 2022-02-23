@@ -1,0 +1,43 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: '/'
+    schedule:
+      interval: monthly
+      time: '04:00'
+    open-pull-requests-limit: 10
+    ignore:
+      - dependency-name: 'react'
+      - dependency-name: 'react-dom'
+      - dependency-name: 'workbox-background-sync'
+      - dependency-name: 'workbox-broadcast-update'
+      - dependency-name: 'workbox-cacheable-response'
+      - dependency-name: 'workbox-google-analytics'
+      - dependency-name: 'workbox-expiration'
+      - dependency-name: 'workbox-navigation-preload'
+      - dependency-name: 'workbox-precaching'
+      - dependency-name: 'workbox-range-requests'
+      - dependency-name: 'workbox-routing'
+      - dependency-name: 'workbox-strategies'
+      - dependency-name: 'workbox-streams'
+      - dependency-name: '@arkweid/lefthook'
+      - dependency-name: '@commitlint/cli'
+      - dependency-name: '@commitlint/config-conventional'
+      - dependency-name: 'cspell'
+      - dependency-name: 'eslint'
+      - dependency-name: 'eslint-config-prettier'
+      - dependency-name: 'eslint-config-standard'
+      - dependency-name: 'eslint-plugin-import'
+      - dependency-name: 'eslint-plugin-node'
+      - dependency-name: 'eslint-plugin-promise'
+      - dependency-name: 'eslint-plugin-react'
+      - dependency-name: 'prettier'
+      - dependency-name: 'react-app-rewired'
+      - dependency-name: 'stylelint'
+      - dependency-name: 'stylelint-config-standard'
+      - dependency-name: 'stylelint-processor-styled-components'
+      - dependency-name: 'stylelint-webpack-plugin'
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    schedule:
+      interval: 'monthly'
