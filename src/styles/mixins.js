@@ -15,6 +15,11 @@ export const border = ({ all, x = all, y = all, bottom = y, left = x, right = x,
   }
 `
 
+/**
+ * 
+ * @param {{ all?: String, bl?: String, br?: String, tl?: String, tr?: String }} Object 
+ * @returns 
+ */
 export const rounded = ({ all, bl = all, br = all, tl = all, tr = all }) => css`
   border-end-end-radius: ${br};
   border-end-start-radius: ${bl};
@@ -53,6 +58,12 @@ export const p = ({ all, x = all, y = all, bottom = y, left = x, right = x, top 
     padding-top: ${top};
   }
 `
+
+/**
+ * 
+ * @param {{ height?: String, maxHeight?: String, maxWidth?: String, minHeight?: String, minWidth?: String, width?: String }} Object 
+ * @returns 
+ */
 export const size = ({ height, maxHeight, maxWidth, minHeight, minWidth, width }) => css`
   block-size: ${height};
   inline-size: ${width};

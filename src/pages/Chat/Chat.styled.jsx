@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 import { bg, p, rounded, size, text } from '../../styles/mixins'
 
 export const ChatLayoutContainer = styled.div`

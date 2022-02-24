@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from '@emotion/styled';
 import star from '../../assets/star.svg'
 import selectedStar from '../../assets/selected-star.svg'
 

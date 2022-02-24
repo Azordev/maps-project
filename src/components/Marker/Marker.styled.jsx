@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from '@emotion/styled';
 import dasherMarker from '../../assets/dasher-marker.svg'
 
 /**
@@ -8,7 +8,7 @@ import dasherMarker from '../../assets/dasher-marker.svg'
  */
 
 export const Wrapper =
-  /** @type {import('styled-components').ThemedStyledFunction<'div', MarkerProps>} */
+  /** @type {import('@emotion/styled').ThemedStyledFunction<'div', MarkerProps>} */
   (styled.div)`
     position: absolute;
     top: 50%;
