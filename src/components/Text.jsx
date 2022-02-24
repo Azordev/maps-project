@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components'
+import styled from '@emotion/styled'
+import { css } from '@emotion/react'
 import { text } from '../styles/mixins'
 
 /**
@@ -13,28 +14,34 @@ import { text } from '../styles/mixins'
  *    input?: boolean,
  *    center?: boolean,
  *    margin?: string,
+ *    color?: string,
  * }} TextProps
  */
 const Text =
-  /** @type {import('styled-components').ThemedStyledFunction<'p', TextProps>} */
-  (styled.p)`
+  styled.p`
     // The most common
     ${[text.white, text.xs]}
 
     // Size
-  ${props =>
+  ${
+  /** @param {TextProps} props */
+  props =>
       props.xsmall &&
       css`
         ${text.sm};
       `}
 
-  ${props =>
+  ${
+  /** @param {TextProps} props */
+  props =>
       props.small &&
       css`
         ${text.base};
       `}
 
-  ${props =>
+  ${
+  /** @param {TextProps} props */
+  props =>
       props.medium &&
       css`
         ${text['2xl']};
@@ -43,7 +50,9 @@ const Text =
         }
       `}
 
-  ${props =>
+  ${
+  /** @param {TextProps} props */
+  props =>
       props.xlarge &&
       css`
         ${text['5xl']};
@@ -52,7 +61,9 @@ const Text =
         }
       `}
 
-    ${props =>
+    ${
+    /** @param {TextProps} props */
+    props =>
       props.large &&
       css`
         ${text['4xl']};
@@ -62,28 +73,36 @@ const Text =
       `}
 
   // Weight
-  ${props =>
+  ${
+  /** @param {TextProps} props */
+  props =>
       props.bold &&
       css`
         ${text['600']};
       `}
   
   //Colors
-  ${props =>
+  ${
+  /** @param {TextProps} props */
+  props =>
       props.color &&
       css`
         ${text[props.color] || `color: ${props.color}`};
       `}
 
   // Uppercase
-  ${props =>
+  ${
+  /** @param {TextProps} props */
+  props =>
       props.uppercase &&
       css`
         text-transform: uppercase;
       `}
  
   //Input
-  ${props =>
+  ${
+  /** @param {TextProps} props */
+  props =>
       props.input &&
       css`
         ::placeholder {
@@ -92,14 +111,18 @@ const Text =
       `}
 
     // Text align
-    ${props =>
+    ${
+    /** @param {TextProps} props */
+    props =>
       props.center &&
       css`
         text-align: center;
       `}
 
     // Margin
-    ${props =>
+    ${
+    /** @param {TextProps} props */
+    props =>
       props.margin &&
       css`
         margin: ${props.margin}px;
