@@ -13,20 +13,19 @@ const theme = {
 const Theme = ({ children }) => (
   <ThemeProvider theme={theme}>
     
-    
     <Global
       styles={css`
       ${normalize}
 
       :root {
-        --primary: ${({ theme }) => theme.colors.blue08};
-        --secondary: ${({ theme }) => theme.colors.yellow06};
-        --black: ${({ theme }) => theme.colors.gray09};
-        --light-gray: ${({ theme }) => theme.colors.gray02};
-        --light-gray-2: ${({ theme }) => theme.colors.gray04};
+        --primary: ${theme.colors.blue08};
+        --secondary: ${theme.colors.yellow06};
+        --black: ${theme.colors.gray09};
+        --light-gray: ${theme.colors.gray02};
+        --light-gray-2: ${theme.colors.gray04};
         --white: white;
-        --danger: ${({ theme }) => theme.colors.gray09};
-        --blue-text: ${({ theme }) => theme.colors.blue06};
+        --danger: ${theme.colors.gray09};
+        --blue-text: ${theme.colors.blue06};
 
         --font-family: 'Poppins', sans-serif;
         --z-normal: 0;
