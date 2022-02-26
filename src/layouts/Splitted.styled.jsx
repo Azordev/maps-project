@@ -16,7 +16,7 @@ export const Header = styled.div`
   display: flex;
   flex-direction: column;
   background: var(--light-blue-3);
-  border-radius: 0 0 68px 73px;
+  border-radius: 0 0 25px 25px;
   padding: 0 2rem;
 
   @media (max-width: 960px) {
