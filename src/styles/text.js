@@ -63,7 +63,7 @@ const text = {
     font-weight: 600;
   `,
   700: css`
-    font-weight: 700;
+    font-weight: 700 !important;
   `,
   800: css`
     font-weight: 800;
