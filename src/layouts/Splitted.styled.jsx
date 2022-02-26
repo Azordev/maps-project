@@ -15,7 +15,7 @@ export const Container = styled.div`
 export const Header = styled.div`
   display: flex;
   flex-direction: column;
-  background: var(--primary);
+  background: var(--light-blue-3);
   border-radius: 0 0 25px 25px;
   padding: 0 2rem;
 

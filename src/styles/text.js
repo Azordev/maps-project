@@ -63,7 +63,7 @@ const text = {
     font-weight: 600;
   `,
   700: css`
-    font-weight: 700;
+    font-weight: 700 !important;
   `,
   800: css`
     font-weight: 800;
@@ -73,6 +73,12 @@ const text = {
   `,
   secondary: css`
     color: var(--secondary);
+  `,
+  third: css`
+  color: var(--light-blue-2);
+  `,
+  four: css`
+  color: var(--light-blue-1);
   `,
   black: css`
     color: var(--black);

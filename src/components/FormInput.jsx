@@ -1,15 +1,17 @@
 import styled from '@emotion/styled';
 
 export const FormInput = styled.input`
-  width: 280px;
-  height: 40px;
+  width: 268px;
+  height: 53px;
 
-  border-radius: 2rem;
+  border-radius: 8px;
+
+  background: var(--light-gray-1);
 
   padding-left: 20px;
   margin: 10px;
   border: none;
-  border: 1px solid var(--light-gray-2);
+  border: 1px solid var(--light-gray-0);
   outline: none;
 
   display: block;
@@ -18,6 +20,7 @@ export const FormInput = styled.input`
     font-weight: bold;
     color: #acb3ba;
     font-size: 0.8rem;
+    text-align: center;
   }
 
   &:focus {
