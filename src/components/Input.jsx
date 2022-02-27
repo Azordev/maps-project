@@ -18,7 +18,7 @@ const Input = styled.input`
     ({bgColor}) =>
       bgColor === 'gray' &&
       css`
-        background-color: var(--light-gray);
+       //background-color: var(--light-gray);
         text-color: var(--black);
       `}
   `
