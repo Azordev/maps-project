@@ -11,6 +11,8 @@ const colors = {
   blue03: '#9DBDFD',
   blue02: '#002740',
   blue01: '#005D9D',
+  blue061: '#9DBDFD',
+  blue062:  '#002740',
   yellow09: '#FF9F00',
   yellow08: '#FDBF00',
   yellow07: '#FDC12A',
