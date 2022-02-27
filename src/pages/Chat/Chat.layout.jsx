@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import deliveryManWhite from '../../assets/delivery-chat-white.png'
+import deliveryManWhite from '../../assets/user-white.png'
 import BackButton from '../../components/BackButton'
 import {
   ChatLayoutContainer,
@@ -16,12 +16,12 @@ const Chat = ({ children, SendForm }) => (
   <ChatLayoutContainer>
     <HeaderChat>
       <BackButton />
-      <HeaderText>
-        <HeaderTitle>Repartidor Dasher</HeaderTitle>
-      </HeaderText>
       <HeaderChatImgContainer>
         <HeaderChatImg src={deliveryManWhite} />
       </HeaderChatImgContainer>
+      <HeaderText>
+        <HeaderTitle>Repartidor Dasher</HeaderTitle>
+      </HeaderText>
     </HeaderChat>
     <ChatBodyWrapper>{children}</ChatBodyWrapper>
     <FooterChat>{SendForm}</FooterChat>

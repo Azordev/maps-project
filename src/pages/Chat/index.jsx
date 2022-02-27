@@ -1,5 +1,5 @@
 import { useParams, useHistory } from 'react-router-dom'
-import deliveryManWhite from '../../assets/delivery-chat-white.png'
+import deliveryManWhite from '../../assets/delivery-chat-user.png'
 import userIcon from '../../assets/user-icon.png'
 import { FooterChatInput, MessageBox, Avatar, MessageRow } from './Chat.styled'
 import { useLatestMessages, InsertClientMessage } from '../../hooks'
@@ -65,8 +65,6 @@ const Chat = () => {
         >
           <div>
             <Input
-              // @ts-ignore
-              bgColor="gray"
               placeholder="Escribe aqui..."
               value={message}
               onChange={e => setMessage(e.target.value)}
@@ -82,7 +80,6 @@ const Chat = () => {
         {Messages}
         {loading && (
           <MessageRow
-            // @ts-ignore
             type={'client'}
           >
             <Avatar src={userIcon} />
