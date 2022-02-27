@@ -18,6 +18,7 @@ export const Header = styled.div`
   @media (min-width: 768px) {
     flex-wrap: nowrap;
     flex-direction: row;
+    
   }
 `
 export const HalfSection = styled.div`
@@ -141,5 +142,6 @@ export const Button = styled(Link)`
     letter-spacing: 2px;
     transform: none;
     max-width: 378px;
+    
   }
 `

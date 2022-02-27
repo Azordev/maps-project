@@ -41,15 +41,24 @@ export const InfoContainer = styled.div`
 
   h1 {
     font-size: 20px;
-    color: blue;
-    margin-bottom: 0;
+    color: #005D9D;
+    margin-bottom: 0px;
+    font-weight: bold;
+    line-height: 23px;
+    letter-spacing: -0.02em;
+    font-family: 'Work Sans', sans-serif;
   }
 
   p {
-    font-size: 16px;
-    color: gray;
+    font-size: 14px;
+    color: #3B3B3C;
     padding-left: 16px;
     padding-right: 16px;
+    padding-bottom: 0px;
+    margin-top:10px;
+    margin-bottom:0px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 21px;
   }
 
   h4{
@@ -59,18 +68,26 @@ export const InfoContainer = styled.div`
 
   ul {
     align-self: start;
-    color: blue;
+    font-size: 14px;
+    color: #3B3B3C;
+    padding-top:0;
+    margin-top:0px;
+    line-height: 21px;
+
   }
 `
 export const ModalButton = styled.button`
-  background: blue;
+  background: #005D9D;
   margin: 18px;
   width: 250px;
   height: 50px;
   border: none;
   cursor: pointer;
-  border-radius: 25px;
+  border-radius: 13px;
   flex-shrink: 0;
   color: white;
   font-weight: bold;
+  text-transform:uppercase;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
 `

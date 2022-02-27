@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // @ts-nocheck
 import { useState } from 'react'
 import { useHistory } from 'react-router-dom'
@@ -7,6 +8,7 @@ import { useGetPackagesIdByCode } from '../../hooks'
 import Layout from './Check.layout'
 import FormInput from '../../components/FormInput'
 import { TextHandlerColorMobile } from './Check.styled'
+
 
 const Check = () => {
   const [packageCode, setPackageCode] = useState('')
@@ -50,13 +52,13 @@ const Check = () => {
       DontForgetModal={
         <Modal isOpen={isModalOpen} handleClick={() => changeIsModalOpen(false)} actionText="Entendido">
           <img src={warning} alt="Warning" />
-          <Text as="h1" color="primary" small>
+          <Text as="h1">
             Antes de recibir...
           </Text>
-          <Text color="danger">
+          <Text>
             No olvides confirmar la recepción de este envío al final de este proceso ingresando:
           </Text>
-          <Text as="ul" color="primary" bold>
+          <Text as="ul">
             <li>Nombre</li>
             <li>RUT</li>
             <li>Celular</li>

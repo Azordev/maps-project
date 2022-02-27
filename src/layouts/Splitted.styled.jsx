@@ -5,7 +5,8 @@ export const Container = styled.div`
   flex-direction: column;
   min-height: 100vh;
   width: 100vw;
-  background: var(--white);
+  background-color: #0000FF;
+  background: rgba(0, 0, 255, 0.17);
 
   @media (min-width: 1025px) {
     flex-direction: row;
@@ -40,6 +41,7 @@ export const TicketImage = styled.img`
   width: 140px;
   align-self: flex-start;
   margin: 2.5rem 0 -13px 15px;
+  
 
   @media (min-width: 1025px) {
     width: 40vh;
@@ -54,6 +56,7 @@ export const ConfirmImage = styled.img`
   width: 140px;
   align-self: flex-start;
   margin: 0 0 -13px 15px;
+  
 
   @media (min-width: 1025px) {
     width: 40vh;
@@ -71,6 +74,7 @@ export const MainSection = styled.div`
   display: grid;
   align-content: center;
   text-align: center;
+
 
   @media (min-width: 1025px) {
     width: 50%;
