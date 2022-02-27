@@ -11,12 +11,13 @@ const HeaderMap = styled.div`
   display: flex;
   align-items: center;
   flex-direction: row;
-  background: var(--primary);
+  background: var(--blueheader);
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 25px;
   padding: 5px;
   min-height: 10vh;
   place-content: space-between;
+
 
   @media (max-width: 960px) {
     width: inherit;
@@ -24,15 +25,18 @@ const HeaderMap = styled.div`
     z-index: 1;
   }
 `
-
 const HeaderText = styled.div`
   width: 33.33vw;
   text-align: center;
-  color: var(--secondary);
   display: flex;
   flex-direction: column;
   margin: auto 0;
   height: auto;
+  font-size:18px;
+  font-weight: 700;
+  line-height:27px;
+  color:var(--headertext);
+  font-family: 'Poppins', sans serif;
 
   @media (max-width: 960px) {
     font-size: 1.2em;
@@ -57,7 +61,7 @@ const ChatBtnContainer = styled.div`
 
 const ChatBtn = styled.img`
   cursor: pointer;
-  margin: auto 0;
+  margin: auto 10px;
 
   @media (min-width: 1025px) {
     width: auto;
@@ -75,14 +79,15 @@ const HeaderTitle = styled.div`
   text-align: left;
   margin: 0 auto;
   font-weight: bold;
+  line-height: 17px;
 `
-
 const HeaderSubTitle = styled.div`
   display: flex;
   text-align: left;
-  font-size: 0.58em;
-  color: white;
+  font-size: 13px;
+  color: var(--headertext);
   margin: 0 auto;
+  line-height: 19px;
 `
 
 const FooterMap = styled.div`
@@ -95,6 +100,9 @@ const FooterMap = styled.div`
   flex-wrap: wrap;
   height: auto;
   margin: 0 auto;
+  background: var(--blueheader);
+  font-family: 'Poppins', sans serif;
+  
 
   @media (max-width: 960px) {
     width: 100vw;
@@ -119,7 +127,11 @@ const FooterMapAddress = styled.div`
   align-items: center;
   text-align: center;
   color: white;
-  padding: 10px 0;
+  color:var(--headertext);
+  font-size:12px;
+  font-weight:500;
+  font-family: 'Poppins', sans serif;
+  line-height:18px;
 
   ::after {
     content: '${props => props.txt}';
