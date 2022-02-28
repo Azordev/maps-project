@@ -2,18 +2,23 @@ import styled from '@emotion/styled';
 import { Text } from '../../components'
 
 export const CheckText = styled(Text)`
-  margin: 0;
+  margin-top: 10px;
 
   @media (min-width: 1025px) {
-    font-size: 6rem;
+    font-size: 25px;
     margin-top: max(2.5rem, 13vh);
     margin-bottom: 1.2rem;
   }
   @media (max-height: 480px) {
-    font-size: 5rem;
+    font-size: 25px;
     margin-bottom: 0.3rem;
   }
 `
+
+export const BtnBackContainer = styled.div`
+  margin-top: 10px;
+`
+
 export const CheckTextSubtitle = styled(Text)`
   margin: 0;
   font-weight: bold;
@@ -24,6 +29,7 @@ export const CheckTextSubtitle = styled(Text)`
   }
 `
 export const TextHandlerColorMobile = styled(Text)`
+  margin-top: 80px;
   @media (min-width: 1025px) {
     color: var(--primary);
     font-weight: bold;

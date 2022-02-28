@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types'
 
 import { Container, Header, TicketImage, MainSection } from '../../layouts/Splitted.styled'
-import { CheckText, CheckTextSubtitle } from './Check.styled'
+import { CheckText, CheckTextSubtitle, BtnBackContainer } from './Check.styled'
 import ticket from '../../assets/ticket.png'
 
 import BackButton from '../../components/BackButton'
@@ -10,11 +10,13 @@ import BackButton from '../../components/BackButton'
 const Check = ({ headerTitle, headerSubtitle, children, DontForgetModal }) => (
   <Container>
     <Header className="header-ticket">
-      <BackButton />
-      <CheckText className="heading-text" as="h1" color="secondary" medium>
+      <BtnBackContainer>
+        <BackButton />
+      </BtnBackContainer>
+      <CheckText className="heading-text" as="h1" color="third" xlarge>
         {headerTitle}
       </CheckText>
-      <CheckTextSubtitle className="heading-subtext" small>
+      <CheckTextSubtitle className="heading-subtext" color='third' small>
         {headerSubtitle}
       </CheckTextSubtitle>
       <TicketImage src={ticket} alt="Ticket" />

@@ -67,7 +67,7 @@ const Check = () => {
       }
     >
       <div className="check-ticket">
-        <TextHandlerColorMobile color="secondary" bold uppercase>
+        <TextHandlerColorMobile color="third" bold uppercase lg>
           Confirmar n° boleta o pedido
         </TextHandlerColorMobile>
         <Form formData={setPackageCode} onSubmit={e => toDelivery(e)}>
