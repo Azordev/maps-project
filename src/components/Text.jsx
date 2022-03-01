@@ -12,6 +12,8 @@ import { text } from '../styles/mixins'
  *    large?: boolean,
  *    xlarge?: boolean,
  *    bold?: boolean,
+ *    title?: boolean,
+ *    subtitle?: boolean,
  *    weight700?: boolean, 
  *    uppercase?: boolean,
  *    input?: boolean,
@@ -23,7 +25,7 @@ import { text } from '../styles/mixins'
 const Text =
   styled.p`
     // The most common
-    ${[text.white, text.xs]}
+    //${[text.white, text.xs]}
 
     // Size
   ${
@@ -33,6 +35,20 @@ const Text =
       css`
         ${text.sm};
       `}
+  ${
+  /** @param {TextProps} props */
+  props =>
+      props.title &&
+      css`
+        ${text.title};
+  `} 
+  ${
+  /** @param {TextProps} props */
+  props =>
+      props.subtitle &&
+      css`
+        ${text.subtitle};
+  `}     
 
   ${
   /** @param {TextProps} props */

@@ -4,7 +4,8 @@ export const FormInput = styled.input`
   width: 268px;
   height: 53px;
 
-  border-radius: 8px;
+  border-radius: 7px;
+  box-shadow: 2px 5px 6px rgb(0 0 0 / 0.3);
 
   background: var(--light-gray-1);
 
@@ -21,16 +22,21 @@ export const FormInput = styled.input`
     color: #acb3ba;
     font-size: 0.8rem;
     text-align: center;
+    text-transform: uppercase;
   }
 
   &:focus {
     border: solid 1px var(--dark, #000);
-    box-shadow: 2px 5px 6px rgb(0 0 0 / 0.3);
     outline: none;
   }
 
+  @media (min-width: 961px) {
+    width: 90%;
+    //height: auto;
+  }
+
   @media (min-width: 1025px) {
-    width: 350px;
+    width: 90%;
     height: 60px;
 
     ::placeholder {

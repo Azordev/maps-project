@@ -74,6 +74,20 @@ const text = {
   secondary: css`
     color: var(--secondary);
   `,
+  title: css`
+    color: var(--light-blue-2);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 39px;
+  `,
+  subtitle: css`
+   color: var(--light-blue-2);
+   font-style: normal;
+   font-weight: bold;
+   font-size: 18px;
+   //line-height: 27px;
+ `,
   third: css`
   color: var(--light-blue-2);
   `,

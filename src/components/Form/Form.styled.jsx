@@ -6,16 +6,26 @@ export const FormContainer = styled.form`
   display: flex;
   align-items: center;
   flex-direction: column;
+
+  @media (min-width: 961px) {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+  }
 `
 
 export const ButtonContainer = styled.form`
   display: flex;
   align-items: center;
+
+  @media (min-width: 961px) {
+    //display: block;
+  }
 `
 
 export const FormButtonPrimary = styled.button`
   width: 169px;
-  height: 40px;
+  height: 60px;
   border-radius: 10px;
   margin: 10px;
   margin-top: 60px;
@@ -33,12 +43,12 @@ export const FormButtonPrimary = styled.button`
   }
 
   @media (min-width: 1025px) {
-    width: 350px;
+    width: 200px;
   }
 `
-export const FormButtonDanger = styled.button`
+export const FormButtonSecondary = styled.button`
   width: 169px;
-  height: 40px;
+  height: 60px;
   border-radius: 10px;
   margin: 10px;
   margin-top: 60px;
@@ -56,6 +66,6 @@ export const FormButtonDanger = styled.button`
   }
 
   @media (min-width: 1025px) {
-    width: 350px;
+    width: 200px;
   }
 `

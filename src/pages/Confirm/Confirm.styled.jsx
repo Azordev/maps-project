@@ -13,15 +13,21 @@ export const CheckImg = styled.img`
   @media (max-width: 960px) {
     position: relative;
     height: 100px;
-    bottom: 0;
+    bottom: -20px;
+    width: 94px;
   }
 
   @media (min-width: 961px) {
-    position: absolute;
     width: 20vw;
     height: auto;
     bottom: 0;
     right: 50vw;
+  }
+
+  @media (min-width: 1025px) {
+    margin-left: 360px;
+    margin-top: 185px;
+    width: 150px;
   }
 `
 

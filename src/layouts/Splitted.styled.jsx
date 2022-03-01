@@ -16,7 +16,7 @@ export const Header = styled.div`
   display: flex;
   flex-direction: column;
   background: var(--light-blue-3);
-  border-radius: 0 0 25px 25px;
+  border-radius: 0 0 68px 73px;
   padding: 0 2rem;
 
   @media (max-width: 960px) {
@@ -72,7 +72,6 @@ export const MainSection = styled.div`
   text-align: center;
 
   @media (min-width: 1025px) {
-    background: var(--secondary);
     width: 50%;
     height: 100vh;
     justify-content: center;
