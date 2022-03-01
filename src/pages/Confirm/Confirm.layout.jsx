@@ -12,7 +12,7 @@ const Confirm = ({ headerTitle, headerSubTitle, children, RatingModal, FinalModa
       <BackButton />
       <HeaderContainer>
         <Text as="h1" title>
-          {headerTitle} 555
+          {headerTitle}
         </Text>
         <Text subtitle >{headerSubTitle}</Text>
         <CheckImg src={note} alt="Note icon" />
