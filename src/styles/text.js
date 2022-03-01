@@ -102,6 +102,9 @@ const text = {
   danger: css`
     color: var(--danger);
   `,
+  gray: css`
+    color: var(--gray);
+  `,
   textCenter: css`
     text-align: center;
   `,
