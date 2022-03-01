@@ -51,7 +51,7 @@ const Check = () => {
       headerSubtitle="Ingresa tu número de boleta"
       DontForgetModal={
         <Modal isOpen={isModalOpen} handleClick={() => changeIsModalOpen(false)} actionText="Entendido">
-          <img src={warning} alt="Warning" />
+          <img src={warning}  width='61' height='60' alt="Warning" />
           <Text as="h1">
             Antes de recibir...
           </Text>

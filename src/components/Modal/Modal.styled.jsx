@@ -13,23 +13,25 @@ export const Overlay = styled.div`
 `
 
 export const ModalContainer = styled.div`
-  width: 310px;
-  max-width: 460px;
-  height: 460px;
-  min-height: 460px;
+  width: 260px;
+  max-width: 343px;
+  height: 260px;
+  min-height: 375px;
   background: var(--white);
   position: relative;
-  border-radius: 20px;
+  border-radius: 31px;
   box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
 
+  
   @media (min-width: 680px) {
-    width: 460px;
-    height: 45vh;
+    width: 310px;
+    height: 35vh;
   }
+  
 `
 export const InfoContainer = styled.div`
   border-radius: 15px;
@@ -40,23 +42,25 @@ export const InfoContainer = styled.div`
   justify-content: center;
 
   h1 {
-    font-size: 20px;
+    font-size: 24px;
     color: #005D9D;
-    margin-bottom: 0px;
-    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 25px;
     line-height: 23px;
+    font-style: normal;
+    font-weight: 900;
     letter-spacing: -0.02em;
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
   }
 
   p {
-    font-size: 14px;
+    font-size: 16px;
     color: #3B3B3C;
     padding-left: 16px;
     padding-right: 16px;
     padding-bottom: 0px;
-    margin-top:10px;
-    margin-bottom:0px;
+    margin-top:0;
+    margin-bottom:0;
     font-family: 'Poppins', sans-serif;
     line-height: 21px;
   }
@@ -65,12 +69,17 @@ export const InfoContainer = styled.div`
     margin-top: 0;
     margin-bottom: 2rem;
   }
-
+  img{
+    width: 60px;
+    height: 61px;
+    padding-top:0px;
+    margin-top:0px;
+  }
   ul {
     align-self: start;
-    font-size: 14px;
+    font-size: 16px;
     color: #3B3B3C;
-    padding-top:0;
+    padding-top:5px;
     margin-top:0px;
     line-height: 21px;
 
@@ -86,8 +95,10 @@ export const ModalButton = styled.button`
   border-radius: 13px;
   flex-shrink: 0;
   color: white;
-  font-weight: bold;
+  font-weight: 600;
   text-transform:uppercase;
+  font-style:normal;
   font-size: 16px;
+  line-height:24px;
   font-family: 'Poppins', sans-serif;
 `
