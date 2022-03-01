@@ -39,7 +39,6 @@ export const TicketImage = styled.img`
   width: 140px;
   align-self: flex-start;
   margin: 2.5rem 0 -13px 15px;
-  
   @media (min-width: 1025px) {
     width: 40vh;
     bottom: -38px;
@@ -52,7 +51,6 @@ export const ConfirmImage = styled.img`
   width: 140px;
   align-self: flex-start;
   margin: 0 0 -13px 15px;
-  
   @media (min-width: 1025px) {
     width: 40vh;
     bottom: -38px;
