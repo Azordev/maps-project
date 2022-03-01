@@ -37,7 +37,7 @@ const Form = ({ children, onSubmit, formData = e => e, FormButtonPrimaryTitle = 
         <FormContext.Consumer>{children}</FormContext.Consumer>
       </FormContext.Provider>
       <ButtonContainer>
-      { FormButtonSecondaryTitle != null ? <FormButtonSecondary type="submit">{FormButtonSecondaryTitle}</FormButtonSecondary> : null}
+      { FormButtonSecondaryTitle && <FormButtonSecondary type="submit">{FormButtonSecondaryTitle}</FormButtonSecondary> }
       <FormButtonPrimary type="submit">{FormButtonPrimaryTitle}</FormButtonPrimary>
       </ButtonContainer>
     </FormContainer>

@@ -25,9 +25,19 @@ export const CheckImg = styled.img`
   }
 
   @media (min-width: 1025px) {
-    margin-left: 360px;
-    margin-top: 185px;
-    width: 150px;
+    margin-left: auto;
+    position: relative;
+    left: 266px;
+    top: 232px;
+    width: 147px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-left: auto;
+    position: relative;
+    left: 359px;
+    top: 352px;
+    width: 147px;
   }
 `
 

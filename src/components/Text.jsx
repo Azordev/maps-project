@@ -24,9 +24,6 @@ import { text } from '../styles/mixins'
  */
 const Text =
   styled.p`
-    // The most common
-    //${[text.white, text.xs]}
-
     // Size
   ${
   /** @param {TextProps} props */

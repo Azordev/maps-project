@@ -17,10 +17,6 @@ export const FormContainer = styled.form`
 export const ButtonContainer = styled.form`
   display: flex;
   align-items: center;
-
-  @media (min-width: 961px) {
-    //display: block;
-  }
 `
 
 export const FormButtonPrimary = styled.button`

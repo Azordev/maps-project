@@ -63,7 +63,7 @@ const text = {
     font-weight: 600;
   `,
   700: css`
-    font-weight: 700 !important;
+    font-weight: 700;
   `,
   800: css`
     font-weight: 800;
@@ -86,7 +86,6 @@ const text = {
    font-style: normal;
    font-weight: bold;
    font-size: 18px;
-   //line-height: 27px;
  `,
   third: css`
   color: var(--light-blue-2);

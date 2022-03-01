@@ -65,6 +65,7 @@ export const ConfirmImage = styled.img`
 `
 export const MainSection = styled.div`
   align-items: center;
+  background-color: #FFFFFF;
   justify-content: center;
   height: 100%;
   display: grid;

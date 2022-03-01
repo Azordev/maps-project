@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 export const FormInput = styled.input`
-  width: 268px;
+  max-width: 100%;
   height: 53px;
 
   border-radius: 7px;
@@ -32,11 +32,11 @@ export const FormInput = styled.input`
 
   @media (min-width: 961px) {
     width: 90%;
-    //height: auto;
   }
 
   @media (min-width: 1025px) {
-    width: 90%;
+    width: 90%; 
+    max-width: 350px;
     height: 60px;
 
     ::placeholder {
