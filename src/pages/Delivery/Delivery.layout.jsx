@@ -1,6 +1,6 @@
 // @ts-nocheck
 import PropTypes from 'prop-types'
-import { Text, BackButton } from '../../components'
+import { Text } from '../../components'
 import {
   MapLayoutContainer,
   HeaderMap,
@@ -19,7 +19,6 @@ import assistant from '../../assets/assistant.png'
 import chat from '../../assets/chat.png'
 import gps from '../../assets/gps-icon.png'
 import { Fragment } from 'react'
-
 /**
  * Delivery Layout
  *
@@ -49,7 +48,6 @@ const Delivery = ({
     <Fragment>
       <MapLayoutContainer>
         <HeaderMap>
-          <BackButton />
           <HeaderText>
             <HeaderTitle>{headerTitle}</HeaderTitle>
             <HeaderSubTitle>{headerSubtitle}</HeaderSubTitle>

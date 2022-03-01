@@ -6,7 +6,6 @@ const MapLayoutContainer = styled.div`
   height: 100vh;
   width: 100vw;
 `
-
 const HeaderMap = styled.div`
   display: flex;
   align-items: center;
@@ -14,23 +13,52 @@ const HeaderMap = styled.div`
   background: var(--blueheader);
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 25px;
-  padding: 5px;
+  padding: 6px;
   min-height: 10vh;
   place-content: space-between;
 
-
   @media (max-width: 960px) {
-    width: inherit;
+    width: 98.7%;
     position: absolute;
     z-index: 1;
+    margin-right:0px;
+  }
+  @media (max-width: 885px) {
+    width: 98.5%;
+  }
+  @media (max-width: 767px) {
+    width: 98.3%;
+  }
+  @media (max-width: 677px) {
+    width: 98.1%;
+  }
+  @media (max-width: 606px) {
+    width: 97.8%;
+  }
+  @media (max-width: 523px) {
+    width: 97.5%;
+  }
+  @media (max-width: 461px) {
+    width: 97.2%;
+  }
+  @media (max-width: 411px) {
+    width: 96.9%;
+  }
+  @media (max-width: 371px) {
+    width: 96.4%;
+  }
+  @media (max-width: 320px) {
+    width: 96%;
+  }
+  @media (max-width: 280px) {
+    width: 95.2%;
   }
 `
 const HeaderText = styled.div`
-  width: 33.33vw;
   text-align: center;
   display: flex;
   flex-direction: column;
-  margin: auto 0;
+  margin-left: 25px;
   height: auto;
   font-size:18px;
   font-weight: 700;
@@ -41,24 +69,21 @@ const HeaderText = styled.div`
   @media (max-width: 960px) {
     font-size: 1.2em;
   }
-
   @media (min-width: 961px) {
     font-size: 2em;
   }
-
   @media (min-width: 3180px) {
     font-size: 6em;
   }
 `
-
 const ChatBtnContainer = styled.div`
   width: 28.33vw;
   height: auto;
   display: flex;
   justify-content: flex-end;
   cursor: default;
+  margin-right: 15px;
 `
-
 const ChatBtn = styled.img`
   cursor: pointer;
   margin: auto 10px;
@@ -67,29 +92,29 @@ const ChatBtn = styled.img`
     width: auto;
     height: 7vh;
   }
-
   @media (max-width: 960px) {
     width: 50px;
     height: 50px;
   }
 `
-
 const HeaderTitle = styled.div`
   display: flex;
   text-align: left;
   margin: 0 auto;
-  font-weight: bold;
+  font-weight: 900;
   line-height: 17px;
+  font-family: 'Poppins', sans serif;
 `
 const HeaderSubTitle = styled.div`
   display: flex;
   text-align: left;
   font-size: 13px;
+  font-weight: 400;
   color: var(--headertext);
-  margin: 0 auto;
+  margin-left: 1px;
   line-height: 19px;
+  font-family: 'Poppins', sans serif;
 `
-
 const FooterMap = styled.div`
   align-self: flex-end;
   background-color: var(--primary);
@@ -103,22 +128,18 @@ const FooterMap = styled.div`
   background: var(--blueheader);
   font-family: 'Poppins', sans serif;
   
-
   @media (max-width: 960px) {
     width: 100vw;
     position: absolute;
     bottom: 0;
   }
-
   @media (min-width: 961px) {
     width: 50vw;
   }
-
   @media (min-width: 3180px) {
     width: 70vw;
   }
 `
-
 const FooterMapAddress = styled.div`
   flex: ${props => props.cols};
   display: flex;
@@ -140,16 +161,13 @@ const FooterMapAddress = styled.div`
   @media (max-width: 960px) {
     font-size: 0.7em;
   }
-
   @media (min-width: 1025px) {
     font-size: 1em;
   }
-
   @media (min-width: 3180px) {
     font-size: 3em;
   }
 `
-
 const MapContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -158,12 +176,10 @@ const MapContainer = styled.div`
   @media (max-width: 960px) {
     min-height: 100vh;
   }
-
   @media (min-width: 1025px) {
     margin: 0 auto;
   }
 `
-
 export {
   MapLayoutContainer,
   HeaderMap,
