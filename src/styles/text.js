@@ -25,10 +25,6 @@ const text = {
     font-size: 1.5rem;
     line-height: 2rem;
   `,
-  '1xl': css`
-  font-size: 0.875rem;
-  line-height: 1.3;
-`,
   '3xl': css`
     font-size: 1.875rem;
     line-height: 2.25rem;

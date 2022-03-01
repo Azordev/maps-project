@@ -11,7 +11,6 @@ export const Overlay = styled.div`
   align-items: center;
   justify-content: center;
 `
-
 export const ModalContainer = styled.div`
   width: 260px;
   max-width: 343px;
@@ -26,12 +25,10 @@ export const ModalContainer = styled.div`
   flex-direction: column;
   align-items: center;
 
-  
   @media (min-width: 680px) {
     width: 310px;
     height: 35vh;
   }
-  
 `
 export const InfoContainer = styled.div`
   border-radius: 15px;
@@ -72,15 +69,15 @@ export const InfoContainer = styled.div`
   img{
     width: 60px;
     height: 61px;
-    padding-top:0px;
-    margin-top:0px;
+    padding-top: 0px;
+    margin-top: 0px;
   }
   ul {
     align-self: start;
     font-size: 16px;
     color: #3B3B3C;
-    padding-top:5px;
-    margin-top:0px;
+    padding-top: 5px;
+    margin-top: 0px;
     line-height: 21px;
 
   }
@@ -96,9 +93,9 @@ export const ModalButton = styled.button`
   flex-shrink: 0;
   color: white;
   font-weight: 600;
-  text-transform:uppercase;
+  text-transform: uppercase;
   font-style:normal;
   font-size: 16px;
-  line-height:24px;
+  line-height: 24px;
   font-family: 'Poppins', sans-serif;
 `

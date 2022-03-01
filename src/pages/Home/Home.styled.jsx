@@ -17,8 +17,7 @@ export const Header = styled.div`
 
   @media (min-width: 768px) {
     flex-wrap: nowrap;
-    flex-direction: row;
-    
+    flex-direction: row;  
   }
 `
 export const HalfSection = styled.div`
@@ -78,7 +77,6 @@ export const TextContainer = styled.div`
     max-width: 70%;
   }
 `
-
 export const Text = styled(OriginalText)`
   ${[text.textCenter]}
   ${props => props.title && text['7xl']}
@@ -99,7 +97,6 @@ export const DisplayText = styled(Text)`
     font-size: 6.5rem;
   }
 `
-
 export const SubtitleText = styled(Text)`
   margin-top: 3px;
   font-size: 1rem;
@@ -142,6 +139,5 @@ export const Button = styled(Link)`
     letter-spacing: 2px;
     transform: none;
     max-width: 378px;
-    
   }
 `
