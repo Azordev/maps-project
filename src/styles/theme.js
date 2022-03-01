@@ -19,10 +19,17 @@ const Theme = ({ children }) => (
 
       :root {
         --primary: ${theme.colors.blue08};
+        --light-blue-1: ${theme.colors.blue01};
+        --light-blue-2: ${theme.colors.blue02};
+        --light-blue-3: ${theme.colors.blue03};
+        --light-blue-11: ${theme.colors.blue11};
         --secondary: ${theme.colors.yellow06};
         --black: ${theme.colors.gray09};
         --light-gray: ${theme.colors.gray02};
+        --light-gray-0: ${theme.colors.gray00};
+        --light-gray-1: ${theme.colors.gray01};
         --light-gray-2: ${theme.colors.gray04};
+        --light-red-1: ${theme.colors.red01};
         --white: white;
         --danger: ${theme.colors.gray09};
         --blue-text: ${theme.colors.blue06};

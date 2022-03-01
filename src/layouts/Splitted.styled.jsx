@@ -15,8 +15,8 @@ export const Container = styled.div`
 export const Header = styled.div`
   display: flex;
   flex-direction: column;
-  background: var(--primary);
-  border-radius: 0 0 25px 25px;
+  background: var(--light-blue-3);
+  border-radius: 0 0 68px 73px;
   padding: 0 2rem;
 
   @media (max-width: 960px) {
@@ -65,6 +65,7 @@ export const ConfirmImage = styled.img`
 `
 export const MainSection = styled.div`
   align-items: center;
+  background-color: #FFFFFF;
   justify-content: center;
   height: 100%;
   display: grid;
@@ -72,7 +73,6 @@ export const MainSection = styled.div`
   text-align: center;
 
   @media (min-width: 1025px) {
-    background: var(--secondary);
     width: 50%;
     height: 100vh;
     justify-content: center;

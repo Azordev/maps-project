@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import { FormButton, FormContainer } from './Form.styled'
+import { ButtonContainer, FormButtonPrimary, FormButtonSecondary, FormContainer } from './Form.styled'
 
 const FormContext = React.createContext({
   /** @type {Object} */
@@ -9,7 +9,7 @@ const FormContext = React.createContext({
   handleFormChange: () => {},
 })
 
-const Form = ({ children, onSubmit, formData = e => e, FormButtonTitle = 'Confirmar' }) => {
+const Form = ({ children, onSubmit, formData = e => e, FormButtonPrimaryTitle = 'Confirmar', FormButtonSecondaryTitle }) => {
   const [form, setForm] = useState({})
 
   /** @param {React.ChangeEvent<HTMLInputElement>} event */
@@ -36,7 +36,10 @@ const Form = ({ children, onSubmit, formData = e => e, FormButtonTitle = 'Confir
       >
         <FormContext.Consumer>{children}</FormContext.Consumer>
       </FormContext.Provider>
-      <FormButton type="submit">{FormButtonTitle}</FormButton>
+      <ButtonContainer>
+      { FormButtonSecondaryTitle && <FormButtonSecondary type="submit">{FormButtonSecondaryTitle}</FormButtonSecondary> }
+      <FormButtonPrimary type="submit">{FormButtonPrimaryTitle}</FormButtonPrimary>
+      </ButtonContainer>
     </FormContainer>
   )
 }
@@ -45,7 +48,8 @@ Form.propTypes = {
   children: PropTypes.oneOfType([PropTypes.func, PropTypes.node]),
   onSubmit: PropTypes.func,
   formData: PropTypes.func,
-  FormButtonTitle: PropTypes.string,
+  FormButtonPrimaryTitle: PropTypes.string,
+  FormButtonSecondaryTitle: PropTypes.string,
 }
 
 export default Form
