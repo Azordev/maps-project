@@ -21,7 +21,6 @@ export const HeaderChat = styled.div`
 `
 
 export const HeaderChatImgContainer = styled.div`
-  //width: 33.33vw;
   text-align: right;
   margin-left: -80px;
   display: flex;
