@@ -115,14 +115,14 @@ const Confirm = () => {
       }
     >
       <>
-        <Text color="primary" bold uppercase>
+        <Text color="third" lg bold uppercase>
           Confirma recepción
         </Text>
-        <Form onSubmit={e => submitConfirmation(e)}>
+        <Form onSubmit={e => submitConfirmation(e)} FormButtonSecondaryTitle ='Reportar'>
           {({ handleFormChange, value }) => (
             <>
               <FormInput placeholder="Nombre" name="name" value={value} onChange={handleFormChange} />
-              <FormInput placeholder="RUT" name="RUT" value={value} onChange={handleFormChange} />
+              <FormInput placeholder="Rut" name="rut" value={value} onChange={handleFormChange} />
               <FormInput placeholder="Celular" name="phone" value={value} onChange={handleFormChange} />
             </>
           )}

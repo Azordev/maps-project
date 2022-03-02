@@ -1,7 +1,7 @@
 // @ts-nocheck
 import PropTypes from 'prop-types'
 import { Text } from '../../components'
-import note from '../../assets/note.png'
+import note from '../../assets/new_note.png'
 import { Container, Header, MainSection } from '../../layouts/Splitted.styled'
 import { CheckImg, HeaderContainer } from './Confirm.styled'
 import BackButton from '../../components/BackButton'
@@ -11,10 +11,10 @@ const Confirm = ({ headerTitle, headerSubTitle, children, RatingModal, FinalModa
     <Header>
       <BackButton />
       <HeaderContainer>
-        <Text as="h1" color="secondary" xlarge>
+        <Text as="h1" title>
           {headerTitle}
         </Text>
-        <Text medium>{headerSubTitle}</Text>
+        <Text subtitle >{headerSubTitle}</Text>
         <CheckImg src={note} alt="Note icon" />
       </HeaderContainer>
     </Header>

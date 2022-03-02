@@ -19,10 +19,14 @@ const Theme = ({ children }) => (
 
       :root {
         --primary: ${theme.colors.blue08};
+        --light-blue-11: ${theme.colors.blue11};
         --secondary: ${theme.colors.yellow06};
         --black: ${theme.colors.gray09};
         --light-gray: ${theme.colors.gray02};
+        --light-gray-0: ${theme.colors.gray00};
+        --light-gray-1: ${theme.colors.gray01};
         --light-gray-2: ${theme.colors.gray04};
+        --light-red-1: ${theme.colors.red01};
         --white: white;
         --danger: ${theme.colors.gray09};
         --blue-text: ${theme.colors.blue06};
@@ -34,7 +38,6 @@ const Theme = ({ children }) => (
         --z-map-item: 20;
         --z-modal-overlay: 30;
         --z-modal:40;
-
         --max-width: 1200px;
       }
 

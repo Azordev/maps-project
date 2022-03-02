@@ -7,9 +7,14 @@ import { text } from '../styles/mixins'
  *    xsmall?: boolean,
  *    small?: boolean,
  *    medium?: boolean,
+ *    lg?: boolean,
+ *    xlg?: boolean,
  *    large?: boolean,
  *    xlarge?: boolean,
  *    bold?: boolean,
+ *    title?: boolean,
+ *    subtitle?: boolean,
+ *    weight700?: boolean, 
  *    uppercase?: boolean,
  *    input?: boolean,
  *    center?: boolean,
@@ -19,9 +24,6 @@ import { text } from '../styles/mixins'
  */
 const Text =
   styled.p`
-    // The most common
-    ${[text.white, text.xs]}
-
     // Size
   ${
   /** @param {TextProps} props */
@@ -30,8 +32,30 @@ const Text =
       css`
         ${text.sm};
       `}
+  ${
+  /** @param {TextProps} props */
+  props =>
+      props.title &&
+      css`
+        ${text.title};
+  `} 
+  ${
+  /** @param {TextProps} props */
+  props =>
+      props.subtitle &&
+      css`
+        ${text.subtitle};
+  `}     
 
   ${
+  /** @param {TextProps} props */
+  props =>
+      props.weight700 &&
+      css`
+        ${text['700']};
+      `}
+
+  ${  
   /** @param {TextProps} props */
   props =>
       props.small &&
@@ -50,6 +74,30 @@ const Text =
         }
       `}
   ${
+
+  /** @param {TextProps} props */
+  props =>
+      props.xlg &&
+      css`
+        ${text['3xl']};
+        @media (max-width: 960px) {
+          font-size: 1.625rem;
+        }
+      `}
+
+  ${
+
+  /** @param {TextProps} props */
+  props =>
+      props.lg &&
+      css`
+        ${text['3xl']};
+        @media (max-width: 960px) {
+          font-size: 1.125rem;
+        }
+      `}
+
+  ${  
   /** @param {TextProps} props */
   props =>
       props.xlarge &&

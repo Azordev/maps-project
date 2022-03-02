@@ -45,6 +45,7 @@
     "pedido",
     "boleta",
     "Confirmar",
+    "Reportar",
     "Celular",
     "Hola",
     "llegado",
@@ -89,9 +90,6 @@
     "Quinchoa",
     "Osuna",
     "jhernandez",
-    "Contáctanos",
-    "blueheader",
-    "headertext"
   ],
   "flagWords": [],
   "ignorePaths": [

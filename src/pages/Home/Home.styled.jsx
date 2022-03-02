@@ -14,7 +14,6 @@ export const Header = styled.div`
   @media (min-width: 530px) and (min-height: 850px) {
     flex-wrap: wrap;
   }
-
   @media (min-width: 768px) {
     flex-wrap: nowrap;
     flex-direction: row;
@@ -26,7 +25,6 @@ export const HalfSection = styled.div`
   ${props => `height: ${props.mobileHeight};`}
   display: flex;
   flex-direction: column;
-
   @media (min-width: 768px) {
     ${props => `justify-content: ${props.justifyContent};`}
     width: 100%;
@@ -41,7 +39,6 @@ export const HalfSection = styled.div`
 export const Logo = styled.img`
   display: none;
   max-width: 30%;
-
   @media (min-width: 768px) {
     display: block;
     position: absolute;
@@ -59,7 +56,6 @@ export const ManImage = styled.img`
   transform: translateX(-50%);
   object-fit: contain;
   height: 60vh;
-
   @media (min-width: 768px) {
     transform: none;
     position: static;
@@ -71,13 +67,11 @@ export const ManImage = styled.img`
 export const TextContainer = styled.div`
   max-width: 100%;
   margin-top: 3rem;
-
   @media (min-width: 768px) {
     margin-top: 0px;
     max-width: 70%;
   }
 `
-
 export const Text = styled(OriginalText)`
   ${[text.textCenter]}
   ${props => props.title && text['7xl']}
@@ -87,28 +81,23 @@ export const DisplayText = styled(Text)`
   text-align: left;
   margin: 0px;
   text-align: left;
-
   @media (min-width: 768px) {
     font-size: 5rem;
     text-align: left;
     line-height: 1;
   }
-
   @media (min-width: 1025px) {
     font-size: 6.5rem;
   }
 `
-
 export const SubtitleText = styled(Text)`
   margin-top: 3px;
   font-size: 1rem;
   text-align: left;
-
   @media (min-width: 1025px) {
     font-size: 2rem;
     line-height: 1;
   }
-
   @media (min-width: 768px) {
     font-size: 1.5rem;
   }
@@ -128,7 +117,6 @@ export const Button = styled(Link)`
   font-weight: bold;
   position: absolute;
   top: calc(90% - 10px);
-
   @media (min-width: 768px) {
     display: ${props => props.webDisplay ?? 'block'};
     background: ${props => (props.webDisplay ? 'var(--primary);' : 'var(--secondary);')};

@@ -1,4 +1,5 @@
 const colors = {
+  blue11: '#005D9D',
   blue10: '#1C24F8',
   blue09: '#301BFA',
   blue08: '#4513FE',
@@ -22,9 +23,12 @@ const colors = {
   gray04: '#CDD6E0',
   gray03: '#F2F2F2',
   gray02: '#E1E1E1',
+  gray01: '#C4C4C43B',
+  gray00: '#5F6769',
   red08: '#FA4444',
   red05: '#FF9478',
   red04: '#FFBCAB',
+  red01: '#F74326',
   purple10: '#3E254C',
   purple07: '#6E57C4',
 }

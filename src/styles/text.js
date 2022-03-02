@@ -74,6 +74,25 @@ const text = {
   secondary: css`
     color: var(--secondary);
   `,
+  title: css`
+    color: var(--light-blue-2);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 39px;
+  `,
+  subtitle: css`
+   color: var(--light-blue-2);
+   font-style: normal;
+   font-weight: bold;
+   font-size: 18px;
+ `,
+  third: css`
+  color: var(--light-blue-2);
+  `,
+  four: css`
+  color: var(--light-blue-1);
+  `,
   black: css`
     color: var(--black);
   `,
@@ -82,6 +101,9 @@ const text = {
   `,
   danger: css`
     color: var(--danger);
+  `,
+  gray: css`
+    color: var(--gray);
   `,
   textCenter: css`
     text-align: center;
