@@ -4,7 +4,7 @@ import userIcon from '../../assets/user-icon.png'
 import { FooterChatInput, MessageBox, Avatar, MessageRow } from './Chat.styled'
 import { useLatestMessages, InsertClientMessage } from '../../hooks'
 import { Input } from '../../components'
-import sendChat from '../../assets/send-chat.png'
+import sendChat from '../../assets/image_send_chat.png'
 import { useState } from 'react'
 
 import Layout from './Chat.layout'

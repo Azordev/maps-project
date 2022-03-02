@@ -9,7 +9,7 @@ export const ChatLayoutContainer = styled.div`
 `
 
 export const HeaderChat = styled.div`
-  ${[rounded({ bl: '25px', br: '25px' }), p({ all: '1.5%' }), size({ height: '11vh' })]}
+  ${[rounded({ bl: '25px', br: '25px' }), size({ height: '11vh' })]}
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -33,9 +33,11 @@ export const HeaderChatImg = styled.img`
   min-width: 40px;
   max-width: 50px;
 
-  @media (max-width: 960px) {
+  @media (min-width: 280px) {
     margin: auto 0;
+    margin-left: 60px;
   }
+  
 `
 
 export const HeaderText = styled.div`
