@@ -98,7 +98,7 @@ export const FooterChatInput = styled.form`
   }
 
   button {
-    margin: 1rem;
+    margin-right: 30px;
     cursor: pointer;
     background: none;
     border: none;
@@ -109,6 +109,10 @@ export const FooterChatInput = styled.form`
       cursor: pointer;
     }
   }
+`
+
+export const InputContainer = styled.div`
+  margin: 23px 10px;
 `
 
 export const MessageRow = styled.div`

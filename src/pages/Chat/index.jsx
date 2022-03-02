@@ -1,7 +1,7 @@
 import { useParams, useHistory } from 'react-router-dom'
 import deliveryManWhite from '../../assets/delivery-chat-user.png'
 import userIcon from '../../assets/user_icon.png'
-import { FooterChatInput, MessageBox, Avatar, MessageRow } from './Chat.styled'
+import { FooterChatInput, MessageBox, Avatar, MessageRow, InputContainer } from './Chat.styled'
 import { useLatestMessages, InsertClientMessage } from '../../hooks'
 import { Input } from '../../components'
 import sendChat from '../../assets/image_send_chat.png'
@@ -64,12 +64,14 @@ const Chat = () => {
           onSubmit={handleSubmit}
         >
           <div>
-            <Input
-              placeholder="Escribe aqui..."
-              value={message}
-              bgColor="grey"
-              onChange={e => setMessage(e.target.value)}
-            />
+            <InputContainer>
+              <Input
+                placeholder="Escribe aqui..."
+                value={message}
+                bgColor="grey"
+                onChange={e => setMessage(e.target.value)}
+              />
+            </InputContainer>
             <button type="submit">
               <img src={sendChat} alt="send Chat" />
             </button>
