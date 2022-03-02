@@ -2,10 +2,10 @@ import { useState, useEffect } from 'react'
 import { useParams, useHistory } from 'react-router-dom'
 import { Modal, Text, Rating, Form, FormInput } from '../../components'
 import handshake from '../../assets/handshake.png'
-import RatingMan from '../../assets/man-rate.png'
+import ratingIcon from '../../assets/rating_img.svg'
 import { InsertClientRate, useConfirmPackage } from '../../hooks'
 import Layout from './Confirm.layout'
-import { RatingImg } from './Confirm.styled'
+import { RatingImg, RatingTitle } from './Confirm.styled'
 import warning from '../../assets/warning.png'
 
 const Confirm = () => {
@@ -13,7 +13,7 @@ const Confirm = () => {
   const { id } = useParams()
   const history = useHistory()
   const [isFinalModalOpen, toggleFinalModal] = useState(false)
-  const [isRatingModalOpen, toggleRatingModal] = useState(false)
+  const [isRatingModalOpen, toggleRatingModal] = useState(true)
   const [errorModal, toggleErrorModal] = useState({ isShow: false, message: '', redirect: false })
   const [rating, setRating] = useState(0)
   const { insertClientRate } = InsertClientRate()
@@ -87,13 +87,11 @@ const Confirm = () => {
       headerSubTitle="Inserta tus datos para finalizar"
       RatingModal={
         <Modal isOpen={isRatingModalOpen} handleClick={e => submitRating(e)} actionText="Aceptar">
-          <Text as="h1" color="primary">
+          <RatingTitle color="primary" bold>
             ¿Qué tal tu experiencia?
-          </Text>
-          <Text small>La propina esta en tus manos</Text>
-          <Text>Si deseas, puedes compartirla.</Text>
-          <RatingImg src={RatingMan} alt="Delivery man" />
+          </RatingTitle>
           <Rating setRating={setRating} />
+          <RatingImg src={ratingIcon} alt="Delivery man" />
         </Modal>
       }
       FinalModal={

@@ -66,12 +66,7 @@ export const InfoContainer = styled.div`
     margin-top: 0;
     margin-bottom: 2rem;
   }
-  img{
-    width: 60px;
-    height: 61px;
-    padding-top: 0px;
-    margin-top: 0px;
-  }
+  
   ul {
     align-self: start;
     font-size: 16px;

@@ -1,11 +1,22 @@
 import styled from '@emotion/styled';
 
-export const RatingImg = styled.img`
-  max-width: 100px;
-  height: auto;
-  margin: auto;
+export const RatingTitle = styled.span`
+font-weight: bold;
+font-size: 24px;
+    color: #005D9D;
+    margin-bottom: 10px;
+    margin-top: 25px;
+    line-height: 23px;
+    font-weight: bold;
+label: rating-title;
 `
 
+export const RatingImg = styled.img`
+  max-width: 60%;
+  height: auto;
+  margin: auto;
+  label: rating-image;
+`
 export const CheckImg = styled.img`
   width: auto;
   margin: 0 30px;

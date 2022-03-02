@@ -4,22 +4,23 @@ import selectedStar from '../../assets/selected-star.svg'
 
 export const StarBtn = styled.div`
   display: inline-block;
-  width: 32px;
+  width: 2.8rem;
   height: auto;
   margin: 5px;
+  cursor: pointer;
   content: url(${star});
 
   &:hover {
     content: url(${selectedStar});
-    width: 32px;
     height: auto;
   }
 `
 
 export const SelectedStarBtn = styled.div`
   display: inline-block;
-  width: 32px;
+  width: 2.8rem;
   height: auto;
   margin: 5px;
+  cursor: pointer;
   content: url(${selectedStar});
 `
