@@ -64,14 +64,12 @@ const Chat = () => {
           onSubmit={handleSubmit}
         >
           <div>
-            <InputContainer>
-              <Input
-                placeholder="Escribe aqui..."
-                value={message}
-                bgColor="grey"
-                onChange={e => setMessage(e.target.value)}
-              />
-            </InputContainer>
+            <Input
+              placeholder="Escribe aqui..."
+              value={message}
+              bgColor="white"
+              onChange={e => setMessage(e.target.value)}
+            />
             <button type="submit">
               <img src={sendChat} alt="send Chat" />
             </button>
