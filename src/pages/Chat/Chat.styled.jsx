@@ -104,10 +104,6 @@ export const FooterChatInput = styled.form`
   }
 `
 
-export const InputContainer = styled.div`
-  margin: 23px 10px;
-`
-
 export const MessageRow = styled.div`
   margin: 10px 0;
   display: grid;

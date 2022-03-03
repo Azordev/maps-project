@@ -1,7 +1,7 @@
 import { useParams, useHistory } from 'react-router-dom'
 import deliveryManWhite from '../../assets/delivery-chat-user.png'
 import userIcon from '../../assets/user_icon.png'
-import { FooterChatInput, MessageBox, Avatar, MessageRow, InputContainer } from './Chat.styled'
+import { FooterChatInput, MessageBox, Avatar, MessageRow } from './Chat.styled'
 import { useLatestMessages, InsertClientMessage } from '../../hooks'
 import { Input } from '../../components'
 import sendChat from '../../assets/image_send_chat.png'
