@@ -23,6 +23,7 @@ const Theme = ({ children }) => (
         --light-blue-2: ${theme.colors.blue02};
         --light-blue-3: ${theme.colors.blue03};
         --light-blue-11: ${theme.colors.blue11};
+        --light-blue-12: ${theme.colors.blue12};
         --secondary: ${theme.colors.yellow06};
         --black: ${theme.colors.gray09};
         --light-gray: ${theme.colors.gray02};

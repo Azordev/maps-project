@@ -9,18 +9,18 @@ export const ChatLayoutContainer = styled.div`
 `
 
 export const HeaderChat = styled.div`
-  ${[rounded({ bl: '25px', br: '25px' }), p({ all: '1.5%' }), size({ height: '11vh' }), bg.primary]}
+  ${[rounded({ bl: '25px', br: '25px' }), size({ height: '11vh' })]}
   display: flex;
   flex-direction: row;
   align-items: center;
   position: fixed;
+  background-color: var(--light-blue-12);
   width: 100%;
   grid-row: 1/2;
   height: 80px;
 `
 
 export const HeaderChatImgContainer = styled.div`
-  width: 33.33vw;
   text-align: right;
   display: flex;
   justify-content: flex-end;
@@ -29,11 +29,7 @@ export const HeaderChatImg = styled.img`
   margin: auto 10px;
   width: 4vw;
   min-width: 40px;
-  max-width: 50px;
-
-  @media (max-width: 960px) {
-    margin: auto 0;
-  }
+  max-width: 50px;  
 `
 
 export const HeaderText = styled.div`
@@ -52,7 +48,9 @@ export const HeaderText = styled.div`
 export const HeaderTitle = styled.div`
   display: flex;
   text-align: left;
-  margin: 0 auto;
+  margin-left: 20px;
+  font-weight: bold;
+  color: var(--light-blue-2);
 `
 
 export const ChatBodyWrapper = styled.div`
@@ -78,7 +76,7 @@ export const FooterChat = styled.div`
 export const FooterChatInput = styled.form`
   ${[p({ x: '0', y: '5%' }), text.textCenter, bg.white]}
   flex: ${props => props.cols};
-  background-color: var(--secondary);
+  background-color: var(--light-blue-12);
   padding: 0.5rem;
 
   div {
@@ -93,7 +91,7 @@ export const FooterChatInput = styled.form`
   }
 
   button {
-    margin: 1rem;
+    margin-right: 30px;
     cursor: pointer;
     background: none;
     border: none;
