@@ -23,22 +23,3 @@ export const BackBtn = styled.img`
     height: 100%;
   }
 `
-
-export const BackTxt = styled.p`
-  cursor: pointer;
-  flex: 1;
-  color: white;
-  font-size: 1em;
-  margin: auto 0;
-  max-width: 10rem;
-  display: none;
-
-  @media (min-width: 961px) {
-    display: block;
-    font-size: 1.5em;
-  }
-
-  @media (min-width: 3180px) {
-    font-size: 5em;
-  }
-`
