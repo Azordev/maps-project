@@ -5,8 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
   min-height: 100vh;
   width: 100vw;
-  background-color: #0000FF;
-  background: rgba(0, 0, 255, 0.17);
+  background: #FFFFFF;
 
   @media (min-width: 1025px) {
     flex-direction: row;
