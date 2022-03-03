@@ -34,7 +34,7 @@ export const HeaderChatImg = styled.img`
 
   @media (max-width: 279px) {
     margin: auto 0;
-    margin-left: 88px;
+    margin-left: 70px;
   }
 
   @media (min-width: 280px) {
