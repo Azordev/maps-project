@@ -21,11 +21,14 @@ const Chat = () => {
   const [message, setMessage] = useState('')
 
   const Messages =
+    // @ts-ignore
     LatestMessages.chats &&
+    // @ts-ignore
     LatestMessages.chats.map((message, packageId) => {
       if (message.user_type === 'client') {
         return (
           <MessageRow key={`chat-message-${packageId}`}>
+            {/* @ts-ignore */}
             <Avatar src={userIcon} type={'client'} />
             <MessageBox>{message.last_client_message}</MessageBox>
           </MessageRow>
@@ -33,6 +36,7 @@ const Chat = () => {
       } else {
         return (
           <MessageRow key={`chat-message-${packageId}`}>
+            {/* @ts-ignore */}
             <Avatar src={deliveryManWhite} type={'dasher'} />
             <MessageBox>{message.last_dasher_message}</MessageBox>
           </MessageRow>
