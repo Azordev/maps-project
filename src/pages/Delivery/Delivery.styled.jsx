@@ -13,44 +13,43 @@ const HeaderMap = styled.div`
   background: var(--blueheader);
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 25px;
-  padding: 6px;
-  min-height: 10vh;
+  padding: 3px;
+  min-height: 15vh;
   place-content: space-between;
   @media (max-width: 960px) {
-    width: 98.7%;
+    width: 99.3%;
     position: absolute;
     z-index: 1;
-    margin-right:0px;
   }
   @media (max-width: 885px) {
-    width: 98.5%;
+    width: 99.1%;
   }
   @media (max-width: 767px) {
-    width: 98.3%;
+    width: 99%;
   }
   @media (max-width: 677px) {
-    width: 98.1%;
+    width: 98.9%;
   }
   @media (max-width: 606px) {
-    width: 97.8%;
+    width: 98.3;
   }
   @media (max-width: 523px) {
-    width: 97.5%;
+    width: 98.7%;
   }
-  @media (max-width: 461px) {
-    width: 97.2%;
+  @media (max-width: 462px) {
+    width: 98.6%;
   }
   @media (max-width: 411px) {
-    width: 96.9%;
+    width: 98.2%;
   }
   @media (max-width: 371px) {
-    width: 96.4%;
+    width: 98.3%;
   }
   @media (max-width: 320px) {
-    width: 96%;
+    width: 97.8%;
   }
   @media (max-width: 280px) {
-    width: 95.2%;
+    width: 97.2%;
   }
 `
 const HeaderText = styled.div`
@@ -59,10 +58,10 @@ const HeaderText = styled.div`
   flex-direction: column;
   margin-left: 25px;
   height: auto;
-  font-size:18px;
+  font-size: 18px;
   font-weight: 700;
-  line-height:27px;
-  color:var(--headertext);
+  line-height: 27px;
+  color: var(--headertext);
   font-family: 'Poppins', sans serif;
   @media (max-width: 960px) {
     font-size: 1.2em;
@@ -109,8 +108,12 @@ const HeaderSubTitle = styled.div`
   font-weight: 400;
   color: var(--headertext);
   margin-left: 1px;
+  margin-top: 3px;
   line-height: 19px;
   font-family: 'Poppins', sans serif;
+  @media (max-width: 960px) {
+   margin-top: 0px; 
+  }
 `
 const FooterMap = styled.div`
   align-self: flex-end;
