@@ -59,7 +59,7 @@ const Delivery = ({
         <MapContainer>{children}</MapContainer>
         <FooterMap>
           <FooterMapAddress cols={'0 0 100%'} txt={clientAddress} style={{ flexDirection: 'row',fontWeight:'400',fontSize:'13px'}}>
-            <img src={gps} width="42" height="57" alt="Gps icon" style={{ margin: '10px'}} />
+            <img src={gps} width="22px" height="31px" alt="Gps icon" style={{ margin: '10px'}} />
           </FooterMapAddress>
           <FooterMapAddress cols={'0 0 50%'} txt={'Tiempo estimado de llegada'}>
             <Text medium bold margin="8" style={{ textTransform: 'lowercase', color:'#003B62',fontWeight:'700'}}>
