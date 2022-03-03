@@ -22,7 +22,6 @@ export const HeaderChat = styled.div`
 
 export const HeaderChatImgContainer = styled.div`
   text-align: right;
-  margin-left: -80px;
   display: flex;
   justify-content: flex-end;
 `
