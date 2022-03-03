@@ -22,7 +22,6 @@ export const HeaderChat = styled.div`
 
 export const HeaderChatImgContainer = styled.div`
   text-align: right;
-  margin-left: -80px;
   display: flex;
   justify-content: flex-end;
 `
@@ -30,18 +29,7 @@ export const HeaderChatImg = styled.img`
   margin: auto 10px;
   width: 4vw;
   min-width: 40px;
-  max-width: 50px;
-
-  @media (max-width: 279px) {
-    margin: auto 0;
-    margin-left: 70px;
-  }
-
-  @media (min-width: 280px) {
-    margin: auto 0;
-    margin-left: 60px;
-  }
-  
+  max-width: 50px;  
 `
 
 export const HeaderText = styled.div`
