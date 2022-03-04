@@ -1,4 +1,6 @@
 const colors = {
+  blue14:  '#002740',
+  blue013: '#9DBDFD',
   blue12: '#9DBDFD',
   blue11: '#005D9D',
   blue10: '#1C24F8',
@@ -8,8 +10,6 @@ const colors = {
   blue06: '#006DF0',
   blue05: '#2488FF',
   blue04: '#84DBFF',
-  blue061: '#9DBDFD',
-  blue062:  '#002740',
   yellow09: '#FF9F00',
   yellow08: '#FDBF00',
   yellow07: '#FDC12A',
