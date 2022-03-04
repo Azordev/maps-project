@@ -1,4 +1,4 @@
-import { BackBtn, BackTxt, BackBtnContainer } from './BackButton.styled'
+import { BackBtn, BackBtnContainer } from './BackButton.styled'
 import { useParams, useHistory } from 'react-router-dom'
 import arrow from '../../assets/arrow-left.svg'
 
@@ -24,7 +24,6 @@ const BackButton = () => {
   return (
     <BackBtnContainer>
       <BackBtn onClick={() => handleClick()} src={arrow} />
-      <BackTxt onClick={() => handleClick()}>Atrás</BackTxt>
     </BackBtnContainer>
   )
 }

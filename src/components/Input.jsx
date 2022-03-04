@@ -21,10 +21,6 @@ const Input = styled.input`
         background-color: var(--light-gray);
         text-color: var(--black);
       `}
-
-    ::placeholder {
-      color: #00000029;
-    }
   `
 
 export default Input

@@ -16,6 +16,7 @@ const HeaderMap = styled.div`
   padding: 3px;
   min-height: 15vh;
   place-content: space-between;
+
   @media (max-width: 960px) {
     width: 99.3%;
     position: absolute;
