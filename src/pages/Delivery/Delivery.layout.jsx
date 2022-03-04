@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // @ts-nocheck
 import PropTypes from 'prop-types'
 import { Text } from '../../components'
@@ -12,7 +13,6 @@ import {
   FooterMap,
   FooterMapAddress,
   MapContainer,
-  // eslint-disable-next-line no-unused-vars
   estimatedArrival,
 } from './Delivery.styled'
 import assistant from '../../assets/assistant.png'
