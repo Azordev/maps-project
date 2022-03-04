@@ -1,9 +1,9 @@
 // @ts-nocheck
 import PropTypes from 'prop-types'
 
-import { Container, Header, TicketImage, MainSection } from '../../layouts/Splitted.styled'
-import { CheckText, CheckTextSubtitle, BtnBackContainer } from './Check.styled'
-import ticket from '../../assets/ticket.png'
+import { Container, Header, MainSection } from '../../layouts/Splitted.styled'
+import {BtnBackContainer, SubtitleContainer } from './Check.styled'
+import { Text } from '../../components'
 
 import BackButton from '../../components/BackButton'
 
@@ -13,13 +13,14 @@ const Check = ({ headerTitle, headerSubtitle, children, DontForgetModal }) => (
       <BtnBackContainer>
         <BackButton />
       </BtnBackContainer>
-      <CheckText className="heading-text" as="h1" color="third" xlarge>
+      <Text has="h1" title>
         {headerTitle}
-      </CheckText>
-      <CheckTextSubtitle className="heading-subtext" color='third' small>
+      </Text>
+      <SubtitleContainer>
+      <Text subtitle>
         {headerSubtitle}
-      </CheckTextSubtitle>
-      <TicketImage src={ticket} alt="Ticket" />
+      </Text>
+      </SubtitleContainer>
     </Header>
     <MainSection>{children}</MainSection>
     {DontForgetModal}

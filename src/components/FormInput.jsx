@@ -31,6 +31,10 @@ export const FormInput = styled.input`
     outline: none;
   }
 
+  @media (max-width: 280px) {
+    width: 220px;
+  }
+
   @media (min-width: 961px) {
     width: 90%;
   }

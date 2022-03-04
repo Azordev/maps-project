@@ -4,7 +4,6 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  width: 100vw;
   background: #FFFFFF;
 
   @media (min-width: 1025px) {
@@ -20,12 +19,13 @@ export const Header = styled.div`
 
   @media (max-width: 960px) {
     flex: none;
+    height: 280px;
   }
 
   @media (min-width: 1025px) {
     width: 50%;
     padding-top: 3rem;
-    border-radius: 0000;
+    border-radius: 0px;
     justify-content: start;
     overflow: hidden;
   }

@@ -19,6 +19,10 @@ export const BtnBackContainer = styled.div`
   margin-top: 10px;
 `
 
+export const SubtitleContainer = styled.div`
+  margin-top: -40px;
+`
+
 export const CheckTextSubtitle = styled(Text)`
   margin: 0;
   font-weight: bold;
