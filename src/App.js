@@ -56,15 +56,8 @@ const App = () => {
         defaultCenter={LOS_ANGELES_CENTER}
         onChildClick={onChildClickCallback}
       >
-        {places.map(place => (
-          <Marker
-            key={place.id}
-            text={place.name}
-            place={place}
-            show={place.show || false}
-            lat={place.geometry.location.lat}
-            lng={place.geometry.location.lng}
-          />
+        {places.map((place, id) => (
+          <Marker key={`map-markers-${id}`} isCenter={true} />
         ))}
       </GoogleMapReact>
     </Wrapper>

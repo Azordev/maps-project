@@ -73,7 +73,6 @@ const Text =
           font-size: 1rem;
         }
       `}
-
   ${
 
   /** @param {TextProps} props */
