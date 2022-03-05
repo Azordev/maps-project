@@ -19,10 +19,6 @@ export const BtnBackContainer = styled.div`
   margin-top: 10px;
 `
 
-export const SubtitleContainer = styled.div`
-  margin-top: -40px;
-`
-
 export const CheckTextSubtitle = styled(Text)`
   margin: 0;
   font-weight: bold;
@@ -35,7 +31,6 @@ export const CheckTextSubtitle = styled(Text)`
 export const TextHandlerColorMobile = styled(Text)`
   margin-top: 80px;
   @media (min-width: 1025px) {
-    color: var(--primary);
     font-weight: bold;
     font-size: 1.3rem;
   }

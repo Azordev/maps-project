@@ -80,12 +80,14 @@ const text = {
     font-weight: bold;
     font-size: 26px;
     line-height: 39px;
+    margin: 5px 0px;
   `,
   subtitle: css`
    color: var(--light-blue-2);
    font-style: normal;
    font-weight: bold;
    font-size: 18px;
+   margin: 0px 0px;
  `,
   third: css`
   color: var(--light-blue-2);

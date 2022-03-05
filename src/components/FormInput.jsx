@@ -32,7 +32,7 @@ export const FormInput = styled.input`
   }
 
   @media (max-width: 280px) {
-    width: 220px;
+    width: 180px;
   }
 
   @media (min-width: 961px) {
