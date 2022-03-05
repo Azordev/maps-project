@@ -84,7 +84,9 @@ const Chat = () => {
       <>
         {Messages}
         {loading && (
-          <MessageRow>
+          <MessageRow
+            type={'client'}
+          >
             <Avatar src={userIcon} />
             <MessageBox>Loading..</MessageBox>
           </MessageRow>
