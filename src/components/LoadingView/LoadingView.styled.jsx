@@ -12,11 +12,11 @@ export const Background = styled.div`
   justify-content: center;
 `
 export const Icon = styled.img`
-	width: 300px;
-	height: 188px;
+  width: 300px;
+  height: 188px;
 
-	@media (max-width: 900px) {
-		width: 130px;
-		height: 82px;
-	}
+  @media (max-width: 900px) {
+    width: 130px;
+    height: 82px;
+  }
 `

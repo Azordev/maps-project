@@ -3,11 +3,11 @@ import azordevIcon from '../../assets/azordev-icon.png'
 
 
 const LoadingView = () => {
-	return (
-		<Background>
+    return (
+        <Background>
 			<Icon src={azordevIcon}/>
 		</Background>
-	)
+    )
 }
 
 export default LoadingView
