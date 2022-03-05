@@ -13,44 +13,12 @@ const HeaderMap = styled.div`
   background: var(--blueheader);
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 25px;
-  padding: 3px;
   min-height: 15vh;
   place-content: space-between;
-
   @media (max-width: 960px) {
-    width: 99.3%;
+    width: 100%;
     position: absolute;
     z-index: 1;
-  }
-  @media (max-width: 885px) {
-    width: 99.1%;
-  }
-  @media (max-width: 767px) {
-    width: 99%;
-  }
-  @media (max-width: 677px) {
-    width: 98.9%;
-  }
-  @media (max-width: 606px) {
-    width: 98.3;
-  }
-  @media (max-width: 523px) {
-    width: 98.7%;
-  }
-  @media (max-width: 462px) {
-    width: 98.6%;
-  }
-  @media (max-width: 411px) {
-    width: 98.2%;
-  }
-  @media (max-width: 371px) {
-    width: 98.3%;
-  }
-  @media (max-width: 320px) {
-    width: 97.8%;
-  }
-  @media (max-width: 280px) {
-    width: 97.2%;
   }
 `
 const HeaderText = styled.div`
