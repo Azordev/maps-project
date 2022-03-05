@@ -27,9 +27,4 @@ export const Icon = styled.img`
   width: 300px;
   height: 188px;
   animation: ${twinkle} 0.5s infinite alternate;
-
-  @media (max-width: 900px) {
-    width: 130px;
-    height: 82px;
-  }
 `
