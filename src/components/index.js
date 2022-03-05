@@ -4,10 +4,11 @@ import Map from './Map'
 import Marker from './Marker'
 import Modal from './Modal'
 import Rating from './Rating'
+import LoadingView from './LoadingView'
 
 import Button from './Button'
 import FormInput from './FormInput'
 import Input from './Input'
 import Text from './Text'
 
-export { BackButton, Button, Input, Map, Marker, Modal, Text, Form, Rating, FormInput }
+export { BackButton, Button, Input, Map, Marker, Modal, Text, Form, Rating, FormInput, LoadingView }
