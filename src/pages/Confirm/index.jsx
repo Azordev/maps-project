@@ -13,7 +13,7 @@ const Confirm = () => {
   const { id } = useParams()
   const history = useHistory()
   const [isFinalModalOpen, toggleFinalModal] = useState(false)
-  const [isRatingModalOpen, toggleRatingModal] = useState(true)
+  const [isRatingModalOpen, toggleRatingModal] = useState(false)
   const [errorModal, toggleErrorModal] = useState({ isShow: false, message: '', redirect: false })
   const [rating, setRating] = useState(0)
   const { insertClientRate } = InsertClientRate()
@@ -94,7 +94,7 @@ const Confirm = () => {
         </Modal>
       }
       FinalModal={
-        <Modal isOpen={isFinalModalOpen} handleClick={redirectToCheck} hasTimeout={false}>
+        <Modal isOpen={isFinalModalOpen} handleClick={redirectToCheck} hasTimeout={true}>
           <img src={confirmIcon} alt="Confirm" />
           <Text as="h2" color="#3B3B3C" medium center>
             Hemos recibido tu <br/> opinión

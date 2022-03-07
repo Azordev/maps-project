@@ -4,7 +4,6 @@ import { InfoContainer, ModalButton, ModalContainer, Overlay } from './Modal.sty
 const Modal = ({ children, isOpen, actionText, toggle, handleClick = () => toggle(false), hasTimeout = false }) => {
 
   useEffect(() => {
-    console.log('Modal isOpen', isOpen, 'hasTimeout', hasTimeout)
     if (isOpen && hasTimeout) {
       setTimeout(() => {
         handleClick()

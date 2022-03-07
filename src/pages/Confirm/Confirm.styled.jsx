@@ -1,14 +1,14 @@
 import styled from '@emotion/styled';
 
 export const RatingTitle = styled.span`
-font-weight: bold;
-font-size: 24px;
-    color: #005D9D;
-    margin-bottom: 10px;
-    margin-top: 25px;
-    line-height: 23px;
-    font-weight: bold;
-label: rating-title;
+  font-weight: bold;
+  font-size: 24px;
+  color: #005D9D;
+  margin-bottom: 10px;
+  margin-top: 25px;
+  line-height: 23px;
+  font-weight: bold;
+  label: rating-title;
 `
 
 export const RatingImg = styled.img`
