@@ -33,7 +33,6 @@ const Theme = ({ children }) => (
         --white: white;
         --danger: ${theme.colors.gray09};
         --blue-text: ${theme.colors.blue06};
-        
 
         --font-family: 'Poppins', sans-serif;
         --z-normal: 0;

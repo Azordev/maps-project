@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useParams, useHistory } from 'react-router-dom'
 import { Modal, Text, Rating, Form, FormInput } from '../../components'
-import handshake from '../../assets/handshake.png'
+import confirmIcon from '../../assets/confirm-icon.svg'
 import ratingIcon from '../../assets/rating_img.svg'
 import { InsertClientRate, useConfirmPackage } from '../../hooks'
 import Layout from './Confirm.layout'
@@ -68,8 +68,7 @@ const Confirm = () => {
     }
   }
 
-  /** @param {Event} event */
-  const redirectToCheck = event => {
+  const redirectToCheck = () => {
     localStorage.removeItem('packageId')
     history.push('/check')
   }
@@ -95,10 +94,10 @@ const Confirm = () => {
         </Modal>
       }
       FinalModal={
-        <Modal isOpen={isFinalModalOpen} handleClick={() => redirectToCheck()} actionText="Aceptar">
-          <img src={handshake} alt="Handshake Image" />
-          <Text as="h1" color="primary" medium center>
-            ¡Gracias por confiar <br /> en nosotros!
+        <Modal isOpen={isFinalModalOpen} handleClick={redirectToCheck} hasTimeout={false}>
+          <img src={confirmIcon} alt="Confirm" />
+          <Text as="h2" color="#3B3B3C" medium center>
+            Hemos recibido tu <br/> opinión
           </Text>
         </Modal>
       }
