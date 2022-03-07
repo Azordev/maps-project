@@ -30,7 +30,7 @@ Modal.propTypes = {
   isOpen: PropTypes.bool,
   toggle: PropTypes.func,
   handleClick: PropTypes.func,
-  hasTimeout: PropTypes.number
+  hasTimeout: PropTypes.bool
 }
 
 export default Modal
