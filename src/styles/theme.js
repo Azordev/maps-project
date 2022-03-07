@@ -19,10 +19,8 @@ const Theme = ({ children }) => (
 
       :root {
         --primary: ${theme.colors.blue08};
-        --light-blue-1: ${theme.colors.blue01};
-        --light-blue-2: ${theme.colors.blue02};
-        --light-blue-3: ${theme.colors.blue03};
         --light-blue-11: ${theme.colors.blue11};
+        --light-blue-12: ${theme.colors.blue12};
         --secondary: ${theme.colors.yellow06};
         --black: ${theme.colors.gray09};
         --light-gray: ${theme.colors.gray02};
@@ -33,6 +31,8 @@ const Theme = ({ children }) => (
         --white: white;
         --danger: ${theme.colors.gray09};
         --blue-text: ${theme.colors.blue06};
+        --blueheader: ${theme.colors.blue13};
+        --headertext:${theme.colors.blue14};
 
         --font-family: 'Poppins', sans-serif;
         --z-normal: 0;
@@ -40,7 +40,6 @@ const Theme = ({ children }) => (
         --z-map-item: 20;
         --z-modal-overlay: 30;
         --z-modal:40;
-
         --max-width: 1200px;
       }
 

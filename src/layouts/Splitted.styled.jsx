@@ -4,9 +4,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  width: 100vw;
-  background-color: #0000FF;
-  background: rgba(0, 0, 255, 0.17);
+  background: #FFFFFF;
 
   @media (min-width: 1025px) {
     flex-direction: row;
@@ -16,17 +14,18 @@ export const Header = styled.div`
   display: flex;
   flex-direction: column;
   background: var(--light-blue-3);
-  border-radius: 0 0 68px 73px;
+  border-radius: 0 0 25px 25px;
   padding: 0 2rem;
 
   @media (max-width: 960px) {
     flex: none;
+    height: 280px;
   }
 
   @media (min-width: 1025px) {
     width: 50%;
     padding-top: 3rem;
-    border-radius: 0000;
+    border-radius: 0px;
     justify-content: start;
     overflow: hidden;
   }

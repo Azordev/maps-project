@@ -55,3 +55,7 @@ export const CheckImg = styled.img`
 export const HeaderContainer = styled.div`
   margin: 5vw;
 `
+
+export const BackButtonContainer = styled.div`
+  margin-top: 20px;
+`

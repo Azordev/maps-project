@@ -18,13 +18,8 @@ const Input = styled.input`
     ({bgColor}) =>
       bgColor === 'gray' &&
       css`
-        background-color: var(--light-gray);
         text-color: var(--black);
       `}
-
-    ::placeholder {
-      color: #00000029;
-    }
   `
 
 export default Input
