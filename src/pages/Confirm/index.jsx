@@ -13,7 +13,7 @@ const Confirm = () => {
   const { id } = useParams()
   const history = useHistory()
   const [isFinalModalOpen, toggleFinalModal] = useState(false)
-  const [isRatingModalOpen, toggleRatingModal] = useState(false)
+  const [isRatingModalOpen, toggleRatingModal] = useState(true)
   const [errorModal, toggleErrorModal] = useState({ isShow: false, message: '', redirect: false })
   const [rating, setRating] = useState(0)
   const { insertClientRate } = InsertClientRate()

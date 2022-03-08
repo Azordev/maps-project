@@ -7,7 +7,9 @@ export const RatingTitle = styled.span`
   margin-bottom: 10px;
   margin-top: 25px;
   line-height: 23px;
+  text-align: center;
   font-weight: bold;
+  
   label: rating-title;
 `
 
@@ -16,6 +18,10 @@ export const RatingImg = styled.img`
   height: auto;
   margin: auto;
   label: rating-image;
+
+  @media (max-width: 600px) {
+    width: 40%
+  }
 `
 export const CheckImg = styled.img`
   width: auto;

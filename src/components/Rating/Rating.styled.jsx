@@ -14,6 +14,10 @@ export const StarBtn = styled.div`
     content: url(${selectedStar});
     height: auto;
   }
+
+  @media (max-width: 680px) {
+    width: 2rem;
+  }
 `
 
 export const SelectedStarBtn = styled.div`
@@ -23,4 +27,8 @@ export const SelectedStarBtn = styled.div`
   margin: 5px;
   cursor: pointer;
   content: url(${selectedStar});
+  
+  @media (max-width: 680px) {
+    width: 2rem;
+  }
 `
