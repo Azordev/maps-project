@@ -11,6 +11,10 @@ export const RatingTitle = styled.span`
   font-weight: bold;
   
   label: rating-title;
+
+  @media (max-width: 680px) {
+    font-size: 18px;
+  }
 `
 
 export const RatingImg = styled.img`
