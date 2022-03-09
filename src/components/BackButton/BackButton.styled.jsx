@@ -20,7 +20,7 @@ export const BackBtn = styled.img`
   margin: 0;
   border-radius: 50%;
   margin-left: 20px;
-  background: var(--light-blue-2);;
+  background: var(--headertext);;
 
   @media (max-width: 960px) {
     height: 100%;
