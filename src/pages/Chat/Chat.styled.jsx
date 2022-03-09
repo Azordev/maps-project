@@ -50,7 +50,7 @@ export const HeaderTitle = styled.div`
   text-align: left;
   margin-left: 20px;
   font-weight: bold;
-  color: var(--light-blue-2);
+  color: var(--headertext);
 `
 
 export const ChatBodyWrapper = styled.div`
