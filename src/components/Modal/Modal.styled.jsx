@@ -14,8 +14,8 @@ export const Overlay = styled.div`
 export const ModalContainer = styled.div`
   width: 260px;
   max-width: 343px;
-  height: 260px;
-  min-height: 375px;
+  height: auto;
+  max-height: 80vh;
   background: var(--white);
   position: relative;
   border-radius: 31px;
@@ -27,7 +27,6 @@ export const ModalContainer = styled.div`
 
   @media (min-width: 680px) {
     width: 310px;
-    height: 35vh;
   }
 `
 export const InfoContainer = styled.div`
@@ -66,12 +65,7 @@ export const InfoContainer = styled.div`
     margin-top: 0;
     margin-bottom: 2rem;
   }
-  img{
-    width: 60px;
-    height: 61px;
-    padding-top: 0px;
-    margin-top: 0px;
-  }
+  
   ul {
     align-self: start;
     font-size: 16px;
