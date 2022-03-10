@@ -9,7 +9,7 @@ export const Header = styled.div`
   width: 100%;
   height: 100%;
   max-width: 100vw;
-  max-height: 50vh;
+  max-height: 75vh;
 
   @media (min-width: 530px) and (min-height: 850px) {
     flex-wrap: wrap;
@@ -49,13 +49,13 @@ export const Logo = styled.img`
 `
 export const ManImage = styled.img`
   display: block;
-  width: 70%;
+  width: 90%;
   position: absolute;
-  top: 25%;
+  top: 15%;
   left: 50%;
   transform: translateX(-50%);
   object-fit: contain;
-  height: 60vh;
+  height: 65vh;
   @media (min-width: 768px) {
     transform: none;
     position: static;
@@ -103,8 +103,8 @@ export const SubtitleText = styled(Text)`
   }
 `
 export const Button = styled(Link)`
-  background: var(--primary);
-  border-radius: 20px;
+  background: var(--light-blue-11);
+  border-radius: 14px;
   border: none;
   color: var(--white);
   width: 70%;
@@ -117,15 +117,16 @@ export const Button = styled(Link)`
   font-weight: bold;
   position: absolute;
   top: calc(90% - 10px);
+  font-family: 'Poppins', sans serif;
   @media (min-width: 768px) {
     display: ${props => props.webDisplay ?? 'block'};
-    background: ${props => (props.webDisplay ? 'var(--primary);' : 'var(--secondary);')};
+    background: ${props => (props.webDisplay ? 'var(--primary);' : 'var(--light-blue-11);')};
     width: 65%;
     position: static;
-    padding: 0.5rem 0 3rem 0;
+    padding: 1.5rem 0 1.5rem 0;
     font-weight: bold;
     font-size: 1.5rem;
-    border-radius: 2rem;
+    border-radius: 2.2rem;
     letter-spacing: 2px;
     transform: none;
     max-width: 378px;
