@@ -7,13 +7,14 @@ import { InsertClientRate, useConfirmPackage } from '../../hooks'
 import Layout from './Confirm.layout'
 import { RatingImg, RatingTitle } from './Confirm.styled'
 import warning from '../../assets/warning.png'
+import toast from 'react-hot-toast'
 
 const Confirm = () => {
   /** @type {{id: String}} */
   const { id } = useParams()
   const history = useHistory()
   const [isFinalModalOpen, toggleFinalModal] = useState(false)
-  const [isRatingModalOpen, toggleRatingModal] = useState(true)
+  const [isRatingModalOpen, toggleRatingModal] = useState(false)
   const [errorModal, toggleErrorModal] = useState({ isShow: false, message: '', redirect: false })
   const [rating, setRating] = useState(0)
   const { insertClientRate } = InsertClientRate()
@@ -64,7 +65,7 @@ const Confirm = () => {
         })
       }
     } else {
-      alert('Por favor complete los campos')
+      toast.error("Por favor complete los campos")
     }
   }
 

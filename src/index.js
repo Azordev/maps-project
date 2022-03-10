@@ -7,6 +7,7 @@ import { Theme } from './styles'
 import { ApolloProvider } from '@apollo/client'
 import { client } from './services/GraphQl'
 import ErrorBoundary from './layouts/ErrorBoundary'
+import { Toaster } from 'react-hot-toast'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -14,6 +15,7 @@ ReactDOM.render(
       <ApolloProvider client={client}>
         <ErrorBoundary>
           <Pages />
+          <Toaster position="top-right" />
         </ErrorBoundary>
       </ApolloProvider>
     </Theme>
