@@ -20,9 +20,9 @@ export const ButtonContainer = styled.form`
 `
 
 export const FormButtonPrimary = styled.button`
-  width: 169px;
-  height: 60px;
-  border-radius: 10px;
+  width: 273px;
+  height: 50px;
+  border-radius:20px;
   margin: 10px;
   margin-top: 60px;
   border: none;
@@ -38,14 +38,31 @@ export const FormButtonPrimary = styled.button`
     box-shadow: 2px 5px 6px rgb(0 0 0 / 0.3);
   }
 
-  @media (min-width: 1025px) {
+  @media (min-width: 1200px) {
     width: 200px;
   }
+
+  @media (max-width: 1025px) {
+    width: 200px;
+  }
+
+  @media (max-width: 768px) {
+    width: 230px;
+  }
+
+  @media (max-width: 480px) {
+    width: 230px;
+  }
+
+  @media (max-width: 280px) {
+    width: 150px;
+  }
+
 `
 export const FormButtonSecondary = styled.button`
-  width: 169px;
-  height: 60px;
-  border-radius: 10px;
+  width: 273px;
+  height: 50px;
+  border-radius: 20px;
   margin: 10px;
   margin-top: 60px;
   border: none;
@@ -61,7 +78,23 @@ export const FormButtonSecondary = styled.button`
     box-shadow: 2px 5px 6px rgb(0 0 0 / 0.3);
   }
 
-  @media (min-width: 1025px) {
+  @media (min-width: 1200px) {
     width: 200px;
+  }
+
+  @media (max-width: 1025px) {
+    width: 200px;
+  }
+
+  @media (max-width: 768px) {
+    width: 230px;
+  }
+
+  @media (max-width: 480px) {
+    width: 230px;
+  }
+
+  @media (max-width: 280px) {
+    width: 150px;
   }
 `
