@@ -14,13 +14,12 @@ export const FormContainer = styled.form`
   }
 `
 
-export const ButtonContainer = styled.form`
+export const ButtonContainer = styled.div`
   display: flex;
   align-items: center;
 `
 
 export const FormButtonPrimary = styled.button`
-  width: 273px;
   height: 50px;
   border-radius:20px;
   margin: 10px;
@@ -39,23 +38,23 @@ export const FormButtonPrimary = styled.button`
   }
 
   @media (min-width: 1200px) {
-    width: 200px;
+    width: 230px;
   }
 
   @media (max-width: 1025px) {
-    width: 200px;
+    width: 230px;
   }
 
   @media (max-width: 768px) {
-    width: 230px;
+    width: 292px;
   }
 
   @media (max-width: 480px) {
-    width: 230px;
+    width: 293px;
   }
 
   @media (max-width: 280px) {
-    width: 150px;
+    width: 203px;
   }
 
 `
@@ -79,22 +78,22 @@ export const FormButtonSecondary = styled.button`
   }
 
   @media (min-width: 1200px) {
-    width: 200px;
+    width: 230px;
   }
 
   @media (max-width: 1025px) {
-    width: 200px;
+    width: 230px;
   }
 
   @media (max-width: 768px) {
-    width: 230px;
+    width: 292px;
   }
 
   @media (max-width: 480px) {
-    width: 230px;
+    width: 293px;
   }
 
   @media (max-width: 280px) {
-    width: 150px;
+    width: 203px;
   }
 `
