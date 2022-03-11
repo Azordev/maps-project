@@ -8,7 +8,7 @@ import { useGetPackagesIdByCode } from '../../hooks'
 import Layout from './Check.layout'
 import FormInput from '../../components/FormInput'
 import { TextHandlerColorMobile } from './Check.styled'
-
+import toast from 'react-hot-toast'
 
 const Check = () => {
   const [packageCode, setPackageCode] = useState('')
@@ -36,12 +36,14 @@ const Check = () => {
           case 'rated':
           case 'destination_confirmed':
           default:
-            alert('el paquete ya fue entregado')
+            toast.error("El paquete ya fue entregado")
             break
         }
       } else {
-        alert('el paquete no existe')
+        toast.error("El paquete no existe")
       }
+    } else {
+      toast.error("El número de ticket es requerido")
     }
   }
 

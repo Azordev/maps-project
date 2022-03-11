@@ -14,7 +14,7 @@ export const FormContainer = styled.form`
   }
 `
 
-export const ButtonContainer = styled.form`
+export const ButtonContainer = styled.div`
   display: flex;
   align-items: center;
 `
