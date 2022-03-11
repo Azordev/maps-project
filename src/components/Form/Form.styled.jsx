@@ -17,12 +17,14 @@ export const FormContainer = styled.form`
 export const ButtonContainer = styled.div`
   display: flex;
   align-items: center;
+  width: 100%;
+  justify-content: space-between;
 `
 
 export const FormButtonPrimary = styled.button`
+  width: 100%;
   height: 50px;
   border-radius:20px;
-  margin: 10px;
   margin-top: 60px;
   border: none;
   box-shadow: 2px 5px 6px rgb(0 0 0 / 0.1);
@@ -37,32 +39,11 @@ export const FormButtonPrimary = styled.button`
     box-shadow: 2px 5px 6px rgb(0 0 0 / 0.3);
   }
 
-  @media (min-width: 1200px) {
-    width: 230px;
-  }
-
-  @media (max-width: 1025px) {
-    width: 230px;
-  }
-
-  @media (max-width: 768px) {
-    width: 292px;
-  }
-
-  @media (max-width: 480px) {
-    width: 293px;
-  }
-
-  @media (max-width: 280px) {
-    width: 203px;
-  }
-
 `
 export const FormButtonSecondary = styled.button`
-  width: 273px;
+  width: 100%;
   height: 50px;
   border-radius: 20px;
-  margin: 10px;
   margin-top: 60px;
   border: none;
   box-shadow: 2px 5px 6px rgb(0 0 0 / 0.1);
@@ -75,25 +56,5 @@ export const FormButtonSecondary = styled.button`
   &:focus {
     border: solid 1px var(--dark, #000);
     box-shadow: 2px 5px 6px rgb(0 0 0 / 0.3);
-  }
-
-  @media (min-width: 1200px) {
-    width: 230px;
-  }
-
-  @media (max-width: 1025px) {
-    width: 230px;
-  }
-
-  @media (max-width: 768px) {
-    width: 292px;
-  }
-
-  @media (max-width: 480px) {
-    width: 293px;
-  }
-
-  @media (max-width: 280px) {
-    width: 203px;
   }
 `

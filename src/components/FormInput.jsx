@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 export const FormInput = styled.input`
-  width: 268px;
+  //width: 268px;
   max-width: 100%;
   height: 53px;
 
@@ -31,11 +31,7 @@ export const FormInput = styled.input`
     outline: none;
   }
 
-  @media (max-width: 280px) {
-    width: 180px;
-  }
-
-  @media (min-width: 961px) {
+  @media (max-width: 1024px) {
     width: 90%;
   }
 
