@@ -6,7 +6,7 @@ export const Overlay = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  background: rgba(51, 119, 255, 0.3);
+  background: rgba(0, 0, 255, 0.17);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,7 +14,7 @@ export const Overlay = styled.div`
 export const ModalContainer = styled.div`
   width: 260px;
   max-width: 343px;
-  height: auto;
+  height: 260px;
   max-height: 80vh;
   background: var(--white);
   position: relative;
@@ -41,7 +41,7 @@ export const InfoContainer = styled.div`
     font-size: 24px;
     color: #005D9D;
     margin-bottom: 10px;
-    margin-top: 25px;
+    margin-top: 5px;
     line-height: 23px;
     font-style: normal;
     font-weight: 900;
@@ -62,8 +62,8 @@ export const InfoContainer = styled.div`
   }
 
   h4{
-    margin-top: 0;
-    margin-bottom: 2rem;
+    margin-top: 5px;
+    margin-bottom: 1.8rem;
   }
   
   ul {
@@ -77,13 +77,13 @@ export const InfoContainer = styled.div`
   }
 `
 export const ModalButton = styled.button`
-  background: #005D9D;
-  margin: 18px;
+  background: var(--light-blue-11);
+  margin: 30px auto 0px auto;
   width: 250px;
   height: 50px;
   border: none;
   cursor: pointer;
-  border-radius: 13px;
+  border-radius: 20px;
   flex-shrink: 0;
   color: white;
   font-weight: 600;

@@ -59,8 +59,8 @@ const Delivery = () => {
           }}
           actionText="Aceptar"
         >
-          <Text as="h1" color="primary" medium center>
-            El Dasher ha llegado
+          <Text as="h1" color="light-blue-11" medium center>
+            Hemos llegado
           </Text>
           <Text as="h4" color="gray" small center>
             Recoja su env&iacute;o
