@@ -13,8 +13,7 @@ const Modal = ({ children, isOpen, actionText, toggle, handleClick = () => toggl
   
   return (
   <div test-id="Components/Modal">
-    {/* remember to change true for isOpen */}
-    {true && (
+    {isOpen && (
       <Overlay>
         <ModalContainer>
           <InfoContainer>{children}</InfoContainer>
