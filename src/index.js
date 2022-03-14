@@ -1,6 +1,5 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import ReactDOM from 'react-dom'
-import Pages from './pages'
 import * as serviceWorkerRegistration from './serviceWorkerRegistration'
 import reportWebVitals from './reportWebVitals'
 import { Theme } from './styles'
@@ -8,13 +7,17 @@ import { ApolloProvider } from '@apollo/client'
 import { client } from './services/GraphQl'
 import ErrorBoundary from './layouts/ErrorBoundary'
 import { Toaster } from 'react-hot-toast'
+import LoadingView from './components/LoadingView'
+const Pages = React.lazy(() => import('./pages'))
 
 ReactDOM.render(
   <React.StrictMode>
     <Theme>
       <ApolloProvider client={client}>
         <ErrorBoundary>
-          <Pages />
+          <Suspense fallback={<LoadingView />}>
+            <Pages />
+          </Suspense>
           <Toaster position="top-right" />
         </ErrorBoundary>
       </ApolloProvider>
