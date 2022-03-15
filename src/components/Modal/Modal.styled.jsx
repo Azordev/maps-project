@@ -64,6 +64,7 @@ export const InfoContainer = styled.div`
   h4{
     margin-top: 5px;
     margin-bottom: 1.8rem;
+    font-weight: normal;
   }
   
   ul {
