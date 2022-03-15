@@ -19,6 +19,7 @@ import assistant from '../../assets/assistant.png'
 import chat from '../../assets/chat.png'
 import gps from '../../assets/gps-icon.png'
 import { Fragment } from 'react'
+import LoadingView from '../../components/LoadingView'
 /**
  * Delivery Layout
  *
@@ -37,7 +38,7 @@ const Delivery = ({
   toChat,
 }) => {
   if (isLoading) {
-    return <pre>Loading...</pre>
+    return <LoadingView />
   }
 
   if (hasError) {

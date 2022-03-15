@@ -5,13 +5,14 @@ import Map from '../../components/Map'
 import { useGetPackageInformation, useClientLocation, useDasherLatestCoordinates } from '../../hooks'
 import { useState } from 'react'
 import Layout from './Delivery.layout'
+import LoadingView from '../../components/LoadingView'
 
 const Delivery = () => {
   /** @type {{id: String}} */
   const { id } = useParams()
   const history = useHistory()
   const [openDeliveryConfirmedModal, toggleDeliveryConfirmedModal] = useState(true)
-  const { packageInformation } = useGetPackageInformation(id)
+  const { packageInformation, error: errorPack, loading: loadingPack } = useGetPackageInformation(id)
   const { latestCoordinates, error, loading } = useDasherLatestCoordinates(id)
   const { isLoading, hasError, center, dasher, currentStatus, permission } = useClientLocation({
     data: latestCoordinates,
@@ -36,8 +37,18 @@ const Delivery = () => {
     destination_confirmed: { headerTitle: 'Destino alcanzado', headerSubtitle: 'Hemos llegado' },
   }
 
-  if (isLoading || !packageInformation?.packages[0]?.package_code) {
-    return <pre>Loading...</pre>
+  if (loadingPack) {
+    return <LoadingView />
+  }
+
+  if (errorPack) {
+    return <Modal
+      isOpen={true}
+      handleClick={() => { history.push('/check') }}
+      actionText="Regresar"
+    >
+      <h1>Este paquete no existe</h1>
+    </Modal>
   }
 
   return (
