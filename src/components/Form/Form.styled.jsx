@@ -16,16 +16,17 @@ export const FormContainer = styled.form`
 
 export const ButtonContainer = styled.div`
   display: flex;
+  gap: 12px;
   align-items: center;
   width: 100%;
   justify-content: space-between;
 `
 
 export const FormButtonPrimary = styled.button`
-  width: 100%;
+  width: 80%;
   height: 50px;
   border-radius:20px;
-  margin-top: 60px;
+  margin: 60px auto;
   border: none;
   box-shadow: 2px 5px 6px rgb(0 0 0 / 0.1);
   background: var(--light-blue-11);
@@ -41,10 +42,10 @@ export const FormButtonPrimary = styled.button`
 
 `
 export const FormButtonSecondary = styled.button`
-  width: 100%;
+  width: 80%;
   height: 50px;
   border-radius: 20px;
-  margin-top: 60px;
+  margin: 60px auto;
   border: none;
   box-shadow: 2px 5px 6px rgb(0 0 0 / 0.1);
   background: var(--light-red-1);
