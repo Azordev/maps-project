@@ -39,7 +39,7 @@ export const CheckImg = styled.img`
   }
 
   @media (min-width: 961px) {
-    width: 20vw;
+    width: 100px;
     height: auto;
     bottom: 0;
     right: 50vw;
@@ -53,6 +53,13 @@ export const CheckImg = styled.img`
     width: 147px;
   }
 
+  @media (min-width: 1023px) {
+    margin-left: auto;
+    position: relative;
+    left: 5vw;
+    width: 100px;
+  }
+
   @media (min-width: 1200px) {
     margin-left: auto;
     position: relative;
@@ -63,7 +70,13 @@ export const CheckImg = styled.img`
 `
 
 export const HeaderContainer = styled.div`
-  margin: 5vw;
+  margin-left: 5vw ;
+
+  @media (min-width: 961px) {
+    margin-bottom: 5vw;
+  }
+
+
 `
 
 export const BackButtonContainer = styled.div`
