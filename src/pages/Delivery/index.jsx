@@ -13,10 +13,9 @@ const Delivery = () => {
   const history = useHistory()
   const [openDeliveryConfirmedModal, toggleDeliveryConfirmedModal] = useState(true)
   const { packageInformation, error: errorPack, loading: loadingPack } = useGetPackageInformation(id)
-  const { latestCoordinates, error, loading } = useDasherLatestCoordinates(id)
-  const { isLoading, hasError, center, dasher, currentStatus, permission } = useClientLocation({
+  const { latestCoordinates, loading } = useDasherLatestCoordinates(id)
+  const { isLoading, center, dasher, currentStatus, permission } = useClientLocation({
     data: latestCoordinates,
-    error: error,
     loading: loading,
   })
 
@@ -59,7 +58,6 @@ const Delivery = () => {
       clientAddress={packageInformation?.packages[0]?.client_address}
       estimatedArrival={packageInformation?.packages[0]?.estimated_arrival}
       isLoading={isLoading}
-      hasError={hasError}
       toChat={toChat}
       DeliveryConfirmedModal={
         <Modal
