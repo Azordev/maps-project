@@ -16,10 +16,11 @@ export const Header = styled.div`
   background: var(--light-blue-12);
   border-radius: 0 0 25px 25px;
   padding: 0 2rem;
-
+  
   @media (max-width: 960px) {
     flex: none;
     height: 280px;
+    padding-bottom: 2rem;
   }
 
   @media (min-width: 1025px) {
