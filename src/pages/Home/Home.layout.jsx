@@ -1,10 +1,9 @@
 // @ts-nocheck
-import deliveryMan from '../../assets/delivery-man.png'
-import logo from '../../assets/logo.svg'
-import Colors from '../../styles/colors'
+import deliveryMan from '../../assets/delivery-guy.png'
+import deliveryManCar from '../../assets/vehicle-delivery-guy.png'
 import PropTypes from 'prop-types'
 
-import { Button, Header, Logo, ManImage, DisplayText, SubtitleText, HalfSection, TextContainer } from './Home.styled'
+import { Button, Header, ManImage, DeliveryManCar, DisplayText, SubtitleText, HalfSection, ImagesContent, TextContainer } from './Home.styled'
 
 /**
  * Home Layout
@@ -18,17 +17,14 @@ import { Button, Header, Logo, ManImage, DisplayText, SubtitleText, HalfSection,
  */
 const Home = ({ title, subtitle, buttonText }) => (
   <Header>
-    <HalfSection backgroundColor={Colors.yellow06} className="images-section">
-      <Logo src={logo} alt="logo" />
+    <ImagesContent>
       <ManImage src={deliveryMan} alt="Delivery man" />
-    </HalfSection>
-
-    <HalfSection mobileHeight="50vh" backgroundColor={Colors.blue13} justifyContent="center" alignItems="center">
+      <DeliveryManCar src={deliveryManCar} alt="DeliveryManCar" />
+    </ImagesContent>
+    <HalfSection>
       <TextContainer>
-        <DisplayText as="h1" color="secondary" large>
-          {title}
-        </DisplayText>
-        <SubtitleText small>{subtitle}</SubtitleText>
+        <DisplayText>{title}</DisplayText>
+        <SubtitleText>{subtitle}</SubtitleText>
       </TextContainer>
       <Button to="/check">{buttonText}</Button>
     </HalfSection>
