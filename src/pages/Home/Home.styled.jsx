@@ -22,8 +22,11 @@ export const ImagesContent = styled.div`
 
   @media (max-width: 992px) {
     position: absolute;
-    top: 27%;
     column-gap: 0;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
   }
 `
 export const HalfSection = styled.div`
@@ -45,9 +48,10 @@ export const ManImage = styled.img`
   height: 68vh;
 
   @media (max-width: 992px) {
+    max-height: 50vh;
     width: 35%;
     position: relative;
-    top: -100px;
+    top: -2vh;
   }
 `
 export const DeliveryManCar = styled.img`
@@ -57,7 +61,11 @@ export const DeliveryManCar = styled.img`
   object-fit: contain;
 
   @media (max-width: 992px) {
+    max-height: 50%;
     width: 50%;
+    position: relative;
+    top: 7vh;
+    align-self: center;
   }
 `
 export const TextContainer = styled.div`
@@ -94,6 +102,7 @@ export const SubtitleText = styled.p`
   }
 `
 export const Button = styled(Link)`
+  text-transform: uppercase;
   max-width: 350px;
   padding: 20px 0;
   background: var(--light-blue-11);
@@ -101,8 +110,7 @@ export const Button = styled(Link)`
   border: none;
   color: var(--white);
   display: block;
-  margin: auto;
-  margin-top: 56px;
+  margin: 56px auto 0;
   text-align: center;
   text-decoration: none;
   font-weight: 500;
