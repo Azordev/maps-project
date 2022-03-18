@@ -1,34 +1,50 @@
-EXAMPLE USAGE
-Refer for explanation to following link:
-https://github.com/evilmartians/lefthook/blob/master/docs/full_guide.md
-
-pre-push:
-  commands:
-    packages-audit:
-      tags: frontend security
-      run: yarn audit
-    gems-audit:
-      tags: backend security
-      run: bundle audit
-
+# cSpell:word commitlint typecheck stylelint
 pre-commit:
   parallel: true
   commands:
+    prettier:
+      glob: '*.{js,jsx}'
+      run: npm run prettier:ci {staged_files}
     eslint:
-      glob: "*.{js,ts}"
-      run: yarn eslint {staged_files}
-    rubocop:
-      tags: backend style
-      glob: "*.rb"
-      exclude: "application.rb|routes.rb"
-      run: bundle exec rubocop --force-exclusion {all_files}
-    govet:
-      tags: backend style
-      files: git ls-files -m
-      glob: "*.go"
-      run: go vet {files}
-  scripts:
-    "hello.js":
-      runner: node
-    "any.go":
-      runner: go run
+      glob: '*.{js,jsx}'
+      run: npm run eslint:ci {staged_files}
+    stylelint:
+      glob: './**/*.styled.jsx' # For CSS-in-JS
+      run: npm run stylelint:ci {staged_files}
+    spelling:
+      glob: '*.{js,jsx,md}'
+      run: npm run spelling:ci {staged_files}
+    markdown-link-check:
+      glob: '*.md'
+      run: npx markdown-link-check {staged_files}
+
+commit-msg:
+  parallel: true
+  commands:
+    lint-commit-msg:
+      run: npx commitlint --edit --color --config commitlint.config.js
+      skip:
+        - merge
+        - rebase
+    spell-check:
+      run: npm run spelling --no-summary {1}
+      skip:
+        - merge
+        - rebase
+
+lint:
+  parallel: true
+  commands:
+    test:
+      run: npm test
+    prettier:
+      run: npm run prettier
+    eslint:
+      run: npm run eslint
+    stylelint:
+      run: npm run stylelint
+    spelling:
+      run: npm run spelling
+    markdown-link-check:
+      glob: '*.md'
+      run: npx markdown-link-check {staged_files}
