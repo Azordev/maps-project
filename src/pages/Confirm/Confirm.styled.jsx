@@ -28,42 +28,28 @@ export const RatingImg = styled.img`
   }
 `
 export const CheckImg = styled.img`
-  width: auto;
-  margin: 0 30px;
-
-  @media (max-width: 960px) {
-    position: relative;
-    height: 100px;
-    bottom: -20px;
-    width: 94px;
-  }
+  width: 80px;
+  height: auto;
+  margin-top: 10px;
+  position: relative;
 
   @media (min-width: 961px) {
-    width: 20vw;
+    width: 80px;
     height: auto;
-    bottom: 0;
-    right: 50vw;
   }
 
   @media (min-width: 1025px) {
-    margin-left: auto;
-    position: relative;
-    left: 266px;
-    top: 232px;
-    width: 147px;
-  }
-
-  @media (min-width: 1200px) {
-    margin-left: auto;
-    position: relative;
-    left: 359px;
-    top: 352px;
+    position: absolute;
+    right: 0;
+    bottom: 25%;
     width: 147px;
   }
 `
 
 export const HeaderContainer = styled.div`
+  position: relative;
   margin: 5vw;
+  height: 100%;
 `
 
 export const BackButtonContainer = styled.div`
