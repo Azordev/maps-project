@@ -1,9 +1,9 @@
 // @ts-nocheck
-import { ThemeProvider, Global, css } from '@emotion/react'
-import PropTypes from 'prop-types'
+import { css, Global, ThemeProvider } from '@emotion/react'
 import normalize from 'emotion-normalize'
-import colors from './colors'
+import PropTypes from 'prop-types'
 import { breakpoints } from './breakpoints'
+import colors from './colors'
 
 const theme = {
   colors,
