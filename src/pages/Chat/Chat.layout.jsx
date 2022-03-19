@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types'
-import deliveryManWhite from '../../assets/user-white.png'
+ import PropTypes from 'prop-types'
+import deliveryManWhite from '../../assets/delivery-chat-user.png'
 import BackButton from '../../components/BackButton'
 import {
   ChatLayoutContainer,
