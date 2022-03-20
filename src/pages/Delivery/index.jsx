@@ -3,16 +3,17 @@ import { Text, Modal } from '../../components'
 import send from '../../assets/send.png'
 import Map from '../../components/Map'
 import { useGetPackageInformation, useClientLocation, useDasherLatestCoordinates } from '../../hooks'
-import { useState } from 'react'
+import { useState, Fragment } from 'react'
 import Layout from './Delivery.layout'
-import LoadingView from '../../components/LoadingView'
+import warning from '../../assets/warning.png'
+import Spinner from '../../components/Spinner'
 
 const Delivery = () => {
   /** @type {{id: String}} */
   const { id } = useParams()
   const history = useHistory()
   const [openDeliveryConfirmedModal, toggleDeliveryConfirmedModal] = useState(true)
-  const { packageInformation, error: errorPack, loading: loadingPack } = useGetPackageInformation(id)
+  const { packageInformation, error: errorPack } = useGetPackageInformation(id)
   const { latestCoordinates, loading } = useDasherLatestCoordinates(id)
   const { isLoading, center, dasher, currentStatus, permission } = useClientLocation({
     data: latestCoordinates,
@@ -36,28 +37,27 @@ const Delivery = () => {
     destination_confirmed: { headerTitle: 'Destino alcanzado', headerSubtitle: 'Hemos llegado' },
   }
 
-  if (loadingPack) {
-    return <LoadingView />
-  }
-
-  if (errorPack) {
-    return <Modal
-      isOpen={true}
-      handleClick={() => { history.push('/check') }}
-      actionText="Regresar"
-    >
-      <h1>Este paquete no existe</h1>
-    </Modal>
-  }
-
   return (
+    <Fragment>
+      {
+        errorPack
+        ?
+        <Modal
+          isOpen={true}
+          handleClick={() => { history.push('/check') }}
+          actionText="Regresar"
+          >
+          <img src={warning}  width='61' height='60' alt="Warning" />
+          <Text center as="h1">Paquete no existe</Text>
+        </Modal>
+        : isLoading && <Spinner />
+      }
     <Layout
       packageId={id}
       headerTitle={headerStatus[currentStatus]?.headerTitle}
       headerSubtitle={headerStatus[currentStatus]?.headerSubtitle}
       clientAddress={packageInformation?.packages[0]?.client_address}
       estimatedArrival={packageInformation?.packages[0]?.estimated_arrival}
-      isLoading={isLoading}
       toChat={toChat}
       DeliveryConfirmedModal={
         <Modal
@@ -80,6 +80,7 @@ const Delivery = () => {
     >
       {center[0] && <Map center={center} dasher={dasher} permission={permission} />}
     </Layout>
+    </Fragment>
   )
 }
 

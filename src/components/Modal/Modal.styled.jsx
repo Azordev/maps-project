@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 
 export const Overlay = styled.div`
+  z-index: 99999999;
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -65,7 +66,7 @@ export const InfoContainer = styled.div`
     margin-top: 0;
     margin-bottom: 2rem;
   }
-  
+
   ul {
     align-self: start;
     font-size: 16px;
