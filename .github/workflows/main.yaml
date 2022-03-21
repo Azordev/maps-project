@@ -43,13 +43,10 @@ jobs:
         with:
           # prettier CLI arguments.
           args: --list-different src
-      - uses: bradennapier/eslint-plus-action@v3.4.2
-        with: 
-          issueSummaryType: full
-          issueSummaryOnlyOnEvent: true
-          configFile: .eslintrc.js
       - name: spelling
         run: npm run spelling ci .
+      - name: eslint
+        run: npm run eslint:ci src
       - name: test
         run: npm test
       - name: build
