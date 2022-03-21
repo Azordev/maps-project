@@ -17,6 +17,21 @@ export const FormContainer = styled.form`
 export const ButtonContainer = styled.div`
   display: flex;
   align-items: center;
+  @media (min-width: 600px) {
+    width: 100%;
+  }
+  @media (max-width: 1025px) {
+    width: 70%;
+  }
+  @media (max-width: 500px) {
+    width: 70%;
+  }
+  @media (max-width: 360px) {
+    width: 65%;
+  }
+  
+ 
+
 `
 
 export const FormButtonPrimary = styled.button`
@@ -39,8 +54,15 @@ export const FormButtonPrimary = styled.button`
   }
 
   @media (min-width: 1025px) {
-    width: 200px;
+    width: 270px;
   }
+  @media (min-width: 810px) {
+    width: 270px;
+  }
+  @media (min-width: 300px) {
+    width: 270px;
+  }
+  
 `
 export const FormButtonSecondary = styled.button`
   width: 169px;
@@ -60,8 +82,13 @@ export const FormButtonSecondary = styled.button`
     border: solid 1px var(--dark, #000);
     box-shadow: 2px 5px 6px rgb(0 0 0 / 0.3);
   }
-
   @media (min-width: 1025px) {
-    width: 200px;
+    width: 270px;
+  }
+  @media (min-width: 810px) {
+    width: 270px;
+  }
+  @media (min-width: 300px) {
+    width: 270px;
   }
 `
