@@ -11,8 +11,8 @@ import { TextHandlerColorMobile } from './Check.styled'
 import toast from 'react-hot-toast'
 
 const Check = () => {
-  const [packageCode, setPackageCode] = useState('')
-  const [isModalOpen, changeIsModalOpen] = useState(true)
+  const [ packageCode, setPackageCode ] = useState('')
+  const [ isModalOpen, changeIsModalOpen ] = useState(true)
   const history = useHistory()
   const { packages, loading, error } = useGetPackagesIdByCode(packageCode?.packageCode)
 

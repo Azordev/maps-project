@@ -3,8 +3,8 @@ import { useState } from 'react'
 import PropTypes from 'prop-types'
 
 const Rating = ({ setRating }) => {
-  const stars = [...Array(5).keys()]
-  const [activeStarsArray, setActiveStarsArray] = useState([])
+  const stars = [ ...Array(5).keys() ]
+  const [ activeStarsArray, setActiveStarsArray ] = useState([])
 
   /**
    * @param {number} idx If don't clicked on a star, it will be 0
@@ -20,14 +20,14 @@ const Rating = ({ setRating }) => {
       {stars.map(x => {
         return activeStarsArray.includes(x) ? (
           <SelectedStarBtn
-            key={x++}
+            key={x+1}
             onClick={_ => {
               manageRating(x)
             }}
           />
         ) : (
           <StarBtn
-            key={x++}
+            key={x+1}
             onClick={_ => {
               manageRating(x)
             }}

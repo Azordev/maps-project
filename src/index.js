@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React, { Suspense } from 'react'
 import ReactDOM from 'react-dom'
 import * as serviceWorkerRegistration from './serviceWorkerRegistration'

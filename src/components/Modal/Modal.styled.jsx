@@ -39,7 +39,7 @@ export const InfoContainer = styled.div`
 
   h1 {
     font-size: 24px;
-    color: #005D9D;
+    color: #005d9d;
     margin-bottom: 10px;
     margin-top: 25px;
     line-height: 23px;
@@ -51,33 +51,32 @@ export const InfoContainer = styled.div`
 
   p {
     font-size: 16px;
-    color: #3B3B3C;
+    color: #3b3b3c;
     padding-left: 16px;
     padding-right: 16px;
-    padding-bottom: 0px;
-    margin-top:0;
-    margin-bottom:0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
     font-family: 'Poppins', sans-serif;
     line-height: 21px;
   }
 
-  h4{
+  h4 {
     margin-top: 0;
     margin-bottom: 2rem;
   }
-  
+
   ul {
     align-self: start;
     font-size: 16px;
-    color: #3B3B3C;
+    color: #3b3b3c;
     padding-top: 5px;
-    margin-top: 0px;
+    margin-top: 0;
     line-height: 21px;
-
   }
 `
 export const ModalButton = styled.button`
-  background: #005D9D;
+  background: #005d9d;
   margin: 18px;
   width: 250px;
   height: 50px;
@@ -88,7 +87,7 @@ export const ModalButton = styled.button`
   color: white;
   font-weight: 600;
   text-transform: uppercase;
-  font-style:normal;
+  font-style: normal;
   font-size: 16px;
   line-height: 24px;
   font-family: 'Poppins', sans-serif;

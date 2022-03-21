@@ -9,49 +9,49 @@ import {
 
 /** @param packageId */
 export const useDasherLatestCoordinates = packageId => {
-  const [latestCoordinates, setLatestCoordinates] = useState([])
+  const [ latestCoordinates, setLatestCoordinates ] = useState([])
   const { data, error, loading } = useSubscription(GET_PACKAGE_INFORMATION_SUBSCRIPTION, {
     variables: { id: packageId },
   })
 
   useEffect(() => {
     setLatestCoordinates(data)
-  }, [data])
+  }, [ data ])
   return { loading, error, latestCoordinates }
 }
 
 /** @param packageCode */
 export const useGetPackagesIdByCode = packageCode => {
-  const [packageInformation, setPackageInformation] = useState({ packages: [] })
+  const [ packageInformation, setPackageInformation ] = useState({ packages: [] })
   const { loading, error, data } = useQuery(GET_PACKAGE_ID_QUERY_BY_CODE, {
     variables: { packageCode: packageCode },
   })
 
   useEffect(() => {
     setPackageInformation(data)
-  }, [data])
+  }, [ data ])
 
   return { loading, error, packages: packageInformation?.packages || [] }
 }
 
 /** @param packageId */
 export const useGetPackageInformation = packageId => {
-  const [packageInformation, setPackageInformation] = useState({ packages: [] })
+  const [ packageInformation, setPackageInformation ] = useState({ packages: [] })
   const { loading, error, data } = useQuery(GET_PACKAGE_INFORMATION_QUERY, {
     variables: { id: packageId },
   })
 
   useEffect(() => {
     setPackageInformation(data)
-  }, [data])
+  }, [ data ])
 
   return { loading, error, packageInformation }
 }
 
 export const useConfirmPackage = () => {
-  const [confirmData, setConfirmData] = useState({ RUT: '' })
-  const [packageId, setPackageId] = useState('')
-  const [packageInformation, setPackageInformation] = useState([])
+  const [ confirmData, setConfirmData ] = useState({ RUT: '' })
+  const [ packageId, setPackageId ] = useState('')
+  const [ packageInformation, setPackageInformation ] = useState([])
   const { loading, error, data } = useQuery(CONFIRM_PACKAGE_QUERY, {
     variables: {
       id: packageId,
@@ -72,7 +72,7 @@ export const useConfirmPackage = () => {
     if (data?.packages[0]?.id) {
       setPackageInformation(data?.packages)
     }
-  }, [data])
+  }, [ data ])
 
   return { confirmPackage, loading, error, packageInformation }
 }

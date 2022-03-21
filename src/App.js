@@ -3,8 +3,6 @@ import styled from '@emotion/styled'
 
 import GoogleMapReact from 'google-map-react'
 
-import LOS_ANGELES_CENTER from './const/la_center'
-
 import Marker from './components/Marker/Marker'
 
 const Wrapper = styled.main`
@@ -13,8 +11,8 @@ const Wrapper = styled.main`
 `
 
 const App = () => {
-  const [places, setPlaces] = useState([])
-  const [selectedPlaceId, setSelectedPlaceId] = useState(null)
+  const [ places, setPlaces ] = useState([])
+  const [ selectedPlaceId, setSelectedPlaceId ] = useState(null)
 
   const fetchPlaces = async () => {
     fetch('places.json')
@@ -42,8 +40,8 @@ const App = () => {
     setPlaces(localPlaces)
   }
 
-  const closeOtherPlacesModal = (places, selectedId) =>
-    places.map(place => {
+  const closeOtherPlacesModal = (otherPlaces, selectedId) =>
+    otherPlaces.map(place => {
       place.show = place.id === selectedId
       return place
     })
@@ -53,10 +51,9 @@ const App = () => {
       <GoogleMapReact
         bootstrapURLKeys={{ key: process.env.REACT_APP_MAP_KEY }}
         defaultZoom={10}
-        defaultCenter={LOS_ANGELES_CENTER}
         onChildClick={onChildClickCallback}
       >
-        {places.map((place, id) => (
+        {places.map((_, id) => (
           <Marker key={`map-markers-${id}`} isCenter={true} />
         ))}
       </GoogleMapReact>
