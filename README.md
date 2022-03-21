@@ -33,6 +33,7 @@
     - [Available Scripts](#available-scripts)
       - [`npm start`](#npm-start)
       - [`npm run build`](#npm-run-build)
+      - [`npm run check`](#npm-run-check)
     - [Learn More](#learn-more)
   - [Collaborators](#collaborators)
   - [Contributing](#contributing)
@@ -126,7 +127,7 @@ or
 yarn start
 ```
 
-After executing any of the above commands, a development server will start; generally on port 3000. You must go to your browser and enter [localhost:3000](localhost:3000) and you will have access to the project.
+After executing any of the above commands, a development server will start; generally on port 3000. You must go to your browser and enter localhost:3000 and you will have access to the project.
 
 ## Create a .env file
 
@@ -243,7 +244,7 @@ In the project directory, you can run:
 #### `npm start`
 
 Runs the app in the development mode.
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open localhost:3000 to view it in the browser.
 
 The page will reload if you make edits.
 You will also see any lint errors in the console.
@@ -257,6 +258,10 @@ The build is minified and the filenames include the hashes.
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+#### `npm run check`
+
+The project have some linting rules that we need to follow. This script will check if the project complies with them. If you are trying to commit, you will need to run this script before you do, or you will see some error from "lefthook".
 
 ### Learn More
 
@@ -276,9 +281,6 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 | [Angelica Molina][ange-github] |                              ![email-icon][] Email me to [angeli.molina1@gmail.com][ange-email]                                     |
 |         ![ange-pic][]         |                                                                                                                          |
 
-
-
-
 ## Contributing
 
 [![contributions welcome][contributions-welcome]][issues-url]
@@ -293,8 +295,8 @@ Feel free to check the [issues page][issues-url].
 - <https://blog.logrocket.com/deep-dive-into-lefthook-react-native/>
 - <https://blog.logrocket.com/build-robust-react-app-husky-pre-commit-hooks-github-actions/>
 - Favicon from [favicon.io](https://favicon.io/emoji-favicons/)
-- <https://www.seoptimer.com/meta-tag-generator>
-- <https://dev.to/nitzano/linting-docker-containers-2lo6?utm_source=lefthook>
+- <https://www.seoptimer.com/meta-tag-generator/>
+- <https://dev.to/nitzano/linting-docker-containers-2lo6?utm_source=lefthook/>
 
 ## License
 
