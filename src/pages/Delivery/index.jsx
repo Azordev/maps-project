@@ -68,13 +68,13 @@ const Delivery = () => {
           }}
           actionText="Aceptar"
         >
-          <Text as="h1" color="primary" medium center>
-            El Dasher ha llegado
+          <Text as="div" margin="5" color="six" mlg weight700 center>
+            Hemos llegado
           </Text>
-          <Text as="h4" color="gray" small center>
+          <Text as="div" margin="10" xsm center>
             Recoja su env&iacute;o
           </Text>
-          <img src={send} alt="Dasher has arrived image" />
+          <img style={{margin: '10px'}} src={send} width="121px" height="72px" alt="Dasher has arrived image" />
         </Modal>
       }
     >
