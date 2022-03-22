@@ -2,14 +2,14 @@ import styled from '@emotion/styled'
 import { bg, p, rounded, size, text } from '../../styles/mixins'
 
 export const ChatLayoutContainer = styled.div`
-  ${[ size({ width: '100vw', minHeight: '100vh' }), bg.white ]}
+  ${[size({ width: '100vw', minHeight: '100vh' }), bg.white]}
   display: grid;
   grid-template-rows: 80px calc(100vh - 185px) 105px;
   overflow: hidden;
 `
 
 export const HeaderChat = styled.div`
-  ${[ rounded({ bl: '25px', br: '25px' }), size({ height: '11vh' }) ]}
+  ${[rounded({ bl: '25px', br: '25px' }), size({ height: '11vh' })]}
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -29,19 +29,15 @@ export const HeaderChatImg = styled.img`
   margin: auto 10px;
   width: 4vw;
   min-width: 40px;
-  max-width: 50px;
+  max-width: 50px;  
 `
 
 export const HeaderText = styled.div`
-  ${[ size({ width: '33.33%' }), text.base, text[700], text.secondary, text.textCenter ]}
+  ${[size({ width: '33.33%' }), text.base, text[700], text.secondary, text.textCenter]}
   display: flex;
 
   @media (min-width: 1025px) {
     font-size: 2em;
-  }
-
-  @media (min-width: 3180px) {
-    font-size: 6em;
   }
 `
 
@@ -71,21 +67,27 @@ export const FooterChat = styled.div`
   grid-row: 3/-1;
   display: flex;
   align-items: center;
+  justify-content: center;
 `
-/**
- * @typedef {{ cols: number, rows: number }} Size 
-*/
+
 export const FooterChatInput = styled.form`
-  ${[ p({ x: '0', y: '5%' }), text.textCenter, bg.white ]}
-  flex: ${/** @param {Size} props */ props => props.cols};
+  ${[p({ x: '0', y: '5%' }), text.textCenter, bg.white]}
+  flex: ${props => props.cols};
   background-color: var(--light-blue-12);
   padding: 0.5rem;
 
+  input{
+    margin-right: 0.75rem;
+    @media (max-width: 1024px){
+      margin-left: 0.75rem;
+    }
+  }
+
   div {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    margin: 0 auto;
+    margin: 0px auto;
 
     @media (min-width: 1025px) {
       width: 47vw;
@@ -93,11 +95,14 @@ export const FooterChatInput = styled.form`
   }
 
   button {
-    margin-right: 30px;
     cursor: pointer;
     background: none;
     border: none;
     width: fit-content;
+    padding: 0;
+    @media (max-width: 1024px){
+      padding-right: 0.75rem;
+    }
 
     img {
       width: 3rem;
@@ -108,23 +113,19 @@ export const FooterChatInput = styled.form`
 
 export const MessageRow = styled.div`
   margin: 10px 0;
-  display: grid;
-  grid-template-columns: 50px calc(100% - 50px - 2rem);
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: start;
   width: 100%;
+  gap: 11px;
 
   @media (min-width: 1025px) {
     width: 47vw;
-    gap: 11px;
-  }
-
-  &::after {
-    clear: both;
-    display: table;
   }
 `
 
 export const MessageBox = styled.div`
-  ${[ p({ all: '10px' }), rounded({ all: '15px' }), size({ width: '40vw' }), text.base, text.gray09, bg.gray ]}
+  ${[p({ all: '10px' }), rounded({ all: '15px' }), size({ width: '40vw' }), text.base, text.gray09, bg.gray]}
   display: inline-block;
   width: max-content;
   min-width: 80px;
@@ -135,15 +136,9 @@ export const MessageBox = styled.div`
   @media (min-width: 768px) {
     font-size: 1rem;
   }
-
-  @media (min-width: 3180px) {
-    line-height: 3.5vw;
-    font-size: 3rem;
-  }
 `
 
 export const Avatar = styled.img`
-  width: 4vw;
-  min-width: 40px;
-  max-width: 50px;
+  width: 40px;
+  height: auto;
 `
