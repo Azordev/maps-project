@@ -52,34 +52,34 @@ const Delivery = () => {
         </Modal>
         : isLoading && <Spinner />
       }
-    <Layout
-      packageId={id}
-      headerTitle={headerStatus[currentStatus]?.headerTitle}
-      headerSubtitle={headerStatus[currentStatus]?.headerSubtitle}
-      clientAddress={packageInformation?.packages[0]?.client_address}
-      estimatedArrival={packageInformation?.packages[0]?.estimated_arrival}
-      toChat={toChat}
-      DeliveryConfirmedModal={
-        <Modal
-          isOpen={currentStatus === 'destination_reached' && openDeliveryConfirmedModal}
-          handleClick={() => {
-            toggleDeliveryConfirmedModal(!openDeliveryConfirmedModal)
-            toConfirm()
-          }}
-          actionText="Aceptar"
-        >
-          <Text as="h1" color="primary" medium center>
-            El Dasher ha llegado
-          </Text>
-          <Text as="h4" color="gray" small center>
-            Recoja su env&iacute;o
-          </Text>
-          <img src={send} alt="Dasher has arrived image" />
-        </Modal>
-      }
-    >
-      {center[0] && <Map center={center} dasher={dasher} permission={permission} />}
-    </Layout>
+      <Layout
+        packageId={id}
+        headerTitle={headerStatus[currentStatus]?.headerTitle}
+        headerSubtitle={headerStatus[currentStatus]?.headerSubtitle}
+        clientAddress={packageInformation?.packages[0]?.client_address}
+        estimatedArrival={packageInformation?.packages[0]?.estimated_arrival}
+        toChat={toChat}
+        DeliveryConfirmedModal={
+          <Modal
+            isOpen={currentStatus === 'destination_reached' && openDeliveryConfirmedModal}
+            handleClick={() => {
+              toggleDeliveryConfirmedModal(!openDeliveryConfirmedModal)
+              toConfirm()
+            }}
+            actionText="Aceptar"
+          >
+            <Text as="h1" color="primary" medium center>
+              El Dasher ha llegado
+            </Text>
+            <Text as="h4" color="gray" small center>
+              Recoja su env&iacute;o
+            </Text>
+            <img src={send} alt="Dasher has arrived image" />
+          </Modal>
+        }
+      >
+        {center[0] && <Map center={center} dasher={dasher} permission={permission} />}
+      </Layout>
     </Fragment>
   )
 }
