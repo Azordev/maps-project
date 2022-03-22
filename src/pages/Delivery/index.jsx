@@ -12,7 +12,7 @@ const Delivery = () => {
   /** @type {{id: String}} */
   const { id } = useParams()
   const history = useHistory()
-  const [openDeliveryConfirmedModal, toggleDeliveryConfirmedModal] = useState(true)
+  const [ openDeliveryConfirmedModal, toggleDeliveryConfirmedModal ] = useState(true)
   const { packageInformation, error: errorPack } = useGetPackageInformation(id)
   const { latestCoordinates, loading } = useDasherLatestCoordinates(id)
   const { isLoading, center, dasher, currentStatus, permission } = useClientLocation({
