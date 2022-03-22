@@ -3,14 +3,11 @@ import styled from '@emotion/styled';
 export const RatingTitle = styled.span`
   font-weight: bold;
   font-size: 24px;
-  color: #005D9D;
+  color: #005d9d;
   margin-bottom: 10px;
   margin-top: 25px;
   line-height: 23px;
   text-align: center;
-  font-weight: bold;
-  
-  label: rating-title;
 
   @media (max-width: 680px) {
     font-size: 18px;
@@ -21,10 +18,9 @@ export const RatingImg = styled.img`
   max-width: 60%;
   height: auto;
   margin: auto;
-  label: rating-image;
 
   @media (max-width: 600px) {
-    width: 40%
+    width: 40%;
   }
 `
 export const CheckImg = styled.img`

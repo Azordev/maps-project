@@ -6,7 +6,7 @@ export const BackBtnContainer = styled.div`
   max-height: 68px;
   align-items: center;
   margin-left: -10px;
-  
+
   @media (min-width: 700px) {
     width: 33.33vw;
   }
@@ -20,7 +20,7 @@ export const BackBtn = styled.img`
   margin: 0;
   border-radius: 50%;
   margin-left: 20px;
-  background: var(--headertext);;
+  background: var(--headertext);
 
   @media (max-width: 960px) {
     height: 100%;

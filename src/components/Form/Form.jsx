@@ -9,8 +9,10 @@ const FormContext = React.createContext({
   handleFormChange: () => {},
 })
 
-const Form = ({ children, onSubmit, formData = e => e, FormButtonPrimaryTitle = 'Confirmar', FormButtonSecondaryTitle }) => {
-  const [form, setForm] = useState({})
+const Form = ({ 
+  children, onSubmit, formData = e => e, FormButtonPrimaryTitle = 'Confirmar', FormButtonSecondaryTitle 
+}) => {
+  const [ form, setForm ] = useState({})
 
   /** @param {React.ChangeEvent<HTMLInputElement>} event */
   const handleFormChange = event => {
@@ -45,7 +47,7 @@ const Form = ({ children, onSubmit, formData = e => e, FormButtonPrimaryTitle = 
 }
 
 Form.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.func, PropTypes.node]),
+  children: PropTypes.oneOfType([ PropTypes.func, PropTypes.node ]),
   onSubmit: PropTypes.func,
   formData: PropTypes.func,
   FormButtonPrimaryTitle: PropTypes.string,

@@ -3,7 +3,9 @@ import deliveryMan from '../../assets/delivery-guy.png'
 import deliveryManCar from '../../assets/vehicle-delivery-guy.png'
 import PropTypes from 'prop-types'
 
-import { Button, Header, ManImage, DeliveryManCar, DisplayText, SubtitleText, HalfSection, ImagesContent, TextContainer } from './Home.styled'
+import { 
+  Button, Header, ManImage, DeliveryManCar, DisplayText, SubtitleText, HalfSection, ImagesContent, TextContainer 
+} from './Home.styled'
 
 /**
  * Home Layout

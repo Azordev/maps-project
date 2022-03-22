@@ -40,5 +40,5 @@ const link = new RetryLink({
 
 export const client = new ApolloClient({
   cache: new InMemoryCache(),
-  link: from([link, splitLink]),
+  link: from([ link, splitLink ]),
 })

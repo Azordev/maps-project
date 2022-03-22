@@ -4,7 +4,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: #FFFFFF;
+  background: #fff;
 
   @media (min-width: 1025px) {
     flex-direction: row;
@@ -16,7 +16,7 @@ export const Header = styled.div`
   background: var(--light-blue-12);
   border-radius: 0 0 25px 25px;
   padding: 0 2rem;
-  
+
   @media (max-width: 960px) {
     flex: none;
     height: 280px;
@@ -26,7 +26,7 @@ export const Header = styled.div`
   @media (min-width: 1025px) {
     width: 50%;
     padding-top: 3rem;
-    border-radius: 0px;
+    border-radius: 0;
     justify-content: start;
     overflow: hidden;
   }
@@ -39,6 +39,7 @@ export const TicketImage = styled.img`
   width: 140px;
   align-self: flex-start;
   margin: 2.5rem 0 -13px 15px;
+
   @media (min-width: 1025px) {
     width: 40vh;
     bottom: -38px;
@@ -51,6 +52,7 @@ export const ConfirmImage = styled.img`
   width: 140px;
   align-self: flex-start;
   margin: 0 0 -13px 15px;
+
   @media (min-width: 1025px) {
     width: 40vh;
     bottom: -38px;
@@ -61,7 +63,7 @@ export const ConfirmImage = styled.img`
 `
 export const MainSection = styled.div`
   align-items: center;
-  background-color: #FFFFFF;
+  background-color: #fff;
   justify-content: center;
   height: 100%;
   display: grid;

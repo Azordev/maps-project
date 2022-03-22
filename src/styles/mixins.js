@@ -46,7 +46,7 @@ export const m = ({ all, x = all, y = all, bottom = y, left = x, right = x, top 
   }
 `
 
-export const p = ({ all, x = all, y = all, bottom = y, left = x, right = x, top = y }) => css`
+export const p = ({ all = '0', x = all, y = all, bottom = y, left = x, right = x, top = y }) => css`
   padding-block-end: ${bottom};
   padding-block-start: ${top};
   padding-inline-end: ${right};
@@ -61,7 +61,14 @@ export const p = ({ all, x = all, y = all, bottom = y, left = x, right = x, top 
 
 /**
  * 
- * @param {{ height?: String, maxHeight?: String, maxWidth?: String, minHeight?: String, minWidth?: String, width?: String }} Object 
+ * @param {{ 
+ * height?: String, 
+ * maxHeight?: String,
+ * maxWidth?: String, 
+ * minHeight?: String, 
+ * minWidth?: String, 
+ * width?: String 
+ * }} Object 
  * @returns 
  */
 export const size = ({ height, maxHeight, maxWidth, minHeight, minWidth, width }) => css`

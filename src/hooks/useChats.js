@@ -9,13 +9,13 @@ import { logError } from '../helpers'
 
 /** @param packageId */
 export const useLatestMessages = packageId => {
-  const [LatestMessages, setLatestMessages] = useState([])
+  const [ LatestMessages, setLatestMessages ] = useState([])
   const { data, loading } = useSubscription(GET_CHAT_MESSAGES_SUBSCRIPTION, {
     variables: { packageId },
   })
   useEffect(() => {
     setLatestMessages(data)
-  }, [data])
+  }, [ data ])
   return { loading, LatestMessages }
 }
 
@@ -25,10 +25,15 @@ export const useLatestMessages = packageId => {
  * @param user_type
  * @param last_client_update
  * @param last_client_message
- *  * to use => insert_client_chats({"last_client_message": last_client_message, "last_client_update": last_client_update, "user_type": user_type, "package_id": package_id}
+ *  * to use => insert_client_chats({
+ * "last_client_message": last_client_message, 
+ * "last_client_update": last_client_update, 
+ * "user_type": user_type, 
+ * "package_id": package_id
+ * }
  */
 export function InsertClientMessage() {
-  const [insertClientMessage, { loading, error, data }] = useMutation(INSERT_CLIENT_CHATS_MUTATION)
+  const [ insertClientMessage, { loading, error, data } ] = useMutation(INSERT_CLIENT_CHATS_MUTATION)
   if (error) {
     logError({ error, codeLocation: 'InsertClientMessage', type: 'client' })
   }
@@ -36,7 +41,7 @@ export function InsertClientMessage() {
 }
 
 export function InsertDasherMessage() {
-  const [insertDasherMessage, { loading, error, data }] = useMutation(INSERT_DASHER_CHATS_MUTATION)
+  const [ insertDasherMessage, { loading, error, data } ] = useMutation(INSERT_DASHER_CHATS_MUTATION)
   if (error) {
     logError({ error, codeLocation: 'insertDasherMessage', type: 'client' })
   }

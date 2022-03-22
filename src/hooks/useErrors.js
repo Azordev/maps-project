@@ -9,8 +9,9 @@ import { INSERT_ERRORS_MUTATION } from '../services/GraphQl'
  *  to use => insertErrors({"type": type, "error":error",location": location})
  */
 export function InsertErrors() {
-  const [insertErrors, { loading, error, data }] = useMutation(INSERT_ERRORS_MUTATION)
+  const [ insertErrors, { loading, error, data } ] = useMutation(INSERT_ERRORS_MUTATION)
   if (error) {
+    // eslint-disable-next-line no-console
     console.error(error)
   }
   return { insertErrors, loading, error, data }
