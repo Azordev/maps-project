@@ -13,7 +13,6 @@ import {
   FooterMap,
   FooterMapAddress,
   MapContainer,
-  estimatedArrival,
 } from './Delivery.styled'
 import assistant from '../../assets/assistant.png'
 import chat from '../../assets/chat.png'
@@ -23,7 +22,17 @@ import LoadingView from '../../components/LoadingView'
 /**
  * Delivery Layout
  *
- * @param {{ packageId: string, headerTitle: string, headerSubtitle:string, clientAddress:string, estimatedArrival:string, isLoading:boolean, hasError: boolean, DeliveryConfirmedModal: any, children: any }}
+ * @param {{ 
+ * packageId: string, 
+ * headerTitle: string, 
+ * headerSubtitle:string, 
+ * clientAddress:string, 
+ * estimatedArrival:string, 
+ * isLoading:boolean, 
+ * hasError: boolean, 
+ * DeliveryConfirmedModal: any, 
+ * children: any 
+ * }}
  */
 const Delivery = ({
   packageId,
@@ -54,7 +63,11 @@ const Delivery = ({
         </HeaderMap>
         <MapContainer>{children}</MapContainer>
         <FooterMap>
-          <FooterMapAddress cols={'0 0 100%'} txt={clientAddress} style={{ flexDirection: 'row',fontWeight:'400',fontSize:'13px'}}>
+          <FooterMapAddress 
+            cols={'0 0 100%'} 
+            txt={clientAddress} 
+            style={{ flexDirection: 'row',fontWeight:'400',fontSize:'13px'}}
+          >
             <img src={gps} width="22px" height="31px" alt="Gps icon" style={{ margin: '10px'}} />
           </FooterMapAddress>
           <FooterMapAddress cols={'0 0 50%'} txt={'Tiempo estimado de llegada'}>

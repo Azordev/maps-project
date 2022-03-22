@@ -9,7 +9,7 @@ const Modal = ({ children, isOpen, actionText, toggle, handleClick = () => toggl
         handleClick()
       }, 2000);
     }
-  }, [isOpen])
+  }, [ isOpen ])
   
   return (
   <div test-id="Components/Modal">

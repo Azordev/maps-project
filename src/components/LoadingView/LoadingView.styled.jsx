@@ -18,7 +18,7 @@ export const Background = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  background: #9DBDFD;
+  background: #9dbdfd;
   display: flex;
   align-items: center;
   justify-content: center;

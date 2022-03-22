@@ -9,6 +9,7 @@ export const CheckText = styled(Text)`
     margin-top: max(2.5rem, 13vh);
     margin-bottom: 1.2rem;
   }
+
   @media (max-height: 480px) {
     font-size: 25px;
     margin-bottom: 0.3rem;
@@ -30,6 +31,7 @@ export const CheckTextSubtitle = styled(Text)`
 `
 export const TextHandlerColorMobile = styled(Text)`
   margin-top: 80px;
+
   @media (min-width: 1025px) {
     font-weight: bold;
     font-size: 1.3rem;

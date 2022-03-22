@@ -8,7 +8,7 @@ import { logError } from '../helpers'
  * to use => insertDasherRate({"package_code": package_code, "client_rating": client_rating})}
  */
 export function InsertClientRate() {
-  const [insertClientRate, { loading, error, data }] = useMutation(INSERT_CLIENT_RATE_MUTATION)
+  const [ insertClientRate, { loading, error, data } ] = useMutation(INSERT_CLIENT_RATE_MUTATION)
   if (error) {
     logError({ error: error, codeLocation: 'InsertClientRateHook', type: 'client' })
   }
@@ -22,7 +22,7 @@ export function InsertClientRate() {
  * to use => insertDasherRate({"package_code": package_code, "dasher_rate": dasher_rate})}
  */
 export function InsertDasherRate() {
-  const [insertDasherRate, { loading, error, data }] = useMutation(INSERT_DASHER_RATE_MUTATION)
+  const [ insertDasherRate, { loading, error, data } ] = useMutation(INSERT_DASHER_RATE_MUTATION)
   if (error) {
     logError({ error: error, codeLocation: 'InsertDasherRateHook', type: 'client' })
   }

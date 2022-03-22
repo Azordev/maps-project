@@ -41,5 +41,5 @@ export default class ErrorBoundary extends Component {
   }
 }
 ErrorBoundary.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired,
+  children: PropTypes.oneOfType([ PropTypes.object, PropTypes.array ]).isRequired,
 }

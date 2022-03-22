@@ -18,19 +18,19 @@ const Chat = () => {
   }
   const { LatestMessages = { chats: [] } } = useLatestMessages(id)
   const { loading, insertClientMessage } = InsertClientMessage()
-  const [message, setMessage] = useState('')
+  const [ message, setMessage ] = useState('')
 
   const Messages =
     // @ts-ignore
     LatestMessages.chats &&
     // @ts-ignore
-    LatestMessages.chats.map((message, packageId) => {
-      if (message.user_type === 'client') {
+    LatestMessages.chats.map((msg, packageId) => {
+      if (msg.user_type === 'client') {
         return (
           <MessageRow key={`chat-message-${packageId}`}>
             {/* @ts-ignore */}
             <Avatar src={userIcon} type={'client'} />
-            <MessageBox>{message.last_client_message}</MessageBox>
+            <MessageBox>{msg.last_client_message}</MessageBox>
           </MessageRow>
         )
       } else {
@@ -38,7 +38,7 @@ const Chat = () => {
           <MessageRow key={`chat-message-${packageId}`}>
             {/* @ts-ignore */}
             <Avatar src={deliveryManWhite} type={'dasher'} />
-            <MessageBox>{message.last_dasher_message}</MessageBox>
+            <MessageBox>{msg.last_dasher_message}</MessageBox>
           </MessageRow>
         )
       }
@@ -84,9 +84,7 @@ const Chat = () => {
       <>
         {Messages}
         {loading && (
-          <MessageRow
-            type={'client'}
-          >
+          <MessageRow>
             <Avatar src={userIcon} />
             <MessageBox>Loading..</MessageBox>
           </MessageRow>

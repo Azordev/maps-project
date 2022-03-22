@@ -13,15 +13,20 @@ const Confirm = () => {
   /** @type {{id: String}} */
   const { id } = useParams()
   const history = useHistory()
-  const [isFinalModalOpen, toggleFinalModal] = useState(false)
-  const [isRatingModalOpen, toggleRatingModal] = useState(false)
-  const [errorModal, toggleErrorModal] = useState({ isShow: false, message: '', redirect: false })
-  const [rating, setRating] = useState(0)
+  const [ isFinalModalOpen, toggleFinalModal ] = useState(false)
+  const [ isRatingModalOpen, toggleRatingModal ] = useState(false)
+  const [ errorModal, toggleErrorModal ] = useState({ isShow: false, message: '', redirect: false })
+  const [ rating, setRating ] = useState(0)
   const { insertClientRate } = InsertClientRate()
   const { confirmPackage, packageInformation, loading } = useConfirmPackage()
 
-  const incompleteStatus = ['ready', 'collected', 'in_travel']
-  const completeStatus = ['rated', 'delivery_confirmed', 'delivery_rejected']
+  const incompleteStatus = [ 'ready', 'collected', 'in_travel' ]
+  const completeStatus = [ 'rated', 'delivery_confirmed', 'delivery_rejected' ]
+
+  const redirectToCheck = () => {
+    localStorage.removeItem('packageId')
+    history.push('/check')
+  }
 
   if (!id) {
     redirectToCheck()
@@ -41,7 +46,8 @@ const Confirm = () => {
         })
       }
     }
-  }, [packageInformation, loading])
+    return null;
+  }, [ packageInformation, loading ])
 
   /** @param {Event} event */
   const submitRating = event => {
@@ -53,7 +59,6 @@ const Confirm = () => {
     }
   }
 
-  /** @param {React.FormEvent<HTMLFormElement>} event */
   const submitConfirmation = async event => {
     if (event.name && event.RUT && event.phone) {
       await confirmPackage(event, id)
@@ -69,11 +74,6 @@ const Confirm = () => {
     }
   }
 
-  const redirectToCheck = () => {
-    localStorage.removeItem('packageId')
-    history.push('/check')
-  }
-
   const closeErrorModal = () => {
     toggleErrorModal({ isShow: false, message: '', redirect: false })
     if (errorModal.redirect) {
@@ -87,7 +87,7 @@ const Confirm = () => {
       headerSubTitle="Inserta tus datos para finalizar"
       RatingModal={
         <Modal isOpen={isRatingModalOpen} handleClick={e => submitRating(e)} actionText="Aceptar">
-          <RatingTitle color="primary" bold>
+          <RatingTitle color="primary">
             ¿Qué tal tu experiencia?
           </RatingTitle>
           <Rating setRating={setRating} />
