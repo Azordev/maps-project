@@ -29,7 +29,7 @@ export const HeaderChatImg = styled.img`
   margin: auto 10px;
   width: 4vw;
   min-width: 40px;
-  max-width: 50px;  
+  max-width: 50px;
 `
 
 export const HeaderText = styled.div`
@@ -89,7 +89,7 @@ export const FooterChatInput = styled.form`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0px auto;
+    margin: 0 auto;
 
     @media (min-width: 1025px) {
       width: 47vw;
