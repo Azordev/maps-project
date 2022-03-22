@@ -2,14 +2,14 @@ import styled from '@emotion/styled'
 import { bg, p, rounded, size, text } from '../../styles/mixins'
 
 export const ChatLayoutContainer = styled.div`
-  ${[size({ width: '100vw', minHeight: '100vh' }), bg.white]}
+${[ size({ width: '100vw', minHeight: '100vh' }), bg.white ]}
   display: grid;
   grid-template-rows: 80px calc(100vh - 185px) 105px;
   overflow: hidden;
 `
 
 export const HeaderChat = styled.div`
-  ${[rounded({ bl: '25px', br: '25px' }), size({ height: '11vh' })]}
+  ${[ rounded({ bl: '25px', br: '25px' }), size({ height: '11vh' }) ]}
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -33,7 +33,7 @@ export const HeaderChatImg = styled.img`
 `
 
 export const HeaderText = styled.div`
-  ${[size({ width: '33.33%' }), text.base, text[700], text.secondary, text.textCenter]}
+  ${[ size({ width: '33.33%' }), text.base, text[700], text.secondary, text.textCenter ]}
   display: flex;
 
   @media (min-width: 1025px) {
@@ -69,10 +69,12 @@ export const FooterChat = styled.div`
   align-items: center;
   justify-content: center;
 `
-
+/**
+ * @typedef {{ cols: number, rows: number }} Size 
+*/
 export const FooterChatInput = styled.form`
-  ${[p({ x: '0', y: '5%' }), text.textCenter, bg.white]}
-  flex: ${props => props.cols};
+  ${[ p({ x: '0', y: '5%' }), text.textCenter, bg.white ]}
+  flex: ${/** @param {Size} props */ props => props.cols};
   background-color: var(--light-blue-12);
   padding: 0.5rem;
 
@@ -125,7 +127,7 @@ export const MessageRow = styled.div`
 `
 
 export const MessageBox = styled.div`
-  ${[p({ all: '10px' }), rounded({ all: '15px' }), size({ width: '40vw' }), text.base, text.gray09, bg.gray]}
+  ${[ p({ all: '10px' }), rounded({ all: '15px' }), size({ width: '40vw' }), text.base, text.gray09, bg.gray ]}
   display: inline-block;
   width: max-content;
   min-width: 80px;
