@@ -8,7 +8,6 @@ import { text } from '../styles/mixins'
  *    small?: boolean,
  *    xsm?: boolean,
  *    medium?: boolean,
- *    mlg?: boolean,
  *    lg?: boolean,
  *    xlg?: boolean,
  *    large?: boolean,
@@ -88,17 +87,6 @@ const Text =
       `}
 
   ${
-  /** @param {TextProps} props */
-  props =>
-      props.mlg &&
-      css`
-        ${text['2xl']};
-        @media (max-width: 960px) {
-          ${text.lg};
-        }
-      `}
-
-  ${
 
   /** @param {TextProps} props */
   props =>
@@ -138,9 +126,9 @@ const Text =
     props =>
       props.large &&
       css`
-        ${text['4xl']};
+        ${text['2xl']};
         @media (max-width: 960px) {
-          font-size: 1.7rem;
+          ${text.lg};
         }
       `}
 
