@@ -25,6 +25,10 @@ export const Background = styled.div`
 `
 export const Icon = styled.img`
   width: 300px;
-  height: 188px;
+  height: auto;
   animation: ${twinkle} 0.5s infinite alternate;
+
+  @media (max-width: 375px){
+    width: 210px;
+  }
 `
