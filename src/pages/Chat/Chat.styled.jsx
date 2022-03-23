@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import { bg, p, rounded, size, text } from '../../styles/mixins'
 
 export const ChatLayoutContainer = styled.div`
-${[ size({ width: '100vw', minHeight: '100vh' }), bg.white ]}
+  ${[ size({ width: '100vw', minHeight: '100vh' }), bg.white ]}
   display: grid;
   grid-template-rows: 80px calc(100vh - 185px) 105px;
   overflow: hidden;
