@@ -68,7 +68,7 @@ const Delivery = () => {
           }}
           actionText="Aceptar"
         >
-          <Text as="div" margin="5" color="six" large weight700 center>
+          <Text as="div" margin="5" color="blue" large bolder center>
             Hemos llegado
           </Text>
           <Text as="div" margin="10" xsm center>

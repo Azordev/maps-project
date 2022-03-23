@@ -15,7 +15,7 @@ import { text } from '../styles/mixins'
  *    bold?: boolean,
  *    title?: boolean,
  *    subtitle?: boolean,
- *    weight700?: boolean, 
+ *    bolder?: boolean, 
  *    uppercase?: boolean,
  *    input?: boolean,
  *    center?: boolean,
@@ -51,7 +51,7 @@ const Text =
   ${
   /** @param {TextProps} props */
   props =>
-      props.weight700 &&
+      props.bolder &&
       css`
         ${text['700']};
       `}
