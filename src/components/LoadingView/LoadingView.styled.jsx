@@ -18,13 +18,17 @@ export const Background = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  background: #9dbdfd;
+  background: #9DBDFD;
   display: flex;
   align-items: center;
   justify-content: center;
 `
 export const Icon = styled.img`
   width: 300px;
-  height: 188px;
+  height: auto;
   animation: ${twinkle} 0.5s infinite alternate;
+
+  @media (max-width: 375px){
+    width: 210px;
+  }
 `
