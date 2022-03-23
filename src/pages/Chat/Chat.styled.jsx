@@ -39,10 +39,6 @@ export const HeaderText = styled.div`
   @media (min-width: 1025px) {
     font-size: 2em;
   }
-
-  @media (min-width: 3180px) {
-    font-size: 6em;
-  }
 `
 
 export const HeaderTitle = styled.div`
@@ -71,6 +67,7 @@ export const FooterChat = styled.div`
   grid-row: 3/-1;
   display: flex;
   align-items: center;
+  justify-content: center;
 `
 /**
  * @typedef {{ cols: number, rows: number }} Size 
@@ -81,9 +78,16 @@ export const FooterChatInput = styled.form`
   background-color: var(--light-blue-12);
   padding: 0.5rem;
 
+  input{
+    margin-right: 0.75rem;
+    @media (max-width: 1024px){
+      margin-left: 0.75rem;
+    }
+  }
+
   div {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin: 0 auto;
 
@@ -93,11 +97,14 @@ export const FooterChatInput = styled.form`
   }
 
   button {
-    margin-right: 30px;
     cursor: pointer;
     background: none;
     border: none;
     width: fit-content;
+    padding: 0;
+    @media (max-width: 1024px){
+      padding-right: 0.75rem;
+    }
 
     img {
       width: 3rem;
@@ -108,18 +115,14 @@ export const FooterChatInput = styled.form`
 
 export const MessageRow = styled.div`
   margin: 10px 0;
-  display: grid;
-  grid-template-columns: 50px calc(100% - 50px - 2rem);
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: start;
   width: 100%;
+  gap: 11px;
 
   @media (min-width: 1025px) {
     width: 47vw;
-    gap: 11px;
-  }
-
-  &::after {
-    clear: both;
-    display: table;
   }
 `
 
@@ -135,15 +138,9 @@ export const MessageBox = styled.div`
   @media (min-width: 768px) {
     font-size: 1rem;
   }
-
-  @media (min-width: 3180px) {
-    line-height: 3.5vw;
-    font-size: 3rem;
-  }
 `
 
 export const Avatar = styled.img`
-  width: 4vw;
-  min-width: 40px;
-  max-width: 50px;
+  width: 40px;
+  height: auto;
 `
