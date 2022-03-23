@@ -3,7 +3,7 @@ import { Text, Modal } from '../../components'
 import send from '../../assets/send.png'
 import Map from '../../components/Map'
 import { useGetPackageInformation, useClientLocation, useDasherLatestCoordinates } from '../../hooks'
-import { useState, Fragment } from 'react'
+import { useState } from 'react'
 import Layout from './Delivery.layout'
 import warning from '../../assets/warning.png'
 import Spinner from '../../components/Spinner'
@@ -38,7 +38,7 @@ const Delivery = () => {
   }
 
   return (
-    <Fragment>
+    <>
       {
         errorPack
         ?
@@ -80,7 +80,7 @@ const Delivery = () => {
       >
         {center[0] && <Map center={center} dasher={dasher} permission={permission} />}
       </Layout>
-    </Fragment>
+    </>
   )
 }
 
