@@ -49,18 +49,7 @@ export const FormInput = styled.input`
     }
   }
 
-  @media (max-width: 1100px) {
-    width: 55%;
-  }
-  @media (max-width: 900px) {
-    width: 55%;
-  }
-  @media (max-width: 500px) {
-    width: 55%;
-  }
-  @media (max-width: 400px) {
-    width: 55%;
-  }
+ 
 
 
 `
