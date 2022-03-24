@@ -4,7 +4,7 @@ const MapLayoutContainer = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
 `
 const HeaderMap = styled.div`
@@ -18,7 +18,7 @@ const HeaderMap = styled.div`
   place-content: space-between;
 
   @media (max-width: 960px) {
-    width: 100vw;
+    width: 100%;
     position: absolute;
     z-index: 1;
   }
@@ -47,7 +47,7 @@ const HeaderText = styled.div`
   }
 `
 const ChatBtnContainer = styled.div`
-  width: 28.33vw;
+  width: 28.33%;
   height: auto;
   display: flex;
   justify-content: flex-end;
@@ -89,7 +89,7 @@ const FooterMap = styled.div`
   align-self: flex-end;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
-  width: 50vw;
+  width: 50%;
   display: flex;
   flex-wrap: wrap;
   height: auto;
@@ -98,17 +98,17 @@ const FooterMap = styled.div`
   font-family: 'Poppins', sans-serif;
 
   @media (max-width: 960px) {
-    width: 100vw;
+    width: 100%;
     position: absolute;
     bottom: 0;
   }
 
   @media (min-width: 961px) {
-    width: 50vw;
+    width: 50%;
   }
 
   @media (min-width: 3180px) {
-    width: 70vw;
+    width: 70%;
   }
 `
 
