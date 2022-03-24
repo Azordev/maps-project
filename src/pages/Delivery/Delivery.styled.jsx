@@ -3,8 +3,9 @@ import styled from '@emotion/styled';
 const MapLayoutContainer = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
 `
 const HeaderMap = styled.div`
   display: flex;
@@ -23,7 +24,6 @@ const HeaderMap = styled.div`
   }
 `
 const HeaderText = styled.div`
-  text-align: center;
   display: flex;
   flex-direction: column;
   margin-left: 25px;
@@ -47,7 +47,7 @@ const HeaderText = styled.div`
   }
 `
 const ChatBtnContainer = styled.div`
-  width: 28.33vw;
+  width: 28.33%;
   height: auto;
   display: flex;
   justify-content: flex-end;
@@ -69,21 +69,15 @@ const ChatBtn = styled.img`
   }
 `
 const HeaderTitle = styled.div`
-  display: flex;
-  text-align: left;
-  margin: 0 auto;
   font-weight: 900;
-  line-height: 17px;
   font-family: 'Poppins', sans-serif;
 `
 const HeaderSubTitle = styled.div`
-  display: flex;
-  text-align: left;
   font-size: 13px;
   font-weight: 400;
   color: var(--headertext);
-  margin-left: 1px;
-  margin-top: 3px;
+  margin-top: 8px;
+  margin-bottom: 5px;
   line-height: 19px;
   font-family: 'Poppins', sans-serif;
 
@@ -95,7 +89,7 @@ const FooterMap = styled.div`
   align-self: flex-end;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
-  width: 50vw;
+  width: 50%;
   display: flex;
   flex-wrap: wrap;
   height: auto;
@@ -104,17 +98,17 @@ const FooterMap = styled.div`
   font-family: 'Poppins', sans-serif;
 
   @media (max-width: 960px) {
-    width: 100vw;
+    width: 100%;
     position: absolute;
     bottom: 0;
   }
 
   @media (min-width: 961px) {
-    width: 50vw;
+    width: 50%;
   }
 
   @media (min-width: 3180px) {
-    width: 70vw;
+    width: 70%;
   }
 `
 
