@@ -6,7 +6,6 @@ export const FormContainer = styled.form`
   display: flex;
   align-items: center;
   flex-direction: column;
-
   @media (min-width: 961px) {
     height: auto;
     margin: 0 auto;
@@ -21,11 +20,9 @@ export const ButtonContainer = styled.div`
   align-items: center;
   gap: 10px;
   width: 100%;
-
 `
 
 export const FormButtonPrimary = styled.button`
- 
   width: 75%;
   height: 60px;
   border-radius: 10px;
@@ -37,17 +34,12 @@ export const FormButtonPrimary = styled.button`
   text-transform: uppercase;
   font-weight: bold;
   cursor: pointer;
-
   &:focus {
     border: solid 1px var(--dark, #000);
     box-shadow: 2px 5px 6px rgb(0 0 0 / 0.3);
   }
-
-  
-  
 `
 export const FormButtonSecondary = styled.button`
- 
   width: 75%;
   height: 60px;
   border-radius: 10px;
@@ -59,10 +51,8 @@ export const FormButtonSecondary = styled.button`
   text-transform: uppercase;
   font-weight: bold;
   cursor: pointer;
-
   &:focus {
     border: solid 1px var(--dark, #000);
     box-shadow: 2px 5px 6px rgb(0 0 0 / 0.3);
   }
-  
 `
