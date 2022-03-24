@@ -1,5 +1,5 @@
 import { Background, Icon } from './LoadingView.styled'
-import azordevIcon from '../../assets/azordev-icon.png'
+import azordevIcon from '../../assets/azordev-icon.svg'
 
 
 const LoadingView = () => (

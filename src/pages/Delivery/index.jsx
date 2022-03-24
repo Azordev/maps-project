@@ -5,14 +5,15 @@ import Map from '../../components/Map'
 import { useGetPackageInformation, useClientLocation, useDasherLatestCoordinates } from '../../hooks'
 import { useState } from 'react'
 import Layout from './Delivery.layout'
-import LoadingView from '../../components/LoadingView'
+import warning from '../../assets/warning.png'
+import Spinner from '../../components/Spinner'
 
 const Delivery = () => {
   /** @type {{id: String}} */
   const { id } = useParams()
   const history = useHistory()
   const [ openDeliveryConfirmedModal, toggleDeliveryConfirmedModal ] = useState(true)
-  const { packageInformation, error: errorPack, loading: loadingPack } = useGetPackageInformation(id)
+  const { packageInformation, error: errorPack } = useGetPackageInformation(id)
   const { latestCoordinates, loading } = useDasherLatestCoordinates(id)
   const { isLoading, center, dasher, currentStatus, permission } = useClientLocation({
     data: latestCoordinates,
@@ -36,50 +37,50 @@ const Delivery = () => {
     destination_confirmed: { headerTitle: 'Destino alcanzado', headerSubtitle: 'Hemos llegado' },
   }
 
-  if (loadingPack) {
-    return <LoadingView />
-  }
-
-  if (errorPack) {
-    return <Modal
-      isOpen={true}
-      handleClick={() => { history.push('/check') }}
-      actionText="Regresar"
-    >
-      <h1>Este paquete no existe</h1>
-    </Modal>
-  }
-
   return (
-    <Layout
-      packageId={id}
-      headerTitle={headerStatus[currentStatus]?.headerTitle}
-      headerSubtitle={headerStatus[currentStatus]?.headerSubtitle}
-      clientAddress={packageInformation?.packages[0]?.client_address}
-      estimatedArrival={packageInformation?.packages[0]?.estimated_arrival}
-      isLoading={isLoading}
-      toChat={toChat}
-      DeliveryConfirmedModal={
+    <>
+      {
+        errorPack
+        ?
         <Modal
-          isOpen={currentStatus === 'destination_reached' && openDeliveryConfirmedModal}
-          handleClick={() => {
-            toggleDeliveryConfirmedModal(!openDeliveryConfirmedModal)
-            toConfirm()
-          }}
-          actionText="Aceptar"
+          isOpen={true}
+          handleClick={() => { history.push('/check') }}
+          actionText="Regresar"
         >
-          <Text as="div" margin="5" color="blue" large bolder center>
-            Hemos llegado
-          </Text>
-          <Text as="div" margin="10" xsm center>
-            Recoja su env&iacute;o
-          </Text>
-          <img style={{margin: '10px'}} src={send} width="121px" height="72px" alt="Dasher has arrived image" />
+          <img src={warning}  width='61' height='60' alt="Warning" />
+          <Text center as="h1">Paquete no existe</Text>
         </Modal>
+        : isLoading && <Spinner />
       }
-    >
-      {center[0] && <Map center={center} dasher={dasher} permission={permission} />}
-    </Layout>
+      <Layout
+        packageId={id}
+        headerTitle={headerStatus[currentStatus]?.headerTitle}
+        headerSubtitle={headerStatus[currentStatus]?.headerSubtitle}
+        clientAddress={packageInformation?.packages[0]?.client_address}
+        estimatedArrival={packageInformation?.packages[0]?.estimated_arrival}
+        toChat={toChat}
+        DeliveryConfirmedModal={
+          <Modal
+            isOpen={currentStatus === 'destination_reached' && openDeliveryConfirmedModal}
+            handleClick={() => {
+              toggleDeliveryConfirmedModal(!openDeliveryConfirmedModal)
+              toConfirm()
+            }}
+            actionText="Aceptar"
+          >
+            <Text as="div" margin="5" color="blue" large bolder center>
+              El Dasher ha llegado
+            </Text>
+            <Text as="div" margin="10" xsm center>
+              Recoja su env&iacute;o
+            </Text>
+            <img style={{margin: '10px'}} src={send} width="121px" height="72px" alt="Dasher has arrived image" />
+          </Modal>
+        }
+      >
+        {center[0] && <Map center={center} dasher={dasher} permission={permission} />}
+      </Layout>
+    </>
   )
 }
 
