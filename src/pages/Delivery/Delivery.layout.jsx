@@ -18,7 +18,6 @@ import assistant from '../../assets/assistant.png'
 import chat from '../../assets/chat.png'
 import gps from '../../assets/gps-icon.png'
 import { Fragment } from 'react'
-import LoadingView from '../../components/LoadingView'
 /**
  * Delivery Layout
  *
@@ -34,20 +33,17 @@ import LoadingView from '../../components/LoadingView'
  * children: any 
  * }}
  */
+
 const Delivery = ({
   packageId,
   headerTitle,
   headerSubtitle,
   clientAddress,
   estimatedArrival,
-  isLoading,
   DeliveryConfirmedModal,
   children,
   toChat,
 }) => {
-  if (isLoading) {
-    return <LoadingView />
-  }
 
   return (
     <Fragment>
@@ -93,7 +89,6 @@ Delivery.propTypes = {
   headerSubtitle: PropTypes.string.isRequired,
   clientAddress: PropTypes.string.isRequired,
   estimatedArrival: PropTypes.string.isRequired,
-  isLoading: PropTypes.bool.isRequired,
   DeliveryConfirmedModal: PropTypes.element.isRequired,
   children: PropTypes.element,
   toChat: PropTypes.func.isRequired,
