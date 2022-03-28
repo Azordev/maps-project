@@ -17,7 +17,7 @@ import { Text } from '../../components'
 const ErrorNotFound = ({ message, error }) => (
   <Container>
     <NotFoundImg src={NotFound} alt="Image Not-found" />
-    <Text color="primary" bold center large>
+    <Text color="primary" bold center xlarge>
       {message}
       <br />
       <Text color="primary" uppercase>

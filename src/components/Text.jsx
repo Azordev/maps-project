@@ -6,6 +6,7 @@ import { text } from '../styles/mixins'
  * @typedef {{
  *    xsmall?: boolean,
  *    small?: boolean,
+ *    xsm?: boolean,
  *    medium?: boolean,
  *    lg?: boolean,
  *    xlg?: boolean,
@@ -14,7 +15,7 @@ import { text } from '../styles/mixins'
  *    bold?: boolean,
  *    title?: boolean,
  *    subtitle?: boolean,
- *    weight700?: boolean, 
+ *    bolder?: boolean, 
  *    uppercase?: boolean,
  *    input?: boolean,
  *    center?: boolean,
@@ -50,7 +51,7 @@ const Text =
   ${
   /** @param {TextProps} props */
   props =>
-      props.weight700 &&
+      props.bolder &&
       css`
         ${text['700']};
       `}
@@ -66,6 +67,17 @@ const Text =
   ${
   /** @param {TextProps} props */
   props =>
+      props.xsm &&
+      css`
+        ${text.xl};
+        @media (max-width: 960px) {
+          ${text.sm};
+        }
+      `}
+
+  ${
+  /** @param {TextProps} props */
+  props =>
       props.medium &&
       css`
         ${text['2xl']};
@@ -73,6 +85,7 @@ const Text =
           font-size: 1rem;
         }
       `}
+
   ${
 
   /** @param {TextProps} props */
@@ -113,9 +126,9 @@ const Text =
     props =>
       props.large &&
       css`
-        ${text['4xl']};
+        ${text['2xl']};
         @media (max-width: 960px) {
-          font-size: 1.7rem;
+          ${text.lg};
         }
       `}
 
