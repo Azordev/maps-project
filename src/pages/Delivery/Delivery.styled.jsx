@@ -4,7 +4,7 @@ const MapLayoutContainer = styled.div`
   display: flex;
   flex-direction: column;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
 `
 const HeaderMap = styled.div`
   display: flex;
@@ -24,10 +24,9 @@ const HeaderMap = styled.div`
 `
 const HeaderText = styled.div`
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  margin-left: 25px;
   height: auto;
+  position: absolute;
+  left: 40% ;
   font-size: 18px;
   font-weight: 700;
   line-height: 27px;
@@ -36,6 +35,10 @@ const HeaderText = styled.div`
 
   @media (max-width: 960px) {
     font-size: 1.2em;
+  }
+  @media (max-width: 550px){
+  position: absolute;
+  left: 30% ;
   }
 
   @media (min-width: 961px) {
@@ -47,10 +50,9 @@ const HeaderText = styled.div`
   }
 `
 const ChatBtnContainer = styled.div`
-  width: 28.33vw;
   height: auto;
-  display: flex;
-  justify-content: flex-end;
+  position: absolute;
+  left:80% ;
   cursor: default;
   margin-right: 15px;
 `
@@ -71,20 +73,21 @@ const ChatBtn = styled.img`
 const HeaderTitle = styled.div`
   display: flex;
   text-align: left;
-  margin: 0 auto;
-  font-weight: 900;
-  line-height: 17px;
+  justify-content: center ;
+  font-weight: 700;
+  line-height: 57px;
   font-family: 'Poppins', sans-serif;
 `
 const HeaderSubTitle = styled.div`
   display: flex;
   text-align: left;
+  justify-content: center ;
   font-size: 13px;
   font-weight: 400;
   color: var(--headertext);
-  margin-left: 1px;
   margin-top: 3px;
-  line-height: 19px;
+  padding-bottom: 3px;
+  line-height: 45px;
   font-family: 'Poppins', sans-serif;
 
   @media (max-width: 960px) {
@@ -102,6 +105,7 @@ const FooterMap = styled.div`
   margin: 0 auto;
   background-color: var(--blueheader);
   font-family: 'Poppins', sans-serif;
+  padding-bottom:20px;
 
   @media (max-width: 960px) {
     width: 100vw;
@@ -133,10 +137,10 @@ const FooterMapAddress = styled.div`
   text-align: center;
   color: white;
   color: var(--headertext);
-  font-size: 12px;
-  font-weight: 500;
+  font-size: 27px;
+  font-weight: 700;
   font-family: 'Poppins', sans-serif;
-  line-height: 18px;
+  line-height: 40.5px;
 
   ::after {
     content: '${props => props.txt}';
@@ -178,4 +182,5 @@ export {
   FooterMap,
   FooterMapAddress,
   MapContainer,
-}
+};
+
