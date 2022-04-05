@@ -13,11 +13,11 @@ export const FormInput = styled.input`
   border: 1px solid var(--light-gray-0);
   outline: none;
   display: block;
-  text-align: center;
   ::placeholder {
     font-weight: bold;
     color: #acb3ba;
     font-size: 0.8rem;
+    text-align: center;
     text-transform: uppercase;
   }
   &:focus {
