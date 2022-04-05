@@ -27,7 +27,7 @@ const Chat = () => {
     LatestMessages.chats.map((msg, packageId) => {
       if (msg.user_type === 'client') {
         return (
-          <MessageRow  client key={`chat-message-${packageId}`}>
+          <MessageRow client key={`chat-message-${packageId}`}>
             {/* @ts-ignore */}
             <Avatar src={userIcon} type={'client'} />
             <MessageBox>{msg.last_client_message}</MessageBox>
