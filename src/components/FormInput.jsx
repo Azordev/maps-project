@@ -1,23 +1,23 @@
 import styled from '@emotion/styled';
 
 export const FormInput = styled.input`
-  width: 268px;
+  width: 228px;
   max-width: 100%;
   height: 53px;
   border-radius: 7px;
   box-shadow: 2px 5px 6px rgb(0 0 0 / 0.3);
   background: var(--light-gray-1);
-  padding-left: 20px;
+  padding: 0 20px;
   margin: 10px;
   border: none;
   border: 1px solid var(--light-gray-0);
   outline: none;
   display: block;
+  text-align: center;
   ::placeholder {
     font-weight: bold;
     color: #acb3ba;
     font-size: 0.8rem;
-    text-align: center;
     text-transform: uppercase;
   }
   &:focus {
