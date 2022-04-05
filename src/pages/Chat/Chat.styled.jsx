@@ -116,7 +116,7 @@ export const FooterChatInput = styled.form`
 export const MessageRow = styled.div`
   margin: 10px 0;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: ${ props => props.client ? 'row-reverse' : 'row'};
   align-items: start;
   width: 100%;
   gap: 11px;
