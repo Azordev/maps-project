@@ -76,6 +76,7 @@ const Check = () => {
           {({ handleFormChange, value }) => (
             <>
               <FormInput
+                align="left"
                 width="10"
                 placeholder="133456789078765"
                 name="packageCode"
