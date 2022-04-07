@@ -140,7 +140,7 @@ const FooterMapAddress = styled.div`
   font-size: 27px;
   font-weight: 700;
   font-family: 'Poppins', sans-serif;
-  line-height: 40.5px;
+  line-height: 3.11px;
 
   ::after {
     content: '${props => props.txt}';
