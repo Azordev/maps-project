@@ -69,7 +69,7 @@ const Check = () => {
       }
     >
       <div className="check-ticket">
-        <TextHandlerColorMobile color="six" bold uppercase lg>
+        <TextHandlerColorMobile color="blue" bold uppercase lg>
           Inserta número de ticket
         </TextHandlerColorMobile>
         <Form FormButtonPrimaryTitle = 'Empecemos' formData={setPackageCode} onSubmit={e => toDelivery(e)}>

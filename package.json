@@ -55,8 +55,8 @@
     "stylelint:ci": "stylelint --config .stylelintrc.json",
     "eslint:ci": "eslint --color --cache -f table",
     "stylelint": "stylelint --config .stylelintrc.json './**/*.styled.jsx'",
-    "eslint": "eslint src --color --cache -f table",
-    "lint:js:fix": "eslint src --fix",
+    "lint": "eslint ./src",
+    "lint:fix": "eslint src --fix",
     "prettier": "prettier --write src --config ./.prettierrc.js",
     "prettier:ci": "prettier --check --config ./.prettierrc.js",
     "check": "npm run prettier && npm run eslint && npm run stylelint && npm run test"

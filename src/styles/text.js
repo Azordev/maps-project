@@ -95,7 +95,7 @@ const text = {
   four: css`
   color: var(--light-blue-1);
   `,
-  six: css`
+  blue: css`
   color: var(--light-blue-11);
   `,
   black: css`

@@ -98,7 +98,7 @@ const FooterMap = styled.div`
   align-self: flex-end;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
-  width: 50vw;
+  width: 50%;
   display: flex;
   flex-wrap: wrap;
   height: auto;
@@ -108,17 +108,17 @@ const FooterMap = styled.div`
   padding-bottom:20px;
 
   @media (max-width: 960px) {
-    width: 100vw;
+    width: 100%;
     position: absolute;
     bottom: 0;
   }
 
   @media (min-width: 961px) {
-    width: 50vw;
+    width: 50%;
   }
 
   @media (min-width: 3180px) {
-    width: 70vw;
+    width: 70%;
   }
 `
 
