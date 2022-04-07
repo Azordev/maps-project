@@ -27,6 +27,7 @@ const Theme = ({ children }) => (
         --light-gray-0: ${theme.colors.gray00};
         --light-gray-1: ${theme.colors.gray01};
         --light-gray-2: ${theme.colors.gray04};
+        --light-gray-11: ${theme.colors.gray11};
         --light-red-1: ${theme.colors.red01};
         --white: white;
         --danger: ${theme.colors.gray09};

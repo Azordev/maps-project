@@ -129,7 +129,7 @@ export const MessageRow = styled.div`
 export const MessageBox = styled.div`
   ${[ p({ all: '10px' }), rounded({ all: '15px' }), size({ width: '40vw' }), text.base, text.gray09, bg.gray ]}
   display: inline-block;
-  width: max-content;
+  width: auto;
   min-width: 80px;
   max-width: 100%;
   overflow-wrap: break-word;
@@ -138,6 +138,18 @@ export const MessageBox = styled.div`
   @media (min-width: 768px) {
     font-size: 1rem;
   }
+`
+
+export const MessageBoxDate = styled.div`
+  font-size: 0.8rem;
+  margin-top: 10px;
+  color: var(--light-gray-11);
+`
+
+export const MessageAndUpdatedBox = styled.div`
+ display: flex;
+ flex-direction: column;
+ align-items: ${ props => props.client ? 'end' : 'start'};;
 `
 
 export const Avatar = styled.img`
