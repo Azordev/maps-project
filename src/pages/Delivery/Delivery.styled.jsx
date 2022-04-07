@@ -26,19 +26,19 @@ const HeaderText = styled.div`
   text-align: center;
   height: auto;
   position: absolute;
-  left: 40% ;
-  font-size: 18px;
+  left: 43%;
+  font-size:24px ;
+  line-height: 16px;
   font-weight: 700;
-  line-height: 27px;
   color: var(--headertext);
   font-family: 'Poppins', sans-serif;
 
   @media (max-width: 960px) {
     font-size: 1.2em;
   }
-  @media (max-width: 550px){
+  @media (max-width: 1024px){
   position: absolute;
-  left: 30% ;
+  left: 15% ;
   }
 
   @media (min-width: 961px) {
@@ -75,19 +75,19 @@ const HeaderTitle = styled.div`
   text-align: left;
   justify-content: center ;
   font-weight: 700;
-  line-height: 57px;
+  font-size:24px ;
+  line-height: 16px;
   font-family: 'Poppins', sans-serif;
 `
 const HeaderSubTitle = styled.div`
   display: flex;
   text-align: left;
   justify-content: center ;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 400;
   color: var(--headertext);
   margin-top: 3px;
-  padding-bottom: 3px;
-  line-height: 45px;
+  line-height: 28px;
   font-family: 'Poppins', sans-serif;
 
   @media (max-width: 960px) {
