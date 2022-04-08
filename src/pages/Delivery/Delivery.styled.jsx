@@ -26,7 +26,7 @@ const HeaderText = styled.div`
   text-align: center;
   height: auto;
   position: absolute;
-  left: 43%;
+  left: 42.5%;
   font-size:24px ;
   line-height: 16px;
   font-weight: 700;
