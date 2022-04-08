@@ -33,7 +33,6 @@ const colors = {
   red01: '#F74326',
   purple10: '#3E254C',
   purple07: '#6E57C4',
-  
 }
 
 export default colors

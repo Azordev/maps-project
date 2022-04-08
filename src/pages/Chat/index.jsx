@@ -18,8 +18,8 @@ const Chat = () => {
   }
 
   const formatDate = (dateString) => {
-    const options = { year: "numeric", month: "long", day: "numeric" }
-    return new Date(dateString).toLocaleDateString(undefined, options)
+    const options = {hour: '2-digit', minute: '2-digit'}
+    return `Enviado ${new Date(dateString).toLocaleTimeString("es-CO", options)}`
   }
 
   const { LatestMessages = { chats: [] } } = useLatestMessages(id)
