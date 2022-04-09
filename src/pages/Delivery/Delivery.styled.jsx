@@ -26,7 +26,8 @@ const HeaderText = styled.div`
   text-align: center;
   height: auto;
   position: absolute;
-  left: 42.5%;
+  left: 50%;
+  transform: translateX(-50%);
   font-size:24px ;
   line-height: 16px;
   font-weight: 700;
@@ -38,7 +39,12 @@ const HeaderText = styled.div`
   }
   @media (max-width: 1024px){
   position: absolute;
-  left: 15% ;
+  left: 50%;
+  transform: translateX(-50%)
+  }
+  @media (max-width: 460px){
+    left: 15%;
+    transform: translateX(-15%);
   }
 
   @media (min-width: 961px) {
