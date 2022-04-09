@@ -1,7 +1,7 @@
 import { useParams, useHistory } from 'react-router-dom'
 import deliveryManWhite from '../../assets/delivery-chat-user.png'
 import userIcon from '../../assets/user_icon.png'
-import { FooterChatInput, MessageBox, Avatar, MessageRow } from './Chat.styled'
+import { FooterChatInput, MessageBox, MessageAndUpdatedBox, MessageBoxDate, Avatar, MessageRow } from './Chat.styled'
 import { useLatestMessages, InsertClientMessage } from '../../hooks'
 import { Input } from '../../components'
 import sendChat from '../../assets/image_send_chat.png'
@@ -16,6 +16,12 @@ const Chat = () => {
   if (!id) {
     history.push('/check')
   }
+
+  const formatDate = (dateString) => {
+    const options = {hour: '2-digit', minute: '2-digit'}
+    return `Enviado ${new Date(dateString).toLocaleTimeString("es-CO", options)}`
+  }
+
   const { LatestMessages = { chats: [] } } = useLatestMessages(id)
   const { loading, insertClientMessage } = InsertClientMessage()
   const [ message, setMessage ] = useState('')
@@ -30,7 +36,10 @@ const Chat = () => {
           <MessageRow client key={`chat-message-${packageId}`}>
             {/* @ts-ignore */}
             <Avatar src={userIcon} type={'client'} />
-            <MessageBox>{msg.last_client_message}</MessageBox>
+            <MessageAndUpdatedBox client>
+              <MessageBox>{msg.last_client_message}</MessageBox>
+              <MessageBoxDate>{formatDate(msg.updated_at)}</MessageBoxDate>
+              </MessageAndUpdatedBox>  
           </MessageRow>
         )
       } else {
@@ -38,7 +47,10 @@ const Chat = () => {
           <MessageRow key={`chat-message-${packageId}`}>
             {/* @ts-ignore */}
             <Avatar src={deliveryManWhite} type={'dasher'} />
-            <MessageBox>{msg.last_dasher_message}</MessageBox>
+            <MessageAndUpdatedBox>
+              <MessageBox>{msg.last_dasher_message}</MessageBox>
+              <MessageBoxDate>{formatDate(msg.updated_at)}</MessageBoxDate>
+              </MessageAndUpdatedBox>  
           </MessageRow>
         )
       }
