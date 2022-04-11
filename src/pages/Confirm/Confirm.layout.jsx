@@ -13,10 +13,10 @@ const Confirm = ({ headerTitle, headerSubTitle, children, RatingModal, FinalModa
         <BackButton />
       </BackButtonContainer>  
       <HeaderContainer>
-        <Text as="h1" title>
+        <Text as="h1" title xlarge>
           {headerTitle}
         </Text>
-        <Text subtitle >{headerSubTitle}</Text>
+        <Text subtitle medium xlg>{headerSubTitle}</Text>
         <CheckImg src={note} alt="Note icon" />
       </HeaderContainer>
     </Header>

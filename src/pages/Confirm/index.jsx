@@ -113,7 +113,7 @@ const Confirm = () => {
       }
     >
       <>
-        <Text color="third" lg bold uppercase>
+        <Text color="blue" lg bold uppercase>
           Confirma recepción
         </Text>
         <Form onSubmit={e => submitConfirmation(e)} FormButtonSecondaryTitle ='Reportar'>

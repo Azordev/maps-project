@@ -136,10 +136,19 @@ const Text =
   ${
   /** @param {TextProps} props */
   props =>
+      props.medium &&
+      css`
+        ${text['500']};
+      `}
+      
+  ${
+  /** @param {TextProps} props */
+  props =>
       props.bold &&
       css`
         ${text['600']};
       `}
+
   
   //Colors
   ${
