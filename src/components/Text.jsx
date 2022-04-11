@@ -148,7 +148,6 @@ const Text =
       css`
         ${text['600']};
       `}
-
   
   //Colors
   ${
