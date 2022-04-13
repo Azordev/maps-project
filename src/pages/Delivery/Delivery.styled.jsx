@@ -3,9 +3,8 @@ import styled from '@emotion/styled';
 const MapLayoutContainer = styled.div`
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
-  overflow: hidden;
 `
 const HeaderMap = styled.div`
   display: flex;
@@ -24,18 +23,28 @@ const HeaderMap = styled.div`
   }
 `
 const HeaderText = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-left: 25px;
+  text-align: center;
   height: auto;
-  font-size: 18px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size:24px ;
+  line-height: 16px;
   font-weight: 700;
-  line-height: 27px;
   color: var(--headertext);
   font-family: 'Poppins', sans-serif;
 
   @media (max-width: 960px) {
     font-size: 1.2em;
+  }
+  @media (max-width: 1024px){
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%)
+  }
+  @media (max-width: 460px){
+    left: 15%;
+    transform: translateX(-15%);
   }
 
   @media (min-width: 961px) {
@@ -47,10 +56,9 @@ const HeaderText = styled.div`
   }
 `
 const ChatBtnContainer = styled.div`
-  width: 28.33%;
   height: auto;
-  display: flex;
-  justify-content: flex-end;
+  position: absolute;
+  left:80% ;
   cursor: default;
   margin-right: 15px;
 `
@@ -69,16 +77,23 @@ const ChatBtn = styled.img`
   }
 `
 const HeaderTitle = styled.div`
-  font-weight: 900;
+  display: flex;
+  text-align: left;
+  justify-content: center ;
+  font-weight: 700;
+  font-size:24px ;
+  line-height: 16px;
   font-family: 'Poppins', sans-serif;
 `
 const HeaderSubTitle = styled.div`
-  font-size: 13px;
+  display: flex;
+  text-align: left;
+  justify-content: center ;
+  font-size: 16px;
   font-weight: 400;
   color: var(--headertext);
-  margin-top: 8px;
-  margin-bottom: 5px;
-  line-height: 19px;
+  margin-top: 3px;
+  line-height: 28px;
   font-family: 'Poppins', sans-serif;
 
   @media (max-width: 960px) {
@@ -96,6 +111,7 @@ const FooterMap = styled.div`
   margin: 0 auto;
   background-color: var(--blueheader);
   font-family: 'Poppins', sans-serif;
+  padding-bottom:20px;
 
   @media (max-width: 960px) {
     width: 100%;
@@ -127,10 +143,10 @@ const FooterMapAddress = styled.div`
   text-align: center;
   color: white;
   color: var(--headertext);
-  font-size: 12px;
-  font-weight: 500;
+  font-size: 27px;
+  font-weight: 700;
   font-family: 'Poppins', sans-serif;
-  line-height: 18px;
+  line-height: 40.5px;
 
   ::after {
     content: '${props => props.txt}';
@@ -172,4 +188,5 @@ export {
   FooterMap,
   FooterMapAddress,
   MapContainer,
-}
+};
+
