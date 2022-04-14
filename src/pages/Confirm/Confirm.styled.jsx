@@ -39,6 +39,10 @@ export const CheckImg = styled.img`
     bottom: 0;
     width: 320px;
   }
+
+  @media screen and (min-width: 1025px) and (max-height: 800px) {
+    width: 40vh;
+  }
 `
 
 export const HeaderContainer = styled.div`
@@ -48,6 +52,10 @@ export const HeaderContainer = styled.div`
 
   @media (min-width: 1025px) {
     white-space: nowrap;
+  }
+
+  @media screen and (min-width: 1025px) and (max-height: 800px) {
+    margin: 5vh 5vw;
   }
 `
 
