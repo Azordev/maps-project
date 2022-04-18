@@ -31,21 +31,32 @@ export const CheckImg = styled.img`
 
   @media (min-width: 961px) {
     width: 80px;
-    height: auto;
   }
 
   @media (min-width: 1025px) {
     position: absolute;
     right: 0;
-    bottom: 25%;
-    width: 147px;
+    bottom: 0;
+    width: 320px;
+  }
+
+  @media screen and (min-width: 1025px) and (max-height: 800px) {
+    width: 40vh;
   }
 `
 
 export const HeaderContainer = styled.div`
   position: relative;
-  margin: 5vw;
+  margin: 120px 5vw 80px;
   height: 100%;
+
+  @media (min-width: 1025px) {
+    white-space: nowrap;
+  }
+
+  @media screen and (min-width: 1025px) and (max-height: 800px) {
+    margin: 5vh 5vw;
+  }
 `
 
 export const BackButtonContainer = styled.div`
