@@ -1,7 +1,17 @@
 import { useEffect } from 'react';
 import PropTypes from 'prop-types'
-import { InfoContainer, ModalButton, ModalContainer, Overlay } from './Modal.styled'
-const Modal = ({ children, isOpen, actionText, toggle, handleClick = () => toggle(false), hasTimeout = false }) => {
+import imgBusqueda from '../../assets/img_busqueda.png'
+import { InfoContainer, ModalButton, ModalContainer, Overlay, ImgBusqueda } from './Modal.styled'
+
+const Modal = ({ 
+  children, 
+  isOpen, 
+  actionText, 
+  toggle, 
+  SearchIcon, 
+  handleClick = () => toggle(false), 
+  hasTimeout = false 
+}) => {
 
   useEffect(() => {
     if (isOpen && hasTimeout) {
@@ -16,6 +26,7 @@ const Modal = ({ children, isOpen, actionText, toggle, handleClick = () => toggl
     {isOpen && (
       <Overlay>
         <ModalContainer>
+          {SearchIcon && <ImgBusqueda src={imgBusqueda} alt="img_busqueda" />}
           <InfoContainer>{children}</InfoContainer>
           {actionText && (<ModalButton onClick={handleClick}>{actionText}</ModalButton>)}
         </ModalContainer>
@@ -30,7 +41,8 @@ Modal.propTypes = {
   isOpen: PropTypes.bool,
   toggle: PropTypes.func,
   handleClick: PropTypes.func,
-  hasTimeout: PropTypes.bool
+  hasTimeout: PropTypes.bool,
+  SearchIcon: PropTypes.bool
 }
 
 export default Modal

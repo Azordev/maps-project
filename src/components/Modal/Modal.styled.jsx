@@ -93,3 +93,15 @@ export const ModalButton = styled.button`
   line-height: 24px;
   font-family: 'Poppins', sans-serif;
 `
+export const ImgBusqueda = styled.img`
+  object-fit: cover;
+  width: 357px;
+  z-index: -1;
+  position: absolute;
+  left: -166px;
+  bottom: -93px;
+
+  @media (max-width: 1025px) {
+    display: none;
+  }
+`

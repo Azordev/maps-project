@@ -20,6 +20,24 @@ export const BtnBackContainer = styled.div`
   margin-top: 10px;
 `
 
+export const HeaderTitle = styled(Text)`
+  margin-top: 28px;
+  margin-left: 13px;
+
+  @media (min-width: 1025px) {
+    margin-top: 80px;
+    margin-left: 56px;
+  }
+`
+
+export const HeaderSubtitle = styled(Text)`
+  margin-left: 13px;
+
+  @media (min-width: 1025px) {
+    margin-left: 56px;
+  }
+`
+
 export const CheckTextSubtitle = styled(Text)`
   margin: 0;
   font-weight: bold;
