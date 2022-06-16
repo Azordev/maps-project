@@ -93,7 +93,7 @@ export const ModalButton = styled.button`
   line-height: 24px;
   font-family: 'Poppins', sans-serif;
 `
-export const ImgBusqueda = styled.img`
+export const ImgSearch = styled.img`
   object-fit: cover;
   width: 357px;
   z-index: -1;

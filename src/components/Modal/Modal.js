@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import PropTypes from 'prop-types'
-import imgBusqueda from '../../assets/img_busqueda.png'
-import { InfoContainer, ModalButton, ModalContainer, Overlay, ImgBusqueda } from './Modal.styled'
+import imgSearch from '../../assets/img_search.png'
+import { InfoContainer, ModalButton, ModalContainer, Overlay, ImgSearch } from './Modal.styled'
 
 const Modal = ({ 
   children, 
@@ -26,7 +26,7 @@ const Modal = ({
     {isOpen && (
       <Overlay>
         <ModalContainer>
-          {SearchIcon && <ImgBusqueda src={imgBusqueda} alt="img_busqueda" />}
+          {SearchIcon && <ImgSearch src={imgSearch} alt="img_search" />}
           <InfoContainer>{children}</InfoContainer>
           {actionText && (<ModalButton onClick={handleClick}>{actionText}</ModalButton>)}
         </ModalContainer>
