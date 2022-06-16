@@ -4,10 +4,11 @@ import { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import { Form, Modal, Text } from '../../components'
 import warning from '../../assets/warning.png'
+import imgSearch from '../../assets/img_search.png'
 import { useGetPackagesIdByCode } from '../../hooks'
 import Layout from './Check.layout'
 import FormInput from '../../components/FormInput'
-import { TextHandlerColorMobile } from './Check.styled'
+import { TextHandlerColorMobile, ImgSearch } from './Check.styled'
 import toast from 'react-hot-toast'
 
 const Check = () => {
@@ -52,12 +53,7 @@ const Check = () => {
       headerTitle="Hola!"
       headerSubtitle="Ingresa tu número de boleta"
       DontForgetModal={
-        <Modal 
-          isOpen={isModalOpen} 
-          handleClick={() => changeIsModalOpen(false)} 
-          actionText="Entendido" 
-          SearchIcon={isModalOpen}
-        >
+        <Modal isOpen={isModalOpen} handleClick={() => changeIsModalOpen(false)} actionText="Entendido">
           <img src={warning}  width='61' height='60' alt="Warning" />
           <Text as="h1">
             Antes de recibir...
@@ -70,6 +66,7 @@ const Check = () => {
             <li>RUT</li>
             <li>Celular</li>
           </Text>
+          <ImgSearch src={imgSearch} alt="img_search" />
         </Modal>
       }
     >

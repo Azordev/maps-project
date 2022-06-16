@@ -1,17 +1,7 @@
 import { useEffect } from 'react';
 import PropTypes from 'prop-types'
-import imgSearch from '../../assets/img_search.png'
-import { InfoContainer, ModalButton, ModalContainer, Overlay, ImgSearch } from './Modal.styled'
-
-const Modal = ({ 
-  children, 
-  isOpen, 
-  actionText, 
-  toggle, 
-  SearchIcon, 
-  handleClick = () => toggle(false), 
-  hasTimeout = false 
-}) => {
+import { InfoContainer, ModalButton, ModalContainer, Overlay } from './Modal.styled'
+const Modal = ({ children, isOpen, actionText, toggle, handleClick = () => toggle(false), hasTimeout = false }) => {
 
   useEffect(() => {
     if (isOpen && hasTimeout) {
@@ -26,7 +16,6 @@ const Modal = ({
     {isOpen && (
       <Overlay>
         <ModalContainer>
-          {SearchIcon && <ImgSearch src={imgSearch} alt="img_search" />}
           <InfoContainer>{children}</InfoContainer>
           {actionText && (<ModalButton onClick={handleClick}>{actionText}</ModalButton>)}
         </ModalContainer>
@@ -41,8 +30,7 @@ Modal.propTypes = {
   isOpen: PropTypes.bool,
   toggle: PropTypes.func,
   handleClick: PropTypes.func,
-  hasTimeout: PropTypes.bool,
-  SearchIcon: PropTypes.bool
+  hasTimeout: PropTypes.bool
 }
 
 export default Modal

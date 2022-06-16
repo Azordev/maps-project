@@ -55,3 +55,15 @@ export const TextHandlerColorMobile = styled(Text)`
     font-size: 1.3rem;
   }
 `
+export const ImgSearch = styled.img`
+  object-fit: cover;
+  width: 357px;
+  z-index: -1;
+  position: absolute;
+  left: -166px;
+  bottom: -93px;
+
+  @media (max-width: 1025px) {
+    display: none;
+  }
+`
