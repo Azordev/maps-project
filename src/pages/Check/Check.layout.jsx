@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 
 import { Container, Header, MainSection } from '../../layouts/Splitted.styled'
 import { BtnBackContainer, HeaderTitle, HeaderSubtitle } from './Check.styled'
-// import { Text } from '../../components'
 
 import BackButton from '../../components/BackButton'
 
