@@ -31,9 +31,5 @@ export const CheckTextSubtitle = styled(Text)`
 `
 export const TextHandlerColorMobile = styled(Text)`
   margin-top: 80px;
-
-  @media (min-width: 1025px) {
-    font-weight: bold;
-    font-size: 1.3rem;
-  }
+  font-size: 1.125rem;
 `
