@@ -1,23 +1,15 @@
 /* eslint-disable no-unused-vars */
 // @ts-nocheck
 import PropTypes from 'prop-types'
-import { Text } from '../../components'
-import {
-  MapLayoutContainer,
-  HeaderMap,
-  HeaderText,
-  ChatBtnContainer,
-  ChatBtn,
-  HeaderTitle,
-  HeaderSubTitle,
-  FooterMap,
-  FooterMapAddress,
-  MapContainer,
-} from './Delivery.styled'
+import { Fragment } from 'react'
 import assistant from '../../assets/assistant.png'
 import chat from '../../assets/chat.png'
 import gps from '../../assets/gps-icon.png'
-import { Fragment } from 'react'
+import { Text } from '../../components'
+import {
+  ChatBtn, ChatBtnContainer, FooterMap,
+  FooterMapAddress, HeaderMap, HeaderSubTitle, HeaderText, HeaderTitle, MapContainer, MapLayoutContainer
+} from './Delivery.styled'
 /**
  * Delivery Layout
  *
@@ -66,12 +58,12 @@ const Delivery = ({
           >
             <img src={gps} width="22px" height="31px" alt="Gps icon" style={{ margin: '10px'}} />
           </FooterMapAddress>
-          <FooterMapAddress cols={'0 0 50%'} txt={'Tiempo estimado de llegada'}>
-            <Text medium bold margin="8" style={{ textTransform: 'lowercase', color:'#003B62',fontWeight:'700'}}>
+          <FooterMapAddress style={{fontSize:'25px'}} cols={'0 0 50%'} txt={'Tiempo estimado de llegada'}>
+            <Text medium bold margin="8" style={{ textTransform: 'lowercase',fontSize:'23px', color:'#003B62',fontWeight:'700'}}>
               {estimatedArrival}
             </Text>
           </FooterMapAddress>
-          <FooterMapAddress cols={'0 0 50%'} txt={'Contáctanos'}>
+          <FooterMapAddress style={{fontSize:'25px'}} cols={'0 0 50%'} txt={'Contáctanos'}>
             <a href="https://wa.me/56962478976" target="_blank" rel="noreferrer">
               <img src={assistant} width="107" height="50" alt="Contáctanos" />
             </a>
