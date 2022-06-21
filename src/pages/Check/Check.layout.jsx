@@ -2,8 +2,7 @@
 import PropTypes from 'prop-types'
 
 import { Container, Header, MainSection } from '../../layouts/Splitted.styled'
-import {BtnBackContainer} from './Check.styled'
-import { Text } from '../../components'
+import { BtnBackContainer, HeaderTitle, HeaderSubtitle } from './Check.styled'
 
 import BackButton from '../../components/BackButton'
 
@@ -13,12 +12,12 @@ const Check = ({ headerTitle, headerSubtitle, children, DontForgetModal }) => (
       <BtnBackContainer>
         <BackButton />
       </BtnBackContainer>
-      <Text title>
+      <HeaderTitle title>
         {headerTitle}
-      </Text>
-      <Text subtitle>
+      </HeaderTitle>
+      <HeaderSubtitle subtitle>
         {headerSubtitle}
-      </Text>
+      </HeaderSubtitle>
     </Header>
     <MainSection>{children}</MainSection>
     {DontForgetModal}
