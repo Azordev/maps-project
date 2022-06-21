@@ -7,8 +7,16 @@ import chat from '../../assets/chat.png'
 import gps from '../../assets/gps-icon.png'
 import { Text } from '../../components'
 import {
-  ChatBtn, ChatBtnContainer, FooterMap,
-  FooterMapAddress, HeaderMap, HeaderSubTitle, HeaderText, HeaderTitle, MapContainer, MapLayoutContainer
+  ChatBtn,
+  ChatBtnContainer,
+  FooterMap,
+  FooterMapAddress,
+  HeaderMap,
+  HeaderSubTitle,
+  HeaderText,
+  HeaderTitle,
+  MapContainer,
+  MapLayoutContainer
 } from './Delivery.styled'
 /**
  * Delivery Layout
