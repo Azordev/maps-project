@@ -1,9 +1,9 @@
-import React from 'react'
 import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
 import GoogleMapReact from 'google-map-react'
-
+import PropTypes from 'prop-types'
+import React from 'react'
 import Marker from '../Marker'
+
 
 const Wrapper = styled.main`
   min-height: 356px;
@@ -12,8 +12,10 @@ const Wrapper = styled.main`
   display: flex;
   flex-direction: row;
   flex: 1;
-  margin: 30px auto;
+  margin: 0px auto;
   justify-content: center;
+  opacity: 65%;
+  color: #c4c4c4;
 
   @media (min-width: 1025px) {
     width: 70vw;
