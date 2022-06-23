@@ -96,6 +96,10 @@ const HeaderSubTitle = styled.div`
   line-height: 28px;
   font-family: 'Poppins', sans-serif;
 
+  @media (max-width: 768px){
+  justify-content: left ; 
+  }
+
   @media (max-width: 960px) {
     margin-top: 0;
   }
