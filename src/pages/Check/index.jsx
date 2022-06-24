@@ -1,15 +1,15 @@
 /* eslint-disable no-unused-vars */
 // @ts-nocheck
 import { useState } from 'react'
+import toast from 'react-hot-toast'
 import { useHistory } from 'react-router-dom'
-import { Form, Modal, Text } from '../../components'
-import warning from '../../assets/warning.png'
 import imgSearch from '../../assets/img_search.png'
+import warning from '../../assets/warning.png'
+import { Form, Modal, Text } from '../../components'
+import FormInput from '../../components/FormInput'
 import { useGetPackagesIdByCode } from '../../hooks'
 import Layout from './Check.layout'
-import FormInput from '../../components/FormInput'
-import { TextHandlerColorMobile, ImgSearch } from './Check.styled'
-import toast from 'react-hot-toast'
+import { ImgSearch, TextHandlerColorMobile } from './Check.styled'
 
 const Check = () => {
   const [ packageCode, setPackageCode ] = useState('')
@@ -51,7 +51,7 @@ const Check = () => {
   return (
     <Layout
       headerTitle="Hola!"
-      headerSubtitle="Ingresa tu número de boleta"
+      headerSubtitle="Inserte su numero de Boleta"
       DontForgetModal={
         <Modal isOpen={isModalOpen} handleClick={() => changeIsModalOpen(false)} actionText="Entendido">
           <img src={warning}  width='61' height='60' alt="Warning" />
