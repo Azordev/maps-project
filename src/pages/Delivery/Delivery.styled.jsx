@@ -110,6 +110,7 @@ const FooterMap = styled.div`
   border-top-right-radius: 25px;
   width: 50%;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   height: auto;
   margin: 0 auto;
