@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import Marker from '../Marker'
 
-
 const Wrapper = styled.main`
   min-height: 356px;
   max-height: auto;
@@ -12,7 +11,7 @@ const Wrapper = styled.main`
   display: flex;
   flex-direction: row;
   flex: 1;
-  margin: 0px auto;
+  margin: 0 auto;
   justify-content: center;
   opacity: 65%;
   color: #c4c4c4;
