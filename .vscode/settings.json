@@ -1,63 +1,23 @@
 {
-  "cSpell.language": "en,es",
-  "diffEditor.ignoreTrimWhitespace": false,
-  "liveshare.languages.allowGuestCommandControl": true,
-  "emmet.excludeLanguages": [],
-  "emmet.triggerExpansionOnTab": true,
-  "emmet.includeLanguages": {
-    "markdown": "html",
-    "javascript": "javascriptreact"
-  },
-  "files.insertFinalNewline": true,
-  "files.exclude": {
-    "**/*.js.map": {
-      "when": "$(basename)"
-    },
-    "**/node_modules": true
-  },
-  "html.autoClosingTags": true,
   "search.exclude": {
-    "**/coverage": true,
-    "**/node_modules": true
+    "**/.sst": true
   },
-  "editor.formatOnSave": true,
-  "editor.bracketPairColorization.enabled": true,
-  "editor.insertSpaces": true,
-  "editor.tabSize": 2,
-  "javascript.autoClosingTags": true,
-  "javascript.suggest.autoImports": true,
-  "javascript.format.enable": false,
-  "javascript.validate.enable": true,
-  "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "githubPullRequests.queries": [
-    {
-      "label": "Waiting For My Review",
-      "query": "is:open review-requested:${user}"
-    },
-    {
-      "label": "Assigned To Me",
-      "query": "is:open assignee:${user}"
-    },
-    {
-      "label": "Created By Me",
-      "query": "is:open author:${user}"
-    }
-  ],
-  "githubIssues.queries": [
-    {
-      "label": "My Issues",
-      "query": "default"
-    },
-    {
-      "label": "Created Issues",
-      "query": "author:${user} state:open repo:${owner}/${repository} sort:created-desc"
-    }
-  ],
-  "githubIssues.issueBranchTitle": "feature/#${issueNumber}",
-  "js/ts.implicitProjectConfig.checkJs": true,
+  "task.allowAutomaticTasks": true,
+  "typescript.tsserver.experimental.enableProjectDiagnostics": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "debug.openDebug": "neverOpen",
+  "problems.autoReveal": true,
+  "terminal.integrated.hideOnStartup": "always",
+  "terminal.integrated.defaultProfile.windows": "Command Prompt",
+  "terminal.integrated.inheritEnv": false,
+  "jestrunner.configPath": "jest.unit.config.cjs",
+  "compile-hero.disable-compile-files-on-did-save-code": true,
+  "tasks": {
+    "label": "lint on open",
+    "type": "shell",
+    "command": "npm run lint",
+    "runOn": "folderOpen"
+  }
 }

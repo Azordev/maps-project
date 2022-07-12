@@ -93,12 +93,12 @@ export const DisplayText = styled.h1`
 export const SubtitleText = styled.p`
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
-  font-size: 30px;
+  font-size: 28px;
   margin-top: 3px;
   text-align: left;
 
   @media (max-width: 992px) {
-    font-size: 17px;
+    font-size: 15px;
   }
 `
 export const Button = styled(Link)`
