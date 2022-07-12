@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 export const Header = styled.div`
   background-image: linear-gradient(to bottom, var(--blueheader) 55%, var(--white) 45%);
@@ -113,7 +113,8 @@ export const Button = styled(Link)`
   margin: 56px auto 0;
   text-align: center;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 18px;
 
   @media (max-width: 992px) {
     margin: 0 auto;
