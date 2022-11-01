@@ -19,7 +19,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "@apollo/client": "~3.5.9",
-    "@emotion/react": "~11.7.1",
+    "@emotion/react": "~11.10.5",
     "@emotion/styled": "~11.8.1",
     "emotion-normalize": "~11.0.1",
     "google-map-react": "~2.1.10",
